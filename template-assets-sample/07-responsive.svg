@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="80 270 1080 765" width="1080" height="765">
+  
+  
+  
+  <g id="scene-07">
+  <g fill="none" stroke="#141414" stroke-width="10.2" stroke-linecap="round" stroke-linejoin="round">
+    
+    <g class="cloud">
+      <path class="dfill draw" style="--d:0ms" pathLength="1" fill="#fff"
+        d="M 122 396 Q 98 390 106 368 Q 102 344 134 342 Q 144 318 176 326 Q 194 306 220 322 Q 246 318 250 344 Q 272 352 260 376 Q 270 394 246 398 Q 210 408 172 404 Q 142 406 122 396 Z" />
+    </g>
+    <g class="spin">
+      <circle class="pop ball" style="--d:100ms" cx="1040" cy="337" r="28" fill="#F6CB43" stroke="none" />
+      <g class="fade" style="--d:200ms" stroke="#141414" stroke-width="8.5" stroke-linecap="round">
+        <path d="M 1040 288 L 1040 300 M 1040 374 L 1040 386 M 991 337 L 1003 337 M 1077 337 L 1089 337
+                 M 1005 302 L 1014 311 M 1066 363 L 1075 372 M 1075 302 L 1066 311 M 1014 363 L 1005 372" />
+      </g>
+    </g>
+
+    
+    <rect class="dfill draw" style="--d:200ms" pathLength="1" x="205" y="552" width="221" height="425" rx="44" fill="#fff" />
+    <rect class="dfill draw" style="--d:300ms" pathLength="1" x="222" y="568" width="187" height="393" rx="30" fill="#fff" stroke-width="8.5" />
+    <rect class="fade" style="--d:380ms" x="285" y="584" width="60" height="12" rx="6" fill="#141414" stroke="none" />
+    <rect class="dfill draw" style="--d:420ms" pathLength="1" x="240" y="628" width="163" height="130" rx="10" fill="#fff" stroke-width="8.5" />
+    <path class="fade" style="--d:500ms" stroke-width="7.65" d="M 248 742 L 282 704 L 306 728 L 326 712 L 394 748" />
+    <circle class="pop ball" style="--d:540ms" cx="351" cy="683" r="14" fill="#F6CB43" stroke="none" />
+    <path class="draw" style="--d:560ms" pathLength="1" stroke-width="8.5" d="M 240 782 L 392 780" />
+    <path class="draw" style="--d:590ms" pathLength="1" stroke-width="8.5" d="M 240 806 L 360 804" />
+    <rect class="pop" style="--d:640ms" x="236" y="858" width="131" height="46" rx="23" fill="#F6CB43" stroke-width="8.5" />
+    <path class="draw" style="--d:700ms" pathLength="1" stroke="#141414" stroke-width="8.5" d="M 272 881 L 331 880" />
+
+    
+    <rect class="dfill draw" style="--d:400ms" pathLength="1" x="567" y="489" width="574" height="487" rx="22" fill="#fff" />
+    <rect class="dfill draw" style="--d:500ms" pathLength="1" x="584" y="506" width="540" height="453" rx="12" fill="#fff" stroke-width="8.5" />
+    <path class="draw" style="--d:580ms" pathLength="1" stroke-width="8.5" d="M 586 540 Q 854 536 1122 540" />
+    <circle class="pop" style="--d:640ms" cx="618" cy="523" r="7" fill="#141414" stroke="none" />
+    <circle class="pop" style="--d:670ms" cx="647" cy="523" r="7" fill="#141414" stroke="none" />
+    <circle class="pop" style="--d:700ms" cx="676" cy="523" r="7" fill="#141414" stroke="none" />
+    <rect class="dfill draw" style="--d:740ms" pathLength="1" x="611" y="578" width="483" height="137" rx="10" fill="#fff" stroke-width="8.5" />
+    <path class="fade" style="--d:820ms" stroke-width="8.5" d="M 622 706 L 700 648 L 756 690 L 826 636 L 886 682 L 946 652 L 1004 674 L 1084 634" />
+    <circle class="pop ball" style="--d:900ms" cx="954" cy="620" r="18" fill="#F6CB43" stroke-width="7.65" />
+    <path class="draw" style="--d:860ms" pathLength="1" stroke-width="9.35" d="M 611 756 L 996 752" />
+    <path class="draw" style="--d:890ms" pathLength="1" stroke-width="8.5" d="M 611 786 L 900 782" />
+    <g class="pop" style="--d:940ms">
+      <rect x="611" y="820" width="134" height="113" rx="10" fill="#fff" stroke-width="8.5" />
+      <path stroke-width="7.65" d="M 620 912 L 656 872 L 678 894 L 696 878 L 736 914" />
+      <path stroke-width="7.65" d="M 622 920 L 700 918" />
+      <path stroke-width="7.65" d="M 622 928 L 682 926" />
+    </g>
+    <g class="pop" style="--d:1000ms">
+      <rect x="783" y="819" width="140" height="119" rx="10" fill="#fff" stroke-width="8.5" />
+      <path stroke-width="7.65" d="M 792 914 L 830 870 L 854 894 L 872 876 L 914 916" />
+      <path stroke-width="7.65" d="M 794 922 L 872 920" />
+      <path stroke-width="7.65" d="M 794 930 L 854 928" />
+    </g>
+    <g class="pop" style="--d:1060ms">
+      <rect x="958" y="819" width="142" height="118" rx="10" fill="#fff" stroke-width="8.5" />
+      <path stroke-width="7.65" d="M 966 912 L 1004 874 L 1028 896 L 1046 880 L 1092 914" />
+      <path stroke-width="7.65" d="M 968 920 L 1046 918" />
+      <path stroke-width="7.65" d="M 968 928 L 1028 926" />
+    </g>
+
+    
+    <path class="fade" style="--d:1120ms" stroke="#8f8f85" stroke-width="9.35" stroke-dasharray="2 14" stroke-linecap="round" d="M 372 520 Q 430 448 552 470" />
+    <path class="fade" style="--d:1160ms" stroke="#8f8f85" stroke-width="8.5" d="M 552 470 L 530 462 M 552 470 L 540 486" />
+    <path class="fade pulse" style="--d:1240ms" stroke="#F6CB43" stroke-width="11.9" pathLength="100" stroke-dasharray="0.01 11" d="M 372 520 Q 430 448 552 470" />
+    <path class="fade" style="--d:1200ms" stroke="#8f8f85" stroke-width="9.35" stroke-dasharray="2 14" stroke-linecap="round" d="M 560 990 Q 460 1020 376 984" />
+    <path class="fade" style="--d:1240ms" stroke="#8f8f85" stroke-width="8.5" d="M 376 984 L 398 984 M 376 984 L 390 970" />
+    <path class="fade pulse p2" style="--d:1280ms" stroke="#F6CB43" stroke-width="11.9" pathLength="100" stroke-dasharray="0.01 11" d="M 560 990 Q 460 1020 376 984" />
+  </g>
+  </g>
+  
+</svg>

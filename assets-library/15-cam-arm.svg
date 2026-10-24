@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1254 1254" width="1254" height="1254">
+  <!-- 15 相机-芯片-机械臂 · 复刻自素材 16_06_06-7(黑底,安防相机+AI芯片+关节机械臂抓黄方块,点线弧连接) -->
+  <style>
+    .draw { stroke-dasharray: 1; }
+    @media (prefers-reduced-motion: no-preference) {
+    .draw { animation: draw-in .7s cubic-bezier(.45,0,.35,1) var(--d,0ms) both; }
+    .dfill { animation: draw-in .9s cubic-bezier(.45,0,.35,1) var(--d,0ms) both, fill-in .5s ease calc(var(--d,0ms) + 300ms) both; }
+    .fade { animation: fade-in .6s ease var(--d,0ms) both; }
+    .pop { transform-box: fill-box; transform-origin: center; animation: pop-o .3s ease var(--d,0ms) both, pop-t .45s cubic-bezier(.34,1.56,.64,1) var(--d,0ms) both; }
+    @keyframes draw-in { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+    @keyframes fill-in { from { fill-opacity: 0; } to { fill-opacity: 1; } }
+    @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes pop-o { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes pop-t { from { transform: scale(.4); } to { transform: scale(1); } }
+    .ball { transform-box: fill-box; transform-origin: center; animation: ball 2.2s ease-in-out infinite alternate; }
+    @keyframes ball { from { transform: scale(1); } to { transform: scale(1.22); } }
+    .spark { transform-box: fill-box; transform-origin: 30% 90%; animation: spark 2.6s ease-in-out infinite; }
+    @keyframes spark { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: .35; transform: scale(.88); } }
+    .lp1 { animation-delay: -.9s; } .lp2 { animation-delay: -1.5s; }
+    }
+    @media print { * { animation: none !important; } }
+  </style>
+  <g id="scene" fill="none" stroke="#141414" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <!-- 点线弧 -->
+    <g class="fade" style="--d:1000ms;--p:.08"><path class="dash" pathLength="1" stroke="#d8d8d2" stroke-width="5" stroke-dasharray="0.012 0.068" stroke-linecap="round" d="M 296 668 Q 400 600 506 562"/></g>
+    <g class="fade lp1" style="--d:1100ms;--p:.08"><path class="dash" pathLength="1" stroke="#d8d8d2" stroke-width="5" stroke-dasharray="0.012 0.068" stroke-linecap="round" d="M 702 560 Q 850 620 944 722"/></g>
+    <!-- 安防相机 -->
+    <rect class="fade" style="--d:250ms" x="204" y="800" width="12" height="55" fill="#d8d8d2" stroke="none"/>
+    <rect class="fade" style="--d:300ms" x="172" y="852" width="80" height="14" rx="7" fill="#d8d8d2" stroke="none"/>
+    <g transform="translate(200,730) rotate(-18)">
+      <rect class="dfill" style="--d:0ms" pathLength="1" x="-105" y="-62" width="195" height="124" rx="30" fill="#fff"/>
+      <ellipse class="dfill" style="--d:150ms" pathLength="1" cx="95" cy="0" rx="28" ry="62" fill="#fff"/>
+      <ellipse class="fade" style="--d:300ms" cx="98" cy="0" rx="16" ry="34" fill="#0a0a0a" stroke="none"/>
+      <ellipse class="pop" style="--d:400ms" cx="98" cy="0" rx="8" ry="17" fill="#F6CB43" stroke="none"/>
+    </g>
+    <g class="spark" stroke="#F6CB43" stroke-width="13">
+      <path class="fade" style="--d:500ms" d="M 336 700 L 372 716 M 348 748 L 388 752 M 330 662 L 362 676"/>
+    </g>
+    <!-- AI 芯片 -->
+    <g stroke="#d8d8d2" stroke-width="10">
+      <path class="draw" style="--d:420ms" pathLength="1" d="M 560 424 L 560 455 M 603 424 L 603 455 M 646 424 L 646 455"/>
+      <path class="draw" style="--d:460ms" pathLength="1" d="M 560 608 L 560 639 M 603 608 L 603 639 M 646 608 L 646 639"/>
+      <path class="draw" style="--d:500ms" pathLength="1" d="M 488 530 L 520 530 M 488 572 L 520 572 M 686 530 L 718 530 M 686 572 L 718 572"/>
+    </g>
+    <rect class="dfill" style="--d:300ms" pathLength="1" x="518" y="453" width="170" height="157" rx="32" fill="#fff"/>
+    <path class="draw" style="--d:560ms" pathLength="1" stroke="#141414" stroke-width="9" d="M 570 558 Q 580 522 594 486 Q 606 522 616 558 M 578 534 Q 592 530 606 534 M 630 487 Q 628 523 631 558"/>
+    <g class="ball"><circle class="pop" style="--d:640ms" cx="560" cy="404" r="9" fill="#F6CB43" stroke="none"/></g>
+    <g class="ball lp1"><circle class="pop" style="--d:670ms" cx="646" cy="404" r="9" fill="#F6CB43" stroke="none"/></g>
+    <circle class="pop" style="--d:700ms" cx="468" cy="530" r="9" fill="#F6CB43" stroke="none"/>
+    <circle class="pop" style="--d:730ms" cx="468" cy="572" r="9" fill="#F6CB43" stroke="none"/>
+    <circle class="pop" style="--d:760ms" cx="738" cy="530" r="9" fill="#F6CB43" stroke="none"/>
+    <circle class="pop" style="--d:790ms" cx="738" cy="572" r="9" fill="#F6CB43" stroke="none"/>
+    <g class="ball lp2"><circle class="pop" style="--d:820ms" cx="603" cy="660" r="9" fill="#F6CB43" stroke="none"/></g>
+    <!-- 机械臂 -->
+    <rect class="dfill" style="--d:400ms" pathLength="1" x="951" y="843" width="226" height="59" rx="18" fill="#fff"/>
+    <rect class="pop" style="--d:520ms" x="1052" y="867" width="54" height="10" rx="5" fill="#F6CB43" stroke="none"/>
+    <path class="dfill" style="--d:560ms" pathLength="1" fill="#fff" d="M 1122.4 771.4 L 1031.4 616.4 L 998.6 635.6 L 1089.6 790.6 Z"/>
+    <path class="dfill" style="--d:640ms" pathLength="1" fill="#fff" d="M 1008.6 610.2 L 822.6 685.2 L 835.4 716.8 L 1021.4 641.8 Z"/>
+    <g class="ball"><circle class="pop" style="--d:600ms" cx="1106" cy="781" r="15" fill="#F6CB43" stroke="none"/></g>
+    <circle class="dfill" style="--d:520ms" pathLength="1" cx="1106" cy="781" r="68" fill="#fff"/>
+    <g class="ball lp1"><circle class="pop" style="--d:700ms" cx="1015" cy="626" r="10" fill="#F6CB43" stroke="none"/></g>
+    <circle class="dfill" style="--d:640ms" pathLength="1" cx="1015" cy="626" r="48" fill="#fff"/>
+    <g class="ball lp2"><circle class="pop" style="--d:760ms" cx="829" cy="701" r="7" fill="#F6CB43" stroke="none"/></g>
+    <circle class="dfill" style="--d:700ms" pathLength="1" cx="829" cy="701" r="33" fill="#fff"/>
+    <path class="draw" style="--d:760ms" pathLength="1" stroke="#141414" stroke-width="26" d="M 822 728 Q 798 768 786 810 Q 780 838 792 852"/>
+    <path class="draw" style="--d:820ms" pathLength="1" stroke="#141414" stroke-width="26" d="M 852 714 Q 834 762 820 810 Q 816 840 828 856"/>
+    <path class="draw" style="--d:760ms" pathLength="1" stroke="#fff" stroke-width="15" d="M 822 728 Q 798 768 786 810 Q 780 838 792 852"/>
+    <path class="draw" style="--d:820ms" pathLength="1" stroke="#fff" stroke-width="15" d="M 852 714 Q 834 762 820 810 Q 816 840 828 856"/>
+    <!-- 黄色小方块 -->
+    <g class="breathe">
+      <path class="pop" style="--d:880ms" d="M 800 845 L 770 855 L 800 865 L 830 855 Z" fill="#F6CB43" stroke="#141414" stroke-width="5"/>
+      <path class="pop" style="--d:920ms" d="M 770 855 L 770 885 L 800 895 L 800 865 Z" fill="#F6CB43" stroke="#141414" stroke-width="5"/>
+      <path class="pop" style="--d:960ms" d="M 830 855 L 830 885 L 800 895 L 800 865 Z" fill="#E9B93A" stroke="#141414" stroke-width="5"/>
+    </g>
+    <g class="spark lp1" stroke="#F6CB43" stroke-width="12">
+      <path class="fade" style="--d:1100ms" d="M 742 816 L 714 836 M 728 778 L 698 790"/>
+    </g>
+  </g>
+</svg>

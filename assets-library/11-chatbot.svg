@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1254 1254" width="1254" height="1254">
+  <!-- 11 聊天机器人 · 复刻自素材 16_06_01-3(黑底,机器人头+大气泡/地球/文字卡/右下气泡,黄耳黄球黄胶囊) -->
+  <style>
+    .draw { stroke-dasharray: 1; }
+    @media (prefers-reduced-motion: no-preference) {
+    .draw { animation: draw-in .7s cubic-bezier(.45,0,.35,1) var(--d,0ms) both; }
+    .dfill { animation: draw-in .9s cubic-bezier(.45,0,.35,1) var(--d,0ms) both, fill-in .5s ease calc(var(--d,0ms) + 300ms) both; }
+    .fade { animation: fade-in .6s ease var(--d,0ms) both; }
+    .pop { transform-box: fill-box; transform-origin: center; animation: pop-o .3s ease var(--d,0ms) both, pop-t .45s cubic-bezier(.34,1.56,.64,1) var(--d,0ms) both; }
+    @keyframes draw-in { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+    @keyframes fill-in { from { fill-opacity: 0; } to { fill-opacity: 1; } }
+    @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes pop-o { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes pop-t { from { transform: scale(.4); } to { transform: scale(1); } }
+    .ball { transform-box: fill-box; transform-origin: center; animation: ball 2.2s ease-in-out infinite alternate; }
+    @keyframes ball { from { transform: scale(1); } to { transform: scale(1.22); } }
+    .spark { transform-box: fill-box; transform-origin: 30% 90%; animation: spark 2.6s ease-in-out infinite; }
+    @keyframes spark { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: .35; transform: scale(.88); } }
+    .lp1 { animation-delay: -.9s; } .lp2 { animation-delay: -1.5s; }
+    }
+    @media print { * { animation: none !important; } }
+  </style>
+  <g id="scene" fill="none" stroke="#141414" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <!-- 连接线 -->
+    <g stroke="#d8d8d2" stroke-width="2.5">
+      <path class="draw" style="--d:900ms" pathLength="1" d="M 250 535 Q 260 640 313 674 Q 380 702 450 692"/>
+      <path class="draw" style="--d:950ms" pathLength="1" d="M 962 560 Q 1010 618 1020 638 Q 940 692 820 700"/>
+      <path class="draw" style="--d:1000ms" pathLength="1" d="M 292 802 Q 342 878 384 899 Q 442 880 470 824"/>
+      <path class="draw" style="--d:1050ms" pathLength="1" d="M 852 794 Q 834 782 818 778"/>
+    </g>
+    <!-- 大气泡(左上) -->
+    <g class="breathe">
+      <path class="dfill" style="--d:250ms" pathLength="1" fill="#fff" d="M 228 330 L 516 330 Q 552 330 552 366 L 552 526 Q 552 562 516 562 L 470 562 Q 462 592 434 610 Q 442 580 438 562 L 228 562 Q 192 562 192 526 L 192 366 Q 192 330 228 330 Z"/>
+      <rect class="pop" style="--d:420ms" x="230" y="372" width="136" height="40" rx="20" fill="#F6CB43" stroke="none"/>
+      <path class="draw" style="--d:480ms" pathLength="1" stroke-width="8" d="M 232 448 L 500 447 M 232 490 L 420 490"/>
+    </g>
+    <!-- 地球(右上) -->
+    <g class="breathe lp1">
+      <circle class="dfill" style="--d:400ms" pathLength="1" cx="1021" cy="472" r="99" fill="#fff"/>
+      <ellipse class="draw" style="--d:520ms" pathLength="1" cx="1021" cy="472" rx="42" ry="99"/>
+      <path class="draw" style="--d:560ms" pathLength="1" stroke-width="6" d="M 924 472 L 1118 472 M 938 418 Q 1021 398 1104 418 M 938 526 Q 1021 546 1104 526"/>
+    </g>
+    <!-- 文字卡(左下) -->
+    <g>
+      <rect class="dfill" style="--d:550ms" pathLength="1" x="204" y="799" width="166" height="163" rx="16" fill="#fff"/>
+      <path class="draw" style="--d:680ms" pathLength="1" stroke-width="7" d="M 228 850 L 346 849 M 228 886 L 346 885 M 228 922 L 306 922"/>
+    </g>
+    <!-- 右下气泡 -->
+    <g>
+      <path class="dfill" style="--d:700ms" pathLength="1" fill="#fff" d="M 841 773 L 1099 773 Q 1135 773 1135 809 L 1135 937 Q 1135 973 1099 973 L 841 973 Q 805 973 805 937 L 805 809 Q 805 773 841 773 Z"/>
+      <path class="draw" style="--d:760ms" pathLength="1" d="M 852 780 Q 828 748 806 738"/>
+      <rect class="pop" style="--d:820ms" x="880" y="812" width="154" height="32" rx="16" fill="#F6CB43" stroke="none"/>
+      <path class="draw" style="--d:860ms" pathLength="1" stroke-width="8" d="M 882 884 L 1088 883 M 882 922 L 1030 922"/>
+    </g>
+    <!-- 机器人头 -->
+    <path class="draw" style="--d:150ms" pathLength="1" stroke="#d8d8d2" stroke-width="11" d="M 634 562 L 634 494"/>
+    <rect class="pop" style="--d:280ms" x="415" y="645" width="44" height="120" rx="22" fill="#F6CB43" stroke-width="6"/>
+    <rect class="pop" style="--d:320ms" x="795" y="645" width="44" height="120" rx="22" fill="#F6CB43" stroke-width="6"/>
+    <rect class="dfill" style="--d:0ms" pathLength="1" x="454" y="564" width="361" height="255" rx="60" fill="#fff"/>
+    <rect class="fade" style="--d:300ms" x="488" y="608" width="294" height="168" rx="48" fill="#0a0a0a" stroke="none"/>
+    <path class="draw" style="--d:480ms" pathLength="1" stroke="#fff" stroke-width="13" d="M 558 714 Q 585 680 612 714 M 658 714 Q 685 680 712 714"/>
+    <g class="ball"><circle class="pop" style="--d:520ms" cx="634" cy="466" r="26" fill="#F6CB43" stroke="none"/></g>
+    <g class="spark" stroke="#F6CB43" stroke-width="13">
+      <path class="fade" style="--d:1300ms" d="M 706 528 L 738 494 M 748 490 L 772 448"/>
+    </g>
+    <!-- 黄节点 + 右气泡左上小黄胶囊 -->
+    <g class="ball lp1"><circle class="pop" style="--d:1200ms" cx="313" cy="674" r="13" fill="#F6CB43" stroke="none"/></g>
+    <g class="ball lp2"><circle class="pop" style="--d:1240ms" cx="1020" cy="638" r="13" fill="#F6CB43" stroke="none"/></g>
+    <g class="ball"><circle class="pop" style="--d:1280ms" cx="384" cy="901" r="13" fill="#F6CB43" stroke="none"/></g>
+    <rect class="pop" style="--d:1320ms" x="834" y="674" width="25" height="57" rx="12" fill="#F6CB43" stroke="none"/>
+  </g>
+</svg>

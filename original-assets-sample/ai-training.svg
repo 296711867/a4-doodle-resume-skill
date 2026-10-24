@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1254 700" width="1254" height="700">
+  <!-- A2 训练曲线 · 原创:损失下降曲线 + 精度上升曲线 + checkpoint 节点 + GPU 芯片 -->
+  <style>
+    .draw { stroke-dasharray: 1; stroke-dashoffset: 1; }
+    .pop { transform: scale(0.4); opacity: 0; transform-box: fill-box; transform-origin: center; }
+    .fade { opacity: 0; }
+    .dfill { fill-opacity: 0; }
+    @media (prefers-reduced-motion: no-preference) {
+      .draw { transition: stroke-dashoffset 0.7s cubic-bezier(0.45,0,0.35,1) var(--d,0ms); }
+      .in .draw { stroke-dashoffset: 0; }
+      .dfill { transition: stroke-dashoffset 0.9s cubic-bezier(0.45,0,0.35,1) var(--d,0ms), fill-opacity 0.5s ease calc(var(--d,0ms) + 300ms); }
+      .in .dfill { fill-opacity: 1; }
+      .fade { transition: opacity 0.6s ease var(--d,0ms); }
+      .in .fade { opacity: 1; }
+      .pop { transition: opacity 0.3s ease var(--d,0ms), transform 0.45s cubic-bezier(0.34,1.56,0.64,1) var(--d,0ms); }
+      .in .pop { opacity: 1; transform: scale(1); }
+      .in .ball { transform-box: fill-box; transform-origin: center; animation: ball-pulse 2.2s ease-in-out infinite alternate; }
+      @keyframes ball-pulse { from { transform: scale(1); } to { transform: scale(1.2); } }
+      .in .tw { animation: twinkle 2.4s ease-in-out infinite; }
+      .in .tw.t2 { animation-delay: -0.8s; }
+      @keyframes twinkle { 0%,100% { opacity: 1; } 50% { opacity: 0.2; } }
+      .in .fan { transform-box: fill-box; transform-origin: center; animation: fanspin 3.6s linear infinite; }
+      @keyframes fanspin { to { transform: rotate(360deg); } }
+      .in .dash { animation: dashrun 3s linear infinite; }
+      @keyframes dashrun { to { stroke-dashoffset: -110; } }
+    }
+  </style>
+  <g id="scene-A2">
+  <g fill="none" stroke="#141414" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- 坐标系 -->
+    <path class="draw" style="--d:0ms" pathLength="1" stroke-width="3.5" d="M 120 120 L 120 560 L 760 560" />
+    <!-- 损失下降(实线) -->
+    <path class="draw" style="--d:150ms" pathLength="1" stroke-width="4.5" d="M 150 170 Q 220 300 300 380 Q 360 440 440 470 Q 520 496 620 508 Q 690 516 740 520" />
+    <!-- 精度上升(虚线) -->
+    <path class="fade dash" style="--d:400ms" stroke="#8f8f85" stroke-width="3" stroke-dasharray="10 9" d="M 150 540 Q 240 470 330 420 Q 420 372 500 340 Q 590 300 680 270 L 740 250" />
+    <!-- checkpoint 圆点 -->
+    <circle class="pop" style="--d:600ms" cx="300" cy="380" r="9" fill="#fff" stroke-width="3" />
+    <circle class="pop" style="--d:640ms" cx="440" cy="470" r="9" fill="#fff" stroke-width="3" />
+    <circle class="pop ball" style="--d:680ms" cx="620" cy="508" r="11" fill="#F6CB43" stroke-width="3" />
+    <circle class="pop" style="--d:700ms" cx="740" cy="520" r="9" fill="#fff" stroke-width="3" />
+    <!-- 最佳点星花 -->
+    <g class="tw fade" style="--d:760ms" stroke-width="3.5">
+      <path d="M 612 480 L 606 466 M 636 484 L 642 470" />
+    </g>
+    <!-- 轴标签刻度 -->
+    <path class="fade" style="--d:800ms" stroke-width="2.4" d="M 118 240 L 128 240 M 118 360 L 128 360 M 118 480 L 128 480 M 260 558 L 260 548 M 420 558 L 420 548 M 580 558 L 580 548" />
+    <text class="fade" style="--d:850ms" x="66" y="140" font-size="26" font-weight="700" font-family="inherit" fill="#141414" stroke="none" transform="rotate(-90 66 140)">loss</text>
+    <text class="fade" style="--d:880ms" x="700" y="606" font-size="26" font-weight="700" font-family="inherit" fill="#141414" stroke="none">epochs</text>
+    <text class="fade" style="--d:910ms" x="596" y="556" font-size="20" font-family="inherit" fill="#141414" stroke="none">best 0.98</text>
+
+    <!-- 右侧 GPU 芯片 -->
+    <rect class="dfill draw" style="--d:1000ms" pathLength="1" x="880" y="180" width="240" height="200" rx="18" fill="#fff" stroke-width="4" />
+    <rect class="dfill draw" style="--d:1100ms" pathLength="1" x="916" y="216" width="168" height="128" rx="10" fill="#fff" stroke-width="3" />
+    <text class="fade" style="--d:1200ms" x="1000" y="296" text-anchor="middle" font-size="34" font-weight="700" font-family="inherit" fill="#141414" stroke="none">GPU</text>
+    <!-- 芯片引脚 -->
+    <path class="fade" style="--d:1250ms" stroke-width="3" d="M 900 160 L 900 180 M 960 160 L 960 180 M 1020 160 L 1020 180 M 1080 160 L 1080 180 M 900 380 L 900 400 M 960 380 L 960 400 M 1020 380 L 1020 400 M 1080 380 L 1080 400 M 860 210 L 880 210 M 860 260 L 880 260 M 860 310 L 880 310 M 860 360 L 880 360 M 1120 210 L 1140 210 M 1120 260 L 1140 260 M 1120 310 L 1140 310 M 1120 360 L 1140 360" />
+    <!-- 训练日志终端 -->
+    <rect class="dfill draw" style="--d:1350ms" pathLength="1" x="880" y="450" width="300" height="120" rx="12" fill="#141414" stroke-width="3" />
+    <circle class="pop" style="--d:1450ms" cx="908" cy="476" r="5" fill="#fff" stroke="none" />
+    <circle class="pop" style="--d:1480ms" cx="926" cy="476" r="5" fill="#fff" stroke="none" />
+    <circle class="pop" style="--d:1510ms" cx="944" cy="476" r="5" fill="#fff" stroke="none" />
+    <path class="fade" style="--d:1550ms" stroke="#f2f2ee" stroke-width="2.6" d="M 906 506 L 990 504 M 906 526 L 1042 524 M 906 546 L 1004 544" />
+    <rect class="fade tw" style="--d:1600ms" x="1010" y="538" width="52" height="13" rx="6" fill="#F6CB43" stroke="none" />
+    <!-- 连接:芯片 → 曲线终点 -->
+    <path class="fade" style="--d:1650ms" stroke-width="2.4" stroke-dasharray="9 10" d="M 872 300 Q 812 340 758 470" />
+    <path class="fade" style="--d:1690ms" stroke-width="2.4" d="M 758 470 L 762 452 M 758 470 L 776 462" />
+  </g>
+  </g>
+</svg>

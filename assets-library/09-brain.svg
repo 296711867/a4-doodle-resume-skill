@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1254 1254" width="1254" height="1254">
+  <!-- 09 AI 大脑中枢 · 复刻自素材 16_05_58-1(黑底,大脑+数据库/文档/芯片/柱卡四卫星,黄点节点连线) -->
+  <style>
+    .draw { stroke-dasharray: 1; }
+    @media (prefers-reduced-motion: no-preference) {
+    .draw { animation: draw-in .7s cubic-bezier(.45,0,.35,1) var(--d,0ms) both; }
+    .dfill { animation: draw-in .9s cubic-bezier(.45,0,.35,1) var(--d,0ms) both, fill-in .5s ease calc(var(--d,0ms) + 300ms) both; }
+    .fade { animation: fade-in .6s ease var(--d,0ms) both; }
+    .pop { transform-box: fill-box; transform-origin: center; animation: pop-o .3s ease var(--d,0ms) both, pop-t .45s cubic-bezier(.34,1.56,.64,1) var(--d,0ms) both; }
+    @keyframes draw-in { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+    @keyframes fill-in { from { fill-opacity: 0; } to { fill-opacity: 1; } }
+    @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes pop-o { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes pop-t { from { transform: scale(.4); } to { transform: scale(1); } }
+    .ball { transform-box: fill-box; transform-origin: center; animation: ball 2.2s ease-in-out infinite alternate; }
+    @keyframes ball { from { transform: scale(1); } to { transform: scale(1.22); } }
+    .spark { transform-box: fill-box; transform-origin: 30% 90%; animation: spark 2.6s ease-in-out infinite; }
+    @keyframes spark { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: .35; transform: scale(.88); } }
+    .lp1 { animation-delay: -.9s; } .lp2 { animation-delay: -1.5s; }
+    }
+    @media print { * { animation: none !important; } }
+  </style>
+  <g id="scene" fill="none" stroke="#141414" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <!-- 连接线(白细线,先画被形压住) -->
+    <g stroke="#d8d8d2" stroke-width="2.5">
+      <path class="draw" style="--d:850ms" pathLength="1" d="M 372 292 Q 430 330 482 391"/>
+      <path class="draw" style="--d:900ms" pathLength="1" d="M 482 391 Q 532 452 562 516"/>
+      <path class="draw" style="--d:950ms" pathLength="1" d="M 852 578 Q 816 520 810 462"/>
+      <path class="draw" style="--d:1000ms" pathLength="1" d="M 810 454 Q 848 420 902 398"/>
+      <path class="draw" style="--d:1050ms" pathLength="1" d="M 297 508 L 297 848"/>
+      <path class="draw" style="--d:1100ms" pathLength="1" d="M 1008 496 L 1008 776"/>
+      <path class="draw" style="--d:1150ms" pathLength="1" d="M 856 806 Q 900 820 936 840"/>
+    </g>
+    <!-- 数据库(左上) -->
+    <g class="breathe">
+      <path class="dfill" style="--d:200ms" pathLength="1" fill="#fff" d="M 205 300 L 205 462 Q 205 494 297 494 Q 389 494 389 462 L 389 300"/>
+      <ellipse class="dfill" style="--d:160ms" pathLength="1" cx="297" cy="300" rx="92" ry="30" fill="#fff"/>
+      <path class="draw" style="--d:280ms" pathLength="1" d="M 205 354 Q 205 386 297 386 Q 389 386 389 354"/>
+      <path class="draw" style="--d:320ms" pathLength="1" d="M 205 408 Q 205 440 297 440 Q 389 440 389 408"/>
+      <circle class="pop" style="--d:420ms" cx="372" cy="332" r="6" fill="#F6CB43" stroke="none"/>
+      <circle class="pop" style="--d:460ms" cx="372" cy="386" r="6" fill="#F6CB43" stroke="none"/>
+      <circle class="pop" style="--d:500ms" cx="372" cy="440" r="6" fill="#F6CB43" stroke="none"/>
+    </g>
+    <!-- 文档卡(右上) -->
+    <g class="breathe lp1">
+      <rect class="dfill" style="--d:320ms" pathLength="1" x="905" y="300" width="145" height="190" rx="12" fill="#fff"/>
+      <path class="draw" style="--d:420ms" pathLength="1" d="M 1006 302 L 1048 344 L 1006 344"/>
+      <path class="draw" style="--d:480ms" pathLength="1" stroke-width="6" d="M 927 386 L 1030 385 M 927 420 L 1030 419 M 927 452 L 995 452"/>
+    </g>
+    <!-- 芯片(左下) -->
+    <g class="breathe lp2">
+      <g stroke="#d8d8d2" stroke-width="10">
+        <path class="draw" style="--d:520ms" pathLength="1" d="M 262 828 L 262 856 M 297 828 L 297 856 M 332 828 L 332 856"/>
+        <path class="draw" style="--d:560ms" pathLength="1" d="M 262 1004 L 262 1032 M 297 1004 L 297 1032 M 332 1004 L 332 1032"/>
+        <path class="draw" style="--d:600ms" pathLength="1" d="M 196 905 L 224 905 M 196 955 L 224 955"/>
+        <path class="draw" style="--d:640ms" pathLength="1" d="M 371 905 L 399 905 M 371 955 L 399 955"/>
+      </g>
+      <rect class="dfill" style="--d:440ms" pathLength="1" x="225" y="855" width="145" height="150" rx="28" fill="#fff"/>
+      <rect class="pop" style="--d:700ms" x="271" y="904" width="52" height="52" rx="8" fill="#F6CB43" stroke="none"/>
+    </g>
+    <!-- 柱状图卡(右下) -->
+    <g class="breathe">
+      <rect class="dfill" style="--d:560ms" pathLength="1" x="940" y="780" width="205" height="155" rx="18" fill="#fff"/>
+      <path class="draw" style="--d:680ms" pathLength="1" stroke-width="5" d="M 962 906 L 1124 906"/>
+      <rect class="pop" style="--d:740ms" x="973" y="864" width="26" height="42" rx="4" fill="#fff" stroke-width="5"/>
+      <rect class="pop" style="--d:780ms" x="1013" y="840" width="26" height="66" rx="4" fill="#fff" stroke-width="5"/>
+      <g class="bars"><rect class="pop" style="--d:820ms" x="1053" y="810" width="26" height="96" rx="4" fill="#F6CB43" stroke-width="5"/></g>
+    </g>
+    <!-- 大脑(中心) -->
+    <path class="dfill" style="--d:0ms" pathLength="1" fill="#fff" d="M 700 495 L 652 516 L 636 492 Q 560 470 512 520 Q 434 514 428 590 Q 356 622 396 700 Q 366 772 434 806 Q 446 880 522 876 Q 570 928 640 898 Q 678 922 700 930 Q 716 908 712 878 Q 760 902 800 868 Q 848 878 862 806 Q 930 762 884 690 Q 918 622 862 574 Q 842 496 762 508 Q 712 452 700 495 Z"/>
+    <!-- 脑内神经节点+沟回 -->
+    <path class="draw" style="--d:600ms" pathLength="1" stroke-width="4.5" d="M 543 591 Q 575 620 606 634 M 798 653 Q 762 630 736 622 M 566 772 Q 606 752 636 740 M 702 568 Q 688 612 668 648 M 486 690 Q 528 692 566 678"/>
+    <path class="draw" style="--d:640ms" pathLength="1" stroke-width="5" d="M 654 522 Q 664 560 652 598 Q 642 634 654 668"/>
+    <g class="ball"><circle class="pop" style="--d:660ms" cx="543" cy="591" r="14" fill="#F6CB43" stroke="none"/></g>
+    <g class="ball lp1"><circle class="pop" style="--d:700ms" cx="798" cy="653" r="14" fill="#F6CB43" stroke="none"/></g>
+    <circle class="pop" style="--d:740ms" cx="566" cy="772" r="11" fill="#fff" stroke-width="5"/>
+    <circle class="pop" style="--d:755ms" cx="702" cy="568" r="11" fill="#fff" stroke-width="5"/>
+    <circle class="pop" style="--d:770ms" cx="486" cy="690" r="11" fill="#fff" stroke-width="5"/>
+    <circle class="pop" style="--d:760ms" cx="736" cy="622" r="11" fill="#fff" stroke-width="5"/>
+    <circle class="pop" style="--d:780ms" cx="636" cy="740" r="11" fill="#fff" stroke-width="5"/>
+    <!-- AI 手绘字 -->
+    <path class="draw" style="--d:820ms" pathLength="1" stroke="#141414" stroke-width="13" d="M 596 740 Q 610 682 633 624 Q 652 682 666 740 M 610 702 Q 630 696 652 702 M 692 626 Q 688 684 694 740"/>
+    <!-- 两侧黄色火花 -->
+    <g class="spark" stroke="#F6CB43" stroke-width="13">
+      <path class="fade" style="--d:1200ms" d="M 386 522 L 420 548 M 424 480 L 450 514 M 456 452 L 476 490 M 362 562 L 396 582"/>
+    </g>
+    <g class="spark lp1" stroke="#F6CB43" stroke-width="13">
+      <path class="fade" style="--d:1300ms" d="M 886 762 L 922 782 M 898 802 L 938 814 M 866 830 L 898 856"/>
+    </g>
+    <!-- 线上节点 -->
+    <g class="ball lp2"><circle class="pop" style="--d:1250ms" cx="482" cy="391" r="13" fill="#F6CB43" stroke="none"/></g>
+    <circle class="pop" style="--d:1300ms" cx="810" cy="458" r="10" fill="#050505" stroke="#d8d8d2" stroke-width="5"/>
+    <circle class="pop" style="--d:1340ms" cx="297" cy="772" r="10" fill="#050505" stroke="#d8d8d2" stroke-width="5"/>
+    <g class="ball lp2"><circle class="pop" style="--d:1380ms" cx="1005" cy="712" r="12" fill="#F6CB43" stroke="none"/></g>
+  </g>
+</svg>

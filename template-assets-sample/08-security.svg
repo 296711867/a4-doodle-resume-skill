@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="75 365 1105 590" width="1105" height="590">
+  
+  
+  
+  <g id="scene-08">
+  <g fill="none" stroke="#141414" stroke-width="6.0" stroke-linecap="round" stroke-linejoin="round">
+    
+    <g class="tw fade" style="--d:1800ms" stroke="#b4b4aa" stroke-width="5.0" stroke-linecap="round">
+      <path d="M 566 418 L 556 392 M 612 410 L 614 382 M 656 420 L 668 396" />
+    </g>
+    <path class="fade" style="--d:1690ms" stroke-width="5.0" d="M 1108 778 L 1120 766 M 1140 806 L 1154 798" />
+    <path class="dfill draw" style="--d:0ms" pathLength="1" fill="#fff"
+      d="M 609 470 Q 530 500 462 508 Q 456 640 470 700 Q 486 776 560 826 L 609 830 L 660 824 Q 732 774 748 698 Q 760 638 756 508 Q 688 500 609 470 Z" />
+    <path class="fade" style="--d:200ms" stroke-width="4.5" d="M 480 520 Q 476 620 488 686" />
+    <g class="pop ball" style="--d:250ms">
+      <path fill="#F6CB43" stroke-width="5.0" d="M 613 598 Q 584 600 584 628 Q 584 648 602 656 L 596 700 Q 596 712 613 712 Q 630 712 630 700 L 626 655 Q 643 646 643 627 Q 642 600 613 598 Z" />
+    </g>
+
+    
+    <g class="cloud">
+      <path class="dfill draw" style="--d:300ms" pathLength="1" fill="#fff"
+        d="M 128 572 Q 96 566 104 536 Q 98 504 140 500 Q 152 468 194 476 Q 214 452 248 472 Q 282 466 288 504 Q 318 514 306 544 Q 318 570 288 574 Q 240 586 188 580 Q 152 582 128 572 Z" />
+    </g>
+
+    
+    <rect class="dfill draw" style="--d:400ms" pathLength="1" x="162" y="715" width="232" height="54" rx="10" fill="#fff" />
+    <rect class="dfill draw" style="--d:480ms" pathLength="1" x="161" y="793" width="231" height="53" rx="10" fill="#fff" />
+    <rect class="dfill draw" style="--d:560ms" pathLength="1" x="162" y="871" width="233" height="53" rx="10" fill="#fff" />
+    <path class="fade" style="--d:640ms" stroke-width="5.0" d="M 296 742 L 306 742 M 314 742 L 324 742 M 296 820 L 306 820 M 314 820 L 324 820 M 296 897 L 306 897 M 314 897 L 324 897" />
+    <circle class="pop led" style="--d:680ms" cx="327" cy="742" r="8" fill="#F6CB43" stroke="none" />
+    <circle class="pop led l2" style="--d:710ms" cx="327" cy="819" r="8" fill="#F6CB43" stroke="none" />
+    <circle class="pop led l3" style="--d:740ms" cx="327" cy="897" r="8" fill="#F6CB43" stroke="none" />
+    <path class="fade" style="--d:700ms" stroke-width="5.0" d="M 348 742 L 376 741 M 348 819 L 374 818 M 348 897 L 376 896" />
+
+    
+    <rect class="dfill draw" style="--d:800ms" pathLength="1" x="911" y="478" width="252" height="174" rx="14" fill="#fff" />
+    <path class="draw" style="--d:900ms" pathLength="1" stroke-width="5.0" d="M 913 520 Q 1037 517 1161 520" />
+    <circle class="pop" style="--d:960ms" cx="936" cy="499" r="6" fill="#141414" stroke="none" />
+    <circle class="pop" style="--d:990ms" cx="960" cy="499" r="6" fill="#141414" stroke="none" />
+    <circle class="pop" style="--d:1020ms" cx="984" cy="499" r="6" fill="#141414" stroke="none" />
+    <path class="draw" style="--d:1060ms" pathLength="1" stroke-width="5.5" d="M 951 614 L 1009 583 L 1063 592 L 1118 549" />
+    <circle class="pop" style="--d:1140ms" cx="951" cy="614" r="8" fill="#F6CB43" stroke-width="4.5" />
+    <circle class="pop" style="--d:1170ms" cx="1009" cy="583" r="8" fill="#F6CB43" stroke-width="4.5" />
+    <circle class="pop" style="--d:1200ms" cx="1063" cy="592" r="8" fill="#F6CB43" stroke-width="4.5" />
+    <circle class="pop" style="--d:1230ms" cx="1123" cy="554" r="8" fill="#F6CB43" stroke-width="4.5" />
+
+    
+    <path class="draw" style="--d:1300ms" pathLength="1" stroke-width="5.5" d="M 712 856 L 712 826 Q 712 800 746 800 Q 780 800 780 826 L 780 856" />
+    <rect class="dfill draw" style="--d:1360ms" pathLength="1" x="695" y="856" width="102" height="81" rx="12" fill="#fff" />
+    <circle class="draw" style="--d:1440ms" pathLength="1" stroke-width="5.0" cx="746" cy="888" r="11" />
+    <path class="fade" style="--d:1500ms" stroke-width="5.0" d="M 746 898 L 746 914" />
+
+    
+    <path class="dfill draw" style="--d:1540ms" pathLength="1" fill="#fff"
+      d="M 880 936 Q 876 836 948 782 Q 1010 738 1082 762 Q 1152 786 1158 930 Q 1158 938 1148 936 Z" />
+    <path class="fade" style="--d:1640ms" stroke-width="5.0" d="M 930 822 L 942 834 M 1010 794 L 1010 810 M 1090 822 L 1078 834 M 960 796 L 966 812 M 1062 794 L 1056 810" />
+    <g class="needle">
+      <path class="pop" style="--d:1720ms" fill="#F6CB43" stroke-width="5.0" d="M 1014 866 L 1074 832 L 1030 884 Q 1018 876 1014 866 Z" />
+    </g>
+    <circle class="pop" style="--d:1800ms" cx="1014" cy="880" r="15" fill="#F6CB43" stroke-width="5.0" />
+
+    
+    <path class="fade" style="--d:1880ms" stroke="#8f8f85" stroke-width="4.5" stroke-dasharray="10 12" d="M 210 588 Q 216 650 220 712" />
+    <path class="fade" style="--d:1920ms" stroke="#8f8f85" stroke-width="4.5" stroke-dasharray="10 12" d="M 396 760 Q 428 790 458 820" />
+    <path class="fade" style="--d:1960ms" stroke="#8f8f85" stroke-width="4.5" stroke-dasharray="10 12" d="M 396 900 Q 440 930 460 930 L 530 930" />
+    <circle class="pop" style="--d:2000ms" cx="458" cy="930" r="10" fill="#fff" stroke-width="5.0" />
+    <path class="fade" style="--d:2040ms" stroke="#8f8f85" stroke-width="4.5" stroke-dasharray="10 12" d="M 660 832 Q 662 872 664 912 L 692 912" />
+    <path class="fade" style="--d:2080ms" stroke="#8f8f85" stroke-width="4.5" stroke-dasharray="10 12" d="M 798 912 L 876 912" />
+    <path class="fade" style="--d:2120ms" stroke="#8f8f85" stroke-width="4.5" stroke-dasharray="10 12" d="M 1040 660 Q 1010 710 1000 758" />
+    <path class="fade" style="--d:2140ms" stroke="#8f8f85" stroke-width="4.5" stroke-dasharray="10 12" d="M 336 540 Q 400 512 456 512" />
+    <path class="fade" style="--d:2160ms" stroke="#8f8f85" stroke-width="4.5" stroke-dasharray="10 12" d="M 762 520 Q 840 496 906 500" />
+    <circle class="pop" style="--d:2020ms" cx="660" cy="908" r="9" fill="#fff" stroke-width="5.0" />
+    <path class="fade pulse" style="--d:2160ms" stroke="#F6CB43" stroke-width="6.0" pathLength="100" stroke-dasharray="0.01 11" d="M 210 588 Q 216 650 220 712" />
+  </g>
+  </g>
+  
+</svg>

@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1254 1254" width="1254" height="1254">
+  <!-- 14 智能体循环 · 复刻自素材 16_06_05-6(黑底,机器人头+齿轮居中,五节点顺时针弧箭头循环) -->
+  <style>
+    .draw { stroke-dasharray: 1; }
+    @media (prefers-reduced-motion: no-preference) {
+    .draw { animation: draw-in .7s cubic-bezier(.45,0,.35,1) var(--d,0ms) both; }
+    .dfill { animation: draw-in .9s cubic-bezier(.45,0,.35,1) var(--d,0ms) both, fill-in .5s ease calc(var(--d,0ms) + 300ms) both; }
+    .fade { animation: fade-in .6s ease var(--d,0ms) both; }
+    .pop { transform-box: fill-box; transform-origin: center; animation: pop-o .3s ease var(--d,0ms) both, pop-t .45s cubic-bezier(.34,1.56,.64,1) var(--d,0ms) both; }
+    @keyframes draw-in { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+    @keyframes fill-in { from { fill-opacity: 0; } to { fill-opacity: 1; } }
+    @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes pop-o { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes pop-t { from { transform: scale(.4); } to { transform: scale(1); } }
+    .ball { transform-box: fill-box; transform-origin: center; animation: ball 2.2s ease-in-out infinite alternate; }
+    @keyframes ball { from { transform: scale(1); } to { transform: scale(1.22); } }
+    .spark { transform-box: fill-box; transform-origin: 30% 90%; animation: spark 2.6s ease-in-out infinite; }
+    @keyframes spark { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: .35; transform: scale(.88); } }
+    .gear { transform-box: fill-box; transform-origin: center; animation: spin 24s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .bars { transform-box: fill-box; transform-origin: 50% 100%; animation: bars 2.8s ease-in-out infinite alternate; }
+    @keyframes bars { from { transform: scaleY(.9); } to { transform: scaleY(1.05); } }
+    .lp1 { animation-delay: -.9s; } .lp2 { animation-delay: -1.5s; }
+    }
+    @media print { * { animation: none !important; } }
+  </style>
+  <g id="scene" fill="none" stroke="#141414" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <!-- 弧形循环箭头 -->
+    <g stroke="#55554f" stroke-width="6.5">
+      <path class="draw" style="--d:1000ms" pathLength="1" d="M 598 302 Q 706 268 796 328 M 796 330 L 772 320 M 796 330 L 782 350"/>
+      <path class="draw" style="--d:1100ms" pathLength="1" d="M 1014 550 Q 1078 600 1062 664 M 1062 668 L 1078 650 M 1062 668 L 1042 654"/>
+      <path class="draw" style="--d:1200ms" pathLength="1" d="M 898 954 Q 826 1000 796 1026 M 794 1028 L 818 1024 M 794 1028 L 810 1010"/>
+      <path class="draw" style="--d:1300ms" pathLength="1" d="M 436 1046 Q 330 1018 264 934 M 262 930 L 284 938 M 262 930 L 278 912"/>
+      <path class="draw" style="--d:1400ms" pathLength="1" d="M 236 588 Q 216 490 264 432 M 266 428 L 244 436 M 266 428 L 282 448"/>
+    </g>
+    <!-- 黄文档卡(上) -->
+    <g class="breathe">
+      <rect class="dfill" style="--d:300ms" pathLength="1" x="266" y="249" width="324" height="200" rx="20" fill="#fff"/>
+      <path class="dfill" style="--d:440ms" pathLength="1" fill="#F6CB43" stroke="#141414" stroke-width="6" d="M 300 285 L 352 285 L 386 319 L 386 400 L 300 400 Z"/>
+      <path class="draw" style="--d:520ms" pathLength="1" stroke-width="5" d="M 352 285 L 352 319 L 386 319"/>
+      <path class="draw" style="--d:560ms" pathLength="1" stroke-width="8" d="M 412 316 L 556 315 M 412 352 L 556 351 M 412 388 L 520 388"/>
+    </g>
+    <!-- 勾选卡(右) -->
+    <g class="breathe lp1">
+      <rect class="dfill" style="--d:420ms" pathLength="1" x="812" y="323" width="290" height="216" rx="20" fill="#fff"/>
+      <rect class="pop" style="--d:560ms" x="842" y="366" width="46" height="46" rx="10" fill="#F6CB43" stroke-width="6"/>
+      <path class="draw" style="--d:620ms" pathLength="1" stroke-width="6" d="M 852 389 L 863 400 L 882 376"/>
+      <path class="draw" style="--d:660ms" pathLength="1" stroke-width="7" d="M 912 382 L 1064 381 M 912 410 L 1064 409"/>
+      <rect class="pop" style="--d:700ms" x="842" y="450" width="46" height="46" rx="10" fill="#fff" stroke-width="6"/>
+      <path class="draw" style="--d:740ms" pathLength="1" stroke-width="6" d="M 852 473 L 863 484 L 882 460"/>
+      <path class="draw" style="--d:780ms" pathLength="1" stroke-width="7" d="M 912 466 L 1064 465 M 912 494 L 1064 493"/>
+    </g>
+    <!-- 浏览器图表卡(右下) -->
+    <g class="breathe lp2">
+      <rect class="dfill" style="--d:540ms" pathLength="1" x="866" y="681" width="301" height="268" rx="20" fill="#fff"/>
+      <path class="draw" style="--d:660ms" pathLength="1" stroke-width="6" d="M 868 733 L 1165 733"/>
+      <circle class="pop" style="--d:700ms" cx="898" cy="707" r="8" fill="#F6CB43" stroke="none"/>
+      <circle class="pop" style="--d:730ms" cx="932" cy="707" r="7" fill="#141414" stroke="none"/>
+      <circle class="pop" style="--d:760ms" cx="966" cy="707" r="7" fill="#141414" stroke="none"/>
+      <path class="draw" style="--d:800ms" pathLength="1" stroke-width="7" d="M 900 866 Q 1000 828 1108 764 M 1108 764 L 1084 768 M 1108 764 L 1096 782"/>
+      <rect class="pop" style="--d:840ms" x="920" y="880" width="26" height="40" rx="4" fill="#fff" stroke-width="5"/>
+      <rect class="pop" style="--d:870ms" x="962" y="856" width="26" height="64" rx="4" fill="#fff" stroke-width="5"/>
+      <rect class="pop" style="--d:900ms" x="1004" y="830" width="26" height="90" rx="4" fill="#fff" stroke-width="5"/>
+      <g class="bars"><rect class="pop" style="--d:930ms" x="1046" y="804" width="26" height="116" rx="4" fill="#F6CB43" stroke-width="5"/></g>
+      <path class="draw" style="--d:860ms" pathLength="1" stroke-width="5" d="M 902 922 L 1130 922"/>
+    </g>
+    <!-- 信封卡(下) -->
+    <g class="breathe">
+      <rect class="dfill" style="--d:660ms" pathLength="1" x="443" y="951" width="342" height="161" rx="20" fill="#fff"/>
+      <rect class="pop" style="--d:780ms" x="473" y="1000" width="105" height="80" rx="8" fill="#fff" stroke-width="6"/>
+      <path class="pop" style="--d:840ms" d="M 478 1004 L 525 1044 L 573 1004 Z" fill="#F6CB43" stroke="none"/>
+      <path class="draw" style="--d:880ms" pathLength="1" stroke-width="8" d="M 605 1030 L 748 1029 M 605 1062 L 715 1062"/>
+    </g>
+    <!-- 服务器堆(左) -->
+    <g class="breathe lp1">
+      <rect class="dfill" style="--d:740ms" pathLength="1" x="114" y="595" width="242" height="72" rx="16" fill="#fff"/>
+      <rect class="dfill" style="--d:790ms" pathLength="1" x="114" y="673" width="242" height="72" rx="16" fill="#fff"/>
+      <rect class="dfill" style="--d:840ms" pathLength="1" x="114" y="751" width="242" height="72" rx="16" fill="#fff"/>
+      <circle class="pop" style="--d:900ms" cx="142" cy="631" r="6" fill="#F6CB43" stroke="none"/>
+      <circle class="pop" style="--d:930ms" cx="142" cy="709" r="6" fill="#F6CB43" stroke="none"/>
+      <circle class="pop" style="--d:960ms" cx="142" cy="787" r="6" fill="#F6CB43" stroke="none"/>
+      <path class="draw" style="--d:980ms" pathLength="1" stroke-width="6" d="M 170 622 L 320 621 M 170 644 L 282 644 M 170 700 L 320 699 M 170 722 L 282 722 M 170 778 L 320 777 M 170 800 L 282 800"/>
+    </g>
+    <!-- 中央机器人头 -->
+    <rect class="pop" style="--d:200ms" x="487" y="640" width="26" height="80" rx="13" fill="#fff" stroke-width="6"/>
+    <rect class="pop" style="--d:240ms" x="727" y="640" width="26" height="80" rx="13" fill="#fff" stroke-width="6"/>
+    <path class="draw" style="--d:100ms" pathLength="1" stroke="#d8d8d2" stroke-width="9" d="M 620 570 L 620 530"/>
+    <rect class="dfill" style="--d:0ms" pathLength="1" x="514" y="572" width="212" height="173" rx="48" fill="#fff"/>
+    <rect class="fade" style="--d:250ms" x="532" y="606" width="176" height="114" rx="38" fill="#0a0a0a" stroke="none"/>
+    <g class="ball"><circle class="pop" style="--d:400ms" cx="578" cy="663" r="13" fill="#F6CB43" stroke="none"/></g>
+    <g class="ball lp1"><circle class="pop" style="--d:440ms" cx="662" cy="663" r="13" fill="#F6CB43" stroke="none"/></g>
+    <g class="ball lp2"><circle class="pop" style="--d:300ms" cx="620" cy="512" r="17" fill="#F6CB43" stroke="none"/></g>
+    <g class="spark" stroke="#F6CB43" stroke-width="12">
+      <path class="fade" style="--d:1500ms" d="M 748 588 L 776 566 M 758 626 L 790 612"/>
+    </g>
+    <!-- 齿轮 -->
+    <g class="gear">
+      <path class="dfill" style="--d:480ms" pathLength="1" transform="translate(700,795)" fill="#fff" d="M 0.6 -52.0 L 14.4 -72.6 L 28.3 -68.4 L 28.4 -43.6 L 37.2 -36.3 L 61.5 -41.1 L 68.4 -28.3 L 50.9 -10.7 L 52.0 0.6 L 72.6 14.4 L 68.4 28.3 L 43.6 28.4 L 36.3 37.2 L 41.1 61.5 L 28.3 68.4 L 10.7 50.9 L -0.6 52.0 L -14.4 72.6 L -28.3 68.4 L -28.4 43.6 L -37.2 36.3 L -61.5 41.1 L -68.4 28.3 L -50.9 10.7 L -52.0 -0.6 L -72.6 -14.4 L -68.4 -28.3 L -43.6 -28.4 L -36.3 -37.2 L -41.1 -61.5 L -28.3 -68.4 L -10.7 -50.9 Z"/>
+      <circle class="fade" style="--d:600ms" cx="700" cy="795" r="24" fill="#050505" stroke="#d8d8d2" stroke-width="5"/>
+    </g>
+  </g>
+</svg>

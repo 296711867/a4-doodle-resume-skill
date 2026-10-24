@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1254 700" width="1254" height="700">
+  <!-- A1 神经网络对话 · 原创:左侧人问(气泡),中间三层神经网络(4-6-3 节点连线,信号流动),右侧 AI 答(机器人+回答气泡) -->
+  <style>
+    .draw { stroke-dasharray: 1; stroke-dashoffset: 1; }
+    .pop { transform: scale(0.4); opacity: 0; transform-box: fill-box; transform-origin: center; }
+    .fade { opacity: 0; }
+    .dfill { fill-opacity: 0; }
+    @media (prefers-reduced-motion: no-preference) {
+      .draw { transition: stroke-dashoffset 0.7s cubic-bezier(0.45,0,0.35,1) var(--d,0ms); }
+      .in .draw { stroke-dashoffset: 0; }
+      .dfill { transition: stroke-dashoffset 0.9s cubic-bezier(0.45,0,0.35,1) var(--d,0ms), fill-opacity 0.5s ease calc(var(--d,0ms) + 300ms); }
+      .in .dfill { fill-opacity: 1; }
+      .fade { transition: opacity 0.6s ease var(--d,0ms); }
+      .in .fade { opacity: 1; }
+      .pop { transition: opacity 0.3s ease var(--d,0ms), transform 0.45s cubic-bezier(0.34,1.56,0.64,1) var(--d,0ms); }
+      .in .pop { opacity: 1; transform: scale(1); }
+      .in .sig { animation: sigflow 2.6s linear infinite; }
+      .in .sig.s2 { animation-delay: -0.9s; }
+      .in .sig.s3 { animation-delay: -1.8s; }
+      @keyframes sigflow { to { stroke-dashoffset: -110; } }
+      .in .node { transform-box: fill-box; transform-origin: center; animation: nodeglow 3s ease-in-out infinite; }
+      .in .node.n2 { animation-delay: -1s; }
+      .in .node.n3 { animation-delay: -2s; }
+      @keyframes nodeglow { 0%,100% { opacity: 1; } 50% { opacity: 0.55; } }
+      .in .think { animation: thinkdot 2.2s ease-in-out infinite; }
+      .in .think.t2 { animation-delay: 0.3s; }
+      .in .think.t3 { animation-delay: 0.6s; }
+      @keyframes thinkdot { 0%,60%,100% { opacity: 1; } 30% { opacity: 0.15; } }
+      .in .cloud { animation: bob 6s ease-in-out infinite alternate; }
+      @keyframes bob { from { transform: translateY(-3px); } to { transform: translateY(4px); } }
+    }
+  </style>
+  <g id="scene-A1">
+  <g fill="none" stroke="#141414" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- 人的问题气泡 -->
+    <path class="draw" style="--d:0ms" pathLength="1" fill="#fff" d="M 60 300 Q 56 288 70 286 L 250 282 Q 264 281 266 294 L 272 360 Q 274 372 260 374 L 130 380 L 108 408 L 106 378 Q 62 374 64 356 Z" />
+    <path class="fade" style="--d:200ms" stroke-width="2.2" d="M 96 316 L 236 312 M 96 336 L 210 333" />
+    <path class="fade" style="--d:260ms" stroke-width="2.2" d="M 96 354 L 150 352" />
+    <circle class="pop think" style="--d:300ms" cx="236" cy="352" r="5" fill="#141414" stroke="none" />
+
+    <!-- 神经网络:输入层 3 / 隐层 4 / 输出层 2 -->
+    <!-- 输入层 x=360 -->
+    <circle class="pop node" style="--d:400ms" cx="360" cy="330" r="20" fill="#fff" stroke-width="3.5" />
+    <circle class="pop node" style="--d:440ms" cx="360" cy="400" r="20" fill="#fff" stroke-width="3.5" />
+    <circle class="pop node" style="--d:480ms" cx="360" cy="470" r="20" fill="#fff" stroke-width="3.5" />
+    <!-- 隐层 x=560 -->
+    <circle class="pop node n2" style="--d:600ms" cx="560" cy="270" r="22" fill="#fff" stroke-width="3.5" />
+    <circle class="pop node n2" style="--d:630ms" cx="560" cy="345" r="22" fill="#fff" stroke-width="3.5" />
+    <circle class="pop node n2" style="--d:660ms" cx="560" cy="420" r="22" fill="#fff" stroke-width="3.5" />
+    <circle class="pop node n2" style="--d:690ms" cx="560" cy="495" r="22" fill="#fff" stroke-width="3.5" />
+    <!-- 输出层 x=760 -->
+    <circle class="pop node n3" style="--d:800ms" cx="760" cy="350" r="20" fill="#fff" stroke-width="3.5" />
+    <circle class="pop node n3" style="--d:840ms" cx="760" cy="440" r="20" fill="#fff" stroke-width="3.5" />
+    <!-- 连线(细,灰) -->
+    <g class="fade" style="--d:900ms" stroke="#8f8f85" stroke-width="1.8">
+      <path d="M 380 324 L 538 272 M 380 338 L 538 340 M 380 352 L 538 414 M 380 366 L 538 486
+               M 380 394 L 538 278 M 380 402 L 538 350 M 380 414 L 538 418 M 380 428 L 538 488
+               M 380 458 L 538 296 M 380 468 L 538 362 M 380 478 L 538 428 M 380 488 L 538 492
+               M 582 280 L 742 344 M 582 348 L 742 352 M 582 416 L 742 358 M 582 490 L 742 362
+               M 582 286 L 742 434 M 582 354 L 742 438 M 582 424 L 742 442 M 582 494 L 742 446" />
+    </g>
+    <!-- 黄色信号脉冲(3 路径流动) -->
+    <path class="fade sig" style="--d:1100ms" stroke="#F6CB43" stroke-width="5" pathLength="100" stroke-dasharray="0.01 11" d="M 380 340 L 538 340 L 742 352" />
+    <path class="fade sig s2" style="--d:1160ms" stroke="#F6CB43" stroke-width="5" pathLength="100" stroke-dasharray="0.01 11" d="M 380 414 L 538 418 L 742 440" />
+    <path class="fade sig s3" style="--d:1220ms" stroke="#F6CB43" stroke-width="5" pathLength="100" stroke-dasharray="0.01 11" d="M 380 470 L 538 490 L 742 434" />
+
+    <!-- 输出 → AI 回答气泡 -->
+    <path class="fade" style="--d:1300ms" stroke-width="2.6" stroke-dasharray="9 10" d="M 790 388 Q 836 380 872 372" />
+    <path class="fade" style="--d:1340ms" stroke-width="2.6" d="M 872 372 L 856 366 M 872 372 L 858 382" />
+    <path class="dfill draw" style="--d:1400ms" pathLength="1" fill="#fff"
+      d="M 896 300 Q 892 288 906 286 L 1160 280 Q 1174 279 1176 292 L 1184 380 Q 1186 392 1172 394 L 1000 402 L 1024 432 L 962 406 Q 898 402 896 388 Z" />
+    <path class="fade" style="--d:1560ms" stroke-width="2.2" d="M 928 314 L 1104 310 M 928 336 L 1140 332 M 928 358 L 1116 354" />
+    <rect class="pop" style="--d:1620ms" x="928" y="372" width="64" height="17" rx="8" fill="#F6CB43" stroke="none" />
+
+    <!-- 顶部云标签 + 黄火花 -->
+    <g class="cloud">
+      <path class="dfill draw" style="--d:1750ms" pathLength="1" fill="#fff"
+        d="M 560 130 Q 534 124 544 100 Q 536 72 572 68 Q 582 40 620 48 Q 640 24 676 42 Q 712 34 720 72 Q 750 80 740 110 Q 756 130 728 136 Q 690 148 640 142 Q 596 146 560 130 Z" />
+    </g>
+    <text class="fade" style="--d:1900ms" x="642" y="108" text-anchor="middle" font-size="30" font-weight="700"
+      font-family="inherit" fill="#141414" stroke="none">AI</text>
+    <g class="fade" style="--d:1980ms" stroke-width="5" stroke-linecap="round">
+      <path d="M 780 58 L 792 40" />
+      <path d="M 812 74 L 828 64" />
+    </g>
+  </g>
+  </g>
+</svg>

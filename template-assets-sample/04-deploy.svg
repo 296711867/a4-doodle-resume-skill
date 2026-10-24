@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="50 480 1180 400" width="1180" height="400">
+  
+  
+  
+  <g id="scene-04">
+  <g fill="none" stroke="#141414" stroke-width="10.2" stroke-linecap="round" stroke-linejoin="round">
+    
+    <path class="dfill draw" style="--d:0ms" pathLength="1" fill="#fff"
+      d="M 97 655 Q 95 649 102 648 L 224 644 Q 232 643 234 650 L 242 738 Q 242 745 235 745 L 110 752 Q 103 752 103 745 Z" />
+    <path class="fade" style="--d:250ms" stroke-width="10.2" d="M 160 690 L 142 712 L 160 734 M 182 686 L 166 736 M 198 690 L 216 712 L 198 734" />
+    <path class="dfill draw" style="--d:150ms" pathLength="1" fill="#fff"
+      d="M 106 750 L 74 782 Q 70 787 78 788 L 292 774 Q 298 773 296 766 L 258 742" />
+    <circle class="pop" style="--d:300ms" cx="196" cy="764" r="9" fill="#F6CB43" stroke="none" />
+    <g class="tw fade" style="--d:400ms" stroke="#8f8f85" stroke-width="8.5" stroke-linecap="round">
+      <path d="M 76 596 L 82 612 M 106 588 L 110 604" />
+    </g>
+
+    
+    <g class="pop" style="--d:500ms">
+      <path fill="#fff" stroke-width="10.2" d="M 406 634 L 449 630 L 490 644 L 490 700 L 449 712 L 408 700 Z" />
+      <path stroke-width="7.65" d="M 421 642 L 421 696 M 434 640 L 434 695 M 447 638 L 447 694 M 460 638 L 461 695 M 473 640 L 473 698" />
+      <rect x="473" y="658" width="13" height="15" rx="3" fill="#F6CB43" stroke="none" />
+    </g>
+    <g class="pop" style="--d:600ms">
+      <path fill="#fff" stroke-width="10.2" d="M 373 712 L 418 708 L 460 722 L 460 778 L 418 791 L 375 778 Z" />
+      <path stroke-width="7.65" d="M 388 720 L 388 774 M 401 718 L 401 772 M 414 716 L 414 771 M 427 716 L 427 772 M 440 718 L 441 774" />
+    </g>
+    <g class="pop" style="--d:700ms">
+      <path fill="#fff" stroke-width="10.2" d="M 470 718 L 512 716 L 547 730 L 547 780 L 512 792 L 472 780 Z" />
+      <path stroke-width="7.65" d="M 484 726 L 484 778 M 497 724 L 497 776 M 510 723 L 510 776 M 523 724 L 523 778 M 536 726 L 536 780" />
+    </g>
+
+    
+    <g class="cloud">
+      <path class="dfill draw" style="--d:900ms" pathLength="1" fill="#fff"
+        d="M 748 762 Q 712 758 720 726 Q 712 692 754 686 Q 764 648 812 656 Q 838 630 878 650 Q 918 644 926 684 Q 960 694 950 728 Q 964 754 928 758 Q 878 770 812 766 Q 774 770 748 762 Z" />
+    </g>
+    <g class="tw fade" style="--d:1050ms" stroke="#F6CB43" stroke-width="22.1" stroke-linecap="round">
+      <path d="M 756 600 L 766 566" />
+    </g>
+    <g class="tw t2 fade" style="--d:1090ms" stroke="#F6CB43" stroke-width="18.7" stroke-linecap="round">
+      <path d="M 700 634 Q 712 622 726 618" />
+    </g>
+    <path class="fade" style="--d:1090ms" stroke="#141414" stroke-width="8.5" stroke-linecap="round" d="M 816 606 L 820 570" />
+
+    
+    <g class="pop" style="--d:1250ms">
+      <path fill="#fff" stroke-width="10.2" d="M 1069 522 L 1160 508 L 1212 522 L 1212 570 L 1160 582 L 1069 570 Z" />
+      <path stroke-width="7.65" d="M 1069 540 L 1160 530 L 1212 542 M 1082 554 L 1146 551 M 1082 564 L 1138 562 M 1160 534 L 1160 578" />
+      <circle cx="1170" cy="546" r="8" fill="#F6CB43" stroke="none" class="led" />
+    </g>
+    <g class="pop" style="--d:1350ms">
+      <path fill="#fff" stroke-width="10.2" d="M 1069 667 L 1160 653 L 1211 667 L 1211 713 L 1160 725 L 1069 713 Z" />
+      <path stroke-width="7.65" d="M 1069 685 L 1160 675 L 1211 687 M 1082 699 L 1146 696 M 1082 709 L 1138 707 M 1160 679 L 1160 723" />
+      <circle cx="1170" cy="691" r="8" fill="#F6CB43" stroke="none" class="led l2" />
+    </g>
+    <g class="pop" style="--d:1450ms">
+      <path fill="#fff" stroke-width="10.2" d="M 1069 808 L 1160 794 L 1212 808 L 1212 854 L 1160 866 L 1069 854 Z" />
+      <path stroke-width="7.65" d="M 1069 826 L 1160 816 L 1212 828 M 1082 840 L 1146 837 M 1082 850 L 1138 848 M 1160 820 L 1160 864" />
+      <circle cx="1170" cy="831" r="8" fill="#F6CB43" stroke="none" class="led l3" />
+    </g>
+
+    
+    <path class="fade" style="--d:1600ms" stroke="#8f8f85" stroke-width="8.5" stroke-dasharray="13 15" d="M 306 706 Q 336 700 358 706" />
+    <path class="fade" style="--d:1640ms" stroke="#8f8f85" stroke-width="8.5" d="M 358 706 L 342 696 M 358 706 L 342 714" />
+    <path class="fade pulse" style="--d:1700ms" stroke="#F6CB43" stroke-width="11.05" pathLength="100" stroke-dasharray="0.01 11" d="M 306 706 Q 336 700 358 706" />
+    <path class="fade" style="--d:1680ms" stroke="#8f8f85" stroke-width="8.5" stroke-dasharray="13 15" d="M 612 700 Q 656 706 692 708" />
+    <path class="fade" style="--d:1720ms" stroke="#8f8f85" stroke-width="8.5" d="M 692 708 L 676 698 M 692 708 L 676 716" />
+    <path class="fade pulse p2" style="--d:1760ms" stroke="#F6CB43" stroke-width="11.05" pathLength="100" stroke-dasharray="0.01 11" d="M 612 700 Q 656 706 692 708" />
+    <path class="fade" style="--d:1760ms" stroke="#8f8f85" stroke-width="8.5" stroke-dasharray="13 15" d="M 956 700 Q 1000 660 1054 545" />
+    <path class="fade" style="--d:1800ms" stroke="#8f8f85" stroke-width="8.5" d="M 1054 545 L 1036 552 M 1054 545 L 1050 562" />
+    <path class="fade" style="--d:1820ms" stroke="#8f8f85" stroke-width="8.5" stroke-dasharray="13 15" d="M 956 706 Q 1008 700 1054 694" />
+    <path class="fade" style="--d:1860ms" stroke="#8f8f85" stroke-width="8.5" d="M 1054 694 L 1038 686 M 1054 694 L 1040 702" />
+    <path class="fade" style="--d:1880ms" stroke="#8f8f85" stroke-width="8.5" stroke-dasharray="13 15" d="M 956 716 Q 1002 752 1050 828" />
+    <path class="fade" style="--d:1920ms" stroke="#8f8f85" stroke-width="8.5" d="M 1050 828 L 1034 820 M 1050 828 L 1048 844" />
+    <path class="fade pulse p3" style="--d:1960ms" stroke="#F6CB43" stroke-width="11.05" pathLength="100" stroke-dasharray="0.01 11" d="M 956 700 Q 1010 690 1054 692" />
+  </g>
+  </g>
+  
+</svg>

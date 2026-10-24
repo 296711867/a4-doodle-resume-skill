@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1254 1254" width="1254" height="1254">
+  <!-- 01 后台仪表盘 · 复刻自素材 ChatGPT 图 1(黑底白面板,黄=首页胶囊/头像/饼角/折线端点/勾选框) -->
+  <style>
+    @media (prefers-reduced-motion: no-preference) {
+    .draw { stroke-dasharray: 1; stroke-dashoffset: 1; }
+    .pop { transform: scale(0.4); opacity: 0; transform-box: fill-box; transform-origin: center; }
+    .fade { opacity: 0; }
+    .dfill { fill-opacity: 0; }
+      .draw { transition: stroke-dashoffset 0.7s cubic-bezier(0.45,0,0.35,1) var(--d,0ms); }
+      .in .draw { stroke-dashoffset: 0; }
+      .dfill { transition: stroke-dashoffset 0.9s cubic-bezier(0.45,0,0.35,1) var(--d,0ms), fill-opacity 0.5s ease calc(var(--d,0ms) + 300ms); }
+      .in .dfill { fill-opacity: 1; }
+      .fade { transition: opacity 0.6s ease var(--d,0ms); }
+      .in .fade { opacity: 1; }
+      .pop { transition: opacity 0.3s ease var(--d,0ms), transform 0.45s cubic-bezier(0.34,1.56,0.64,1) var(--d,0ms); }
+      .in .pop { opacity: 1; transform: scale(1); }
+      .in .ball { animation: ball-pulse 2.2s ease-in-out infinite alternate; }
+      @keyframes ball-pulse { from { transform: scale(1); } to { transform: scale(1.22); } }
+      .in .tw { animation: twinkle 2.4s ease-in-out infinite; }
+      @keyframes twinkle { 0%,100% { opacity: 1; } 50% { opacity: 0.2; } }
+      .in .wig { transform-box: fill-box; transform-origin: 68% 72%; animation: wig 3.2s ease-in-out infinite alternate; }
+      @keyframes wig { from { transform: rotate(-4deg); } to { transform: rotate(5deg); } }
+      .in .breathe { transform-box: fill-box; transform-origin: center; animation: breathe 3s ease-in-out infinite alternate; }
+      @keyframes breathe { from { transform: scale(1); } to { transform: scale(1.04); } }
+      .in .bars { transform-box: fill-box; transform-origin: 50% 100%; animation: bars 2.8s ease-in-out infinite alternate; }
+      @keyframes bars { from { transform: scaleY(0.9); } to { transform: scaleY(1.05); } }
+    }
+    @media print {
+      .draw, .dfill { stroke-dashoffset: 0 !important; }
+      .fade, .pop { opacity: 1 !important; transform: none !important; }
+      .dfill { fill-opacity: 1 !important; }
+    }
+  </style>
+  <rect width="1254" height="1254" fill="#050505" />
+  <g id="scene">
+  <g fill="none" stroke="#141414" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <!-- 主窗口 -->
+    <rect class="dfill draw" style="--d:0ms" pathLength="1" x="55" y="292" width="1143" height="730" rx="26" fill="#fff" />
+    <path class="draw" style="--d:200ms" pathLength="1" d="M 58 366 Q 626 362 1196 366" />
+    <path class="draw" style="--d:260ms" pathLength="1" d="M 288 368 Q 286 690 288 1020" />
+    <circle class="pop" style="--d:340ms" cx="103" cy="329" r="9" fill="#F6CB43" stroke="none" />
+    <circle class="pop" style="--d:370ms" cx="140" cy="329" r="9" fill="#fff" stroke-width="4" />
+    <circle class="pop" style="--d:400ms" cx="177" cy="329" r="9" fill="#fff" stroke-width="4" />
+
+    <!-- 侧边栏 -->
+    <g class="breathe"><rect class="pop" style="--d:520ms" x="65" y="425" width="210" height="65" rx="32" fill="#F6CB43" stroke="none" /></g>
+    <path class="draw" style="--d:560ms" pathLength="1" stroke-width="5" d="M 105 470 L 105 452 L 118 442 M 118 442 L 131 452 L 131 470 Z" />
+    <path class="draw" style="--d:600ms" pathLength="1" stroke-width="7" d="M 152 458 L 240 457" />
+    <circle class="draw" style="--d:640ms" pathLength="1" cx="105" cy="531" r="15" stroke-width="5" />
+    <path class="fade" style="--d:700ms" stroke-width="4.5" d="M 105 531 L 105 522 M 105 531 L 112 535" />
+    <path class="draw" style="--d:680ms" pathLength="1" stroke-width="6" d="M 148 531 L 238 530" />
+    <g class="bars">
+      <path class="fade" style="--d:740ms" stroke-width="5" d="M 96 618 L 96 594 M 107 618 L 107 586 M 118 618 L 118 590" />
+    </g>
+    <path class="draw" style="--d:720ms" pathLength="1" stroke-width="6" d="M 148 606 L 238 605" />
+    <path class="fade" style="--d:780ms" stroke-width="5" d="M 90 684 L 90 667 L 103 667 L 109 672 L 128 672 L 128 684 Z" />
+    <path class="draw" style="--d:760ms" pathLength="1" stroke-width="6" d="M 148 688 L 238 687" />
+    <circle class="draw" style="--d:800ms" pathLength="1" cx="105" cy="765" r="11" stroke-width="5" />
+    <circle class="fade" style="--d:850ms" cx="105" cy="765" r="4.5" stroke-width="4" />
+    <g class="fade" style="--d:860ms" stroke-width="4.5">
+      <path d="M 105 749 L 105 755 M 105 775 L 105 781 M 89 765 L 95 765 M 115 765 L 121 765 M 94 754 L 98 758 M 112 772 L 116 776 M 116 754 L 112 758 M 98 772 L 94 776" />
+    </g>
+    <path class="draw" style="--d:820ms" pathLength="1" stroke-width="6" d="M 148 765 L 238 764" />
+
+    <!-- 头部:标题 + 搜索 + 头像 -->
+    <path class="draw" style="--d:520ms" pathLength="1" stroke-width="11" d="M 333 416 Q 446 412 560 414" />
+    <path class="draw" style="--d:560ms" pathLength="1" stroke-width="6" d="M 333 452 Q 420 450 510 451" />
+    <circle class="draw" style="--d:900ms" pathLength="1" cx="1063" cy="420" r="13" stroke-width="5" />
+    <path class="fade" style="--d:940ms" stroke-width="5" d="M 1073 430 L 1085 442" />
+    <circle class="pop ball" style="--d:960ms" cx="1137" cy="425" r="18" fill="#F6CB43" stroke="none" />
+
+    <!-- 三张统计卡 -->
+    <rect class="dfill draw" style="--d:1050ms" pathLength="1" x="334" y="514" width="256" height="143" rx="15" fill="#fff" />
+    <g class="bars">
+      <path class="fade" style="--d:1150ms" stroke-width="5" d="M 372 600 L 372 580 M 397 600 L 397 568 M 422 600 L 422 576 M 447 600 L 447 552" />
+    </g>
+    <path class="draw" style="--d:1180ms" pathLength="1" stroke-width="5" d="M 482 560 L 556 558" />
+    <path class="draw" style="--d:1210ms" pathLength="1" stroke-width="5" d="M 482 588 L 536 586" />
+    <rect class="dfill draw" style="--d:1150ms" pathLength="1" x="619" y="514" width="249" height="142" rx="15" fill="#fff" />
+    <circle class="draw" style="--d:1250ms" pathLength="1" cx="672" cy="585" r="37" stroke-width="5.5" />
+    <g class="wig"><path class="pop" style="--d:1320ms" d="M 672 585 L 672 549 A 36 36 0 0 1 705 596 Z" fill="#F6CB43" stroke="none" /></g>
+    <path class="draw" style="--d:1280ms" pathLength="1" stroke-width="5" d="M 736 560 L 812 558" />
+    <path class="draw" style="--d:1310ms" pathLength="1" stroke-width="5" d="M 736 590 L 792 588" />
+    <rect class="dfill draw" style="--d:1250ms" pathLength="1" x="896" y="515" width="261" height="141" rx="15" fill="#fff" />
+    <path class="draw" style="--d:1350ms" pathLength="1" stroke-width="5.5" d="M 928 606 L 966 578 L 990 594 L 1028 560" />
+    <path class="fade" style="--d:1420ms" stroke-width="5" d="M 1028 560 L 1010 562 M 1028 560 L 1026 578" />
+    <path class="draw" style="--d:1380ms" pathLength="1" stroke-width="5" d="M 1072 562 L 1136 560" />
+    <path class="draw" style="--d:1410ms" pathLength="1" stroke-width="5" d="M 1072 590 L 1120 588" />
+
+    <!-- 大折线卡 -->
+    <rect class="dfill draw" style="--d:1450ms" pathLength="1" x="333" y="692" width="479" height="293" rx="15" fill="#fff" />
+    <path class="draw" style="--d:1560ms" pathLength="1" stroke-width="9" d="M 365 731 Q 452 727 540 729" />
+    <path class="draw" style="--d:1600ms" pathLength="1" stroke-width="5.5" d="M 365 761 Q 420 759 478 760" />
+    <path class="draw" style="--d:1700ms" pathLength="1" stroke-width="5" d="M 377 815 L 377 948 L 792 946" />
+    <path class="draw" style="--d:1800ms" pathLength="1" stroke-width="6" d="M 415 930 Q 455 892 497 858 Q 540 828 575 840 Q 622 858 662 850 Q 712 838 756 740" />
+    <circle class="pop" style="--d:2100ms" cx="415" cy="930" r="8" fill="#fff" stroke-width="5" />
+    <circle class="pop" style="--d:2150ms" cx="497" cy="858" r="8" fill="#fff" stroke-width="5" />
+    <circle class="pop" style="--d:2200ms" cx="628" cy="854" r="8" fill="#fff" stroke-width="5" />
+    <circle class="pop ball" style="--d:2250ms" cx="757" cy="736" r="10" fill="#F6CB43" stroke-width="5" />
+    <g class="tw fade" style="--d:2350ms" stroke-width="4.5">
+      <path d="M 742 722 L 734 708 M 758 716 L 757 700 M 774 724 L 784 712" />
+    </g>
+
+    <!-- 清单卡 -->
+    <rect class="dfill draw" style="--d:1500ms" pathLength="1" x="843" y="691" width="315" height="294" rx="15" fill="#fff" />
+    <rect class="pop" style="--d:1650ms" x="877" y="727" width="51" height="51" rx="13" fill="#F6CB43" stroke-width="5" />
+    <path class="draw" style="--d:1700ms" pathLength="1" stroke-width="5.5" d="M 952 744 L 1122 742" />
+    <path class="draw" style="--d:1730ms" pathLength="1" stroke-width="5" d="M 952 766 L 1082 764" />
+    <rect class="pop" style="--d:1780ms" x="878" y="817" width="49" height="49" rx="13" fill="#fff" stroke-width="5" />
+    <path class="draw" style="--d:1820ms" pathLength="1" stroke-width="5.5" d="M 952 834 L 1112 832" />
+    <path class="draw" style="--d:1850ms" pathLength="1" stroke-width="5" d="M 952 856 L 1062 854" />
+    <rect class="pop" style="--d:1900ms" x="878" y="904" width="49" height="49" rx="13" fill="#fff" stroke-width="5" />
+    <path class="draw" style="--d:1940ms" pathLength="1" stroke-width="5.5" d="M 952 921 L 1102 919" />
+    <path class="draw" style="--d:1970ms" pathLength="1" stroke-width="5" d="M 952 943 L 1052 941" />
+  </g>
+  </g>
+  <script>
+    (function () {
+      var scene = document.getElementById('scene');
+      var go = function () { scene.classList.add('in'); };
+      if (document.readyState === 'complete') go(); else window.addEventListener('load', go);
+    })();
+  </script>
+</svg>

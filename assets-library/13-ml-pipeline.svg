@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1254 940" width="1254" height="940">
+  <!-- 13 训练流水线 · 复刻自素材 16_06_03-5(黑底宽幅,数据库→清单卡+齿轮→AI芯片→图表卡,点线箭头) -->
+  <style>
+    .draw { stroke-dasharray: 1; }
+    @media (prefers-reduced-motion: no-preference) {
+    .draw { animation: draw-in .7s cubic-bezier(.45,0,.35,1) var(--d,0ms) both; }
+    .dfill { animation: draw-in .9s cubic-bezier(.45,0,.35,1) var(--d,0ms) both, fill-in .5s ease calc(var(--d,0ms) + 300ms) both; }
+    .fade { animation: fade-in .6s ease var(--d,0ms) both; }
+    .pop { transform-box: fill-box; transform-origin: center; animation: pop-o .3s ease var(--d,0ms) both, pop-t .45s cubic-bezier(.34,1.56,.64,1) var(--d,0ms) both; }
+    @keyframes draw-in { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+    @keyframes fill-in { from { fill-opacity: 0; } to { fill-opacity: 1; } }
+    @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes pop-o { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes pop-t { from { transform: scale(.4); } to { transform: scale(1); } }
+    .ball { transform-box: fill-box; transform-origin: center; animation: ball 2.2s ease-in-out infinite alternate; }
+    @keyframes ball { from { transform: scale(1); } to { transform: scale(1.22); } }
+    .spark { transform-box: fill-box; transform-origin: 30% 90%; animation: spark 2.6s ease-in-out infinite; }
+    @keyframes spark { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: .35; transform: scale(.88); } }
+    .dash { animation: march 1.8s linear infinite; }
+    @keyframes march { from { stroke-dashoffset: var(--p,.1); } to { stroke-dashoffset: 0; } }
+    .gear { transform-box: fill-box; transform-origin: center; animation: spin 24s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .bars { transform-box: fill-box; transform-origin: 50% 100%; animation: bars 2.8s ease-in-out infinite alternate; }
+    @keyframes bars { from { transform: scaleY(.9); } to { transform: scaleY(1.05); } }
+    .lp1 { animation-delay: -.9s; } .lp2 { animation-delay: -1.5s; }
+    }
+    @media print { * { animation: none !important; } }
+  </style>
+  <g id="scene" fill="none" stroke="#141414" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <!-- 站间点线箭头 -->
+    <g class="fade" style="--d:1000ms;--p:.075"><path class="dash" pathLength="1" stroke="#d8d8d2" stroke-width="5" stroke-dasharray="0.03 0.045" stroke-linecap="round" d="M 244 468 L 330 468"/></g>
+    <path class="pop" style="--d:1100ms" d="M 336 455 L 358 468 L 336 481 Z" fill="#d8d8d2" stroke="none"/>
+    <g class="fade lp1" style="--d:1100ms;--p:.075"><path class="dash" pathLength="1" stroke="#d8d8d2" stroke-width="5" stroke-dasharray="0.03 0.045" stroke-linecap="round" d="M 556 468 L 660 468"/></g>
+    <path class="pop" style="--d:1200ms" d="M 666 455 L 688 468 L 666 481 Z" fill="#d8d8d2" stroke="none"/>
+    <g class="fade lp2" style="--d:1200ms;--p:.075"><path class="dash" pathLength="1" stroke="#d8d8d2" stroke-width="5" stroke-dasharray="0.03 0.045" stroke-linecap="round" d="M 864 468 L 934 468"/></g>
+    <path class="pop" style="--d:1300ms" d="M 940 455 L 962 468 L 940 481 Z" fill="#d8d8d2" stroke="none"/>
+    <!-- 数据库 -->
+    <g class="breathe" stroke="#141414">
+      <path class="dfill" style="--d:0ms" pathLength="1" fill="#fff" d="M 55 395 L 55 552 Q 55 580 142 580 Q 229 580 229 552 L 229 395"/>
+      <ellipse class="dfill" style="--d:0ms" pathLength="1" cx="142" cy="395" rx="87" ry="26" fill="#fff"/>
+      <path class="draw" style="--d:150ms" pathLength="1" d="M 55 450 Q 55 478 142 478 Q 229 478 229 450 M 55 505 Q 55 533 142 533 Q 229 533 229 505"/>
+      <circle class="pop" style="--d:250ms" cx="212" cy="428" r="6" fill="#F6CB43" stroke="none"/>
+      <circle class="pop" style="--d:290ms" cx="212" cy="480" r="6" fill="#F6CB43" stroke="none"/>
+      <circle class="pop" style="--d:330ms" cx="212" cy="532" r="6" fill="#F6CB43" stroke="none"/>
+    </g>
+    <!-- 清单卡 + 齿轮 -->
+    <g class="breathe lp1">
+      <rect class="dfill" style="--d:200ms" pathLength="1" x="349" y="384" width="190" height="176" rx="16" fill="#fff"/>
+      <circle class="draw" style="--d:350ms" pathLength="1" cx="383" cy="428" r="13"/>
+      <path class="draw" style="--d:400ms" pathLength="1" stroke-width="7" d="M 412 428 L 496 428"/>
+      <rect class="pop" style="--d:460ms" x="360" y="461" width="166" height="42" rx="21" fill="#F6CB43" stroke="none"/>
+      <circle class="draw" style="--d:520ms" pathLength="1" cx="386" cy="482" r="11"/>
+      <path class="draw" style="--d:540ms" pathLength="1" stroke-width="7" d="M 412 482 L 498 482"/>
+      <circle class="draw" style="--d:580ms" pathLength="1" cx="383" cy="536" r="13"/>
+      <path class="draw" style="--d:600ms" pathLength="1" stroke-width="7" d="M 412 536 L 480 536"/>
+    </g>
+    <g class="gear">
+      <path class="dfill" style="--d:620ms" pathLength="1" transform="translate(523,556)" fill="#fff" d="M 0.4 -34.0 L 9.4 -47.1 L 18.4 -44.3 L 18.6 -28.5 L 24.3 -23.8 L 39.9 -26.7 L 44.3 -18.4 L 33.3 -7.0 L 34.0 0.4 L 47.1 9.4 L 44.3 18.4 L 28.5 18.6 L 23.8 24.3 L 26.7 39.9 L 18.4 44.3 L 7.0 33.3 L -0.4 34.0 L -9.4 47.1 L -18.4 44.3 L -18.6 28.5 L -24.3 23.8 L -39.9 26.7 L -44.3 18.4 L -33.3 7.0 L -34.0 -0.4 L -47.1 -9.4 L -44.3 -18.4 L -28.5 -18.6 L -23.8 -24.3 L -26.7 -39.9 L -18.4 -44.3 L -7.0 -33.3 Z"/>
+      <circle class="pop" style="--d:760ms" cx="523" cy="556" r="13" fill="#F6CB43" stroke="none"/>
+    </g>
+    <g class="spark lp1" stroke="#F6CB43" stroke-width="12">
+      <path class="fade" style="--d:1400ms" d="M 562 528 L 590 546 M 574 500 L 598 520 M 556 566 L 580 588"/>
+    </g>
+    <!-- AI 芯片 -->
+    <g stroke="#d8d8d2" stroke-width="9">
+      <path class="draw" style="--d:520ms" pathLength="1" d="M 725 383 L 725 409 M 771 382 L 771 408 M 817 383 L 817 409"/>
+      <path class="draw" style="--d:560ms" pathLength="1" d="M 725 535 L 725 561 M 771 535 L 771 561 M 817 535 L 817 561"/>
+    </g>
+    <rect class="dfill" style="--d:400ms" pathLength="1" x="693" y="407" width="156" height="130" rx="28" fill="#fff"/>
+    <path class="draw" style="--d:660ms" pathLength="1" stroke="#141414" stroke-width="8" d="M 748 508 Q 757 474 770 440 Q 782 474 790 508 M 755 486 Q 768 482 781 486 M 802 441 Q 800 475 803 508"/>
+    <g class="ball"><circle class="pop" style="--d:720ms" cx="725" cy="361" r="9" fill="#F6CB43" stroke="none"/></g>
+    <g class="ball lp1"><circle class="pop" style="--d:750ms" cx="771" cy="360" r="9" fill="#F6CB43" stroke="none"/></g>
+    <circle class="pop" style="--d:780ms" cx="817" cy="361" r="9" fill="#F6CB43" stroke="none"/>
+    <circle class="pop" style="--d:810ms" cx="725" cy="583" r="9" fill="#F6CB43" stroke="none"/>
+    <circle class="pop" style="--d:840ms" cx="771" cy="582" r="9" fill="#F6CB43" stroke="none"/>
+    <circle class="pop" style="--d:870ms" cx="817" cy="583" r="9" fill="#F6CB43" stroke="none"/>
+    <!-- 图表卡 -->
+    <g class="breathe lp2">
+      <rect class="dfill" style="--d:600ms" pathLength="1" x="964" y="384" width="223" height="176" rx="16" fill="#fff"/>
+      <path class="draw" style="--d:700ms" pathLength="1" stroke-width="7" d="M 988 420 L 1120 420 M 988 448 L 1090 448"/>
+      <path class="draw" style="--d:760ms" pathLength="1" stroke-width="7" d="M 990 500 Q 1070 488 1146 434 M 1146 434 L 1124 438 M 1146 434 L 1134 452"/>
+      <rect class="pop" style="--d:820ms" x="1000" y="515" width="24" height="30" rx="4" fill="#fff" stroke-width="5"/>
+      <rect class="pop" style="--d:850ms" x="1036" y="493" width="24" height="52" rx="4" fill="#fff" stroke-width="5"/>
+      <rect class="pop" style="--d:880ms" x="1072" y="471" width="24" height="74" rx="4" fill="#fff" stroke-width="5"/>
+      <g class="bars"><rect class="pop" style="--d:910ms" x="1108" y="449" width="24" height="96" rx="4" fill="#F6CB43" stroke-width="5"/></g>
+    </g>
+    <g class="spark lp2" stroke="#F6CB43" stroke-width="12">
+      <path class="fade" style="--d:1500ms" d="M 1170 430 L 1192 408 M 1196 402 L 1212 384 M 1148 418 L 1154 396"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1254 1254" width="1254" height="1254">
+  <!-- 10 芯片四路中枢 · 复刻自素材 16_05_59-2(黑底,大AI芯片+气泡/图片/文字/柱卡,轴向实线+对角点线) -->
+  <style>
+    .draw { stroke-dasharray: 1; }
+    @media (prefers-reduced-motion: no-preference) {
+    .draw { animation: draw-in .7s cubic-bezier(.45,0,.35,1) var(--d,0ms) both; }
+    .dfill { animation: draw-in .9s cubic-bezier(.45,0,.35,1) var(--d,0ms) both, fill-in .5s ease calc(var(--d,0ms) + 300ms) both; }
+    .fade { animation: fade-in .6s ease var(--d,0ms) both; }
+    .pop { transform-box: fill-box; transform-origin: center; animation: pop-o .3s ease var(--d,0ms) both, pop-t .45s cubic-bezier(.34,1.56,.64,1) var(--d,0ms) both; }
+    @keyframes draw-in { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+    @keyframes fill-in { from { fill-opacity: 0; } to { fill-opacity: 1; } }
+    @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes pop-o { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes pop-t { from { transform: scale(.4); } to { transform: scale(1); } }
+    .ball { transform-box: fill-box; transform-origin: center; animation: ball 2.2s ease-in-out infinite alternate; }
+    @keyframes ball { from { transform: scale(1); } to { transform: scale(1.22); } }
+    .breathe { transform-box: fill-box; transform-origin: center; animation: breathe 3s ease-in-out infinite alternate; }
+    @keyframes breathe { from { transform: scale(1); } to { transform: scale(1.04); } }
+    .bars { transform-box: fill-box; transform-origin: 50% 100%; animation: bars 2.8s ease-in-out infinite alternate; }
+    @keyframes bars { from { transform: scaleY(.9); } to { transform: scaleY(1.05); } }
+    .dash { animation: march 1.8s linear infinite; }
+    @keyframes march { from { stroke-dashoffset: var(--p,.1); } to { stroke-dashoffset: 0; } }
+    .lp1 { animation-delay: -.9s; } .lp2 { animation-delay: -1.5s; }
+    }
+    @media print { * { animation: none !important; } }
+  </style>
+  <g id="scene" fill="none" stroke="#141414" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <!-- 轴向实线 -->
+    <g stroke="#d8d8d2" stroke-width="2.5">
+      <path class="draw" style="--d:700ms" pathLength="1" d="M 625 518 L 625 348"/>
+      <path class="draw" style="--d:750ms" pathLength="1" d="M 506 641 L 305 641"/>
+      <path class="draw" style="--d:800ms" pathLength="1" d="M 744 641 L 951 641"/>
+      <path class="draw" style="--d:850ms" pathLength="1" d="M 625 759 L 625 922"/>
+    </g>
+    <!-- 对角点线 -->
+    <g stroke="#d8d8d2" stroke-width="4" stroke-linecap="round">
+      <g class="fade" style="--d:1050ms;--p:.08"><path class="dash" pathLength="1" stroke-dasharray="0.012 0.068" d="M 505 548 Q 468 486 438 414"/></g>
+      <g class="fade" style="--d:1100ms;--p:.08"><path class="dash" pathLength="1" stroke-dasharray="0.012 0.068" d="M 745 548 Q 800 470 872 376"/></g>
+      <g class="fade" style="--d:1150ms;--p:.08"><path class="dash" pathLength="1" stroke-dasharray="0.012 0.068" d="M 505 736 Q 462 800 418 864"/></g>
+      <g class="fade" style="--d:1200ms;--p:.08"><path class="dash" pathLength="1" stroke-dasharray="0.012 0.068" d="M 745 736 Q 782 800 812 862"/></g>
+    </g>
+    <!-- 气泡(左上) -->
+    <g class="breathe">
+      <path class="dfill" style="--d:250ms" pathLength="1" fill="#fff" d="M 215 333 L 367 333 Q 397 333 397 363 L 397 453 Q 397 483 367 483 L 288 483 Q 262 522 224 534 Q 250 508 254 483 L 215 483 Q 185 483 185 453 L 185 363 Q 185 333 215 333 Z"/>
+      <circle class="pop" style="--d:400ms" cx="258" cy="408" r="10" fill="#141414" stroke="none"/>
+      <circle class="pop" style="--d:440ms" cx="291" cy="408" r="10" fill="#141414" stroke="none"/>
+      <circle class="pop" style="--d:480ms" cx="324" cy="408" r="10" fill="#141414" stroke="none"/>
+    </g>
+    <!-- 图片卡(右上) -->
+    <g class="breathe lp1">
+      <rect class="dfill" style="--d:350ms" pathLength="1" x="864" y="336" width="220" height="157" rx="16" fill="#fff"/>
+      <circle class="pop" style="--d:500ms" cx="920" cy="388" r="15" fill="#F6CB43" stroke="none"/>
+      <path class="draw" style="--d:540ms" pathLength="1" stroke-width="8" d="M 890 462 L 945 414 L 975 444 L 1015 404 L 1060 462"/>
+    </g>
+    <!-- 文字卡(左下) -->
+    <g>
+      <rect class="dfill" style="--d:450ms" pathLength="1" x="206" y="795" width="161" height="169" rx="16" fill="#fff"/>
+      <path class="draw" style="--d:580ms" pathLength="1" stroke-width="7" d="M 230 848 L 342 847 M 230 884 L 342 883 M 230 920 L 308 920"/>
+    </g>
+    <!-- 柱卡(右下) -->
+    <g>
+      <rect class="dfill" style="--d:550ms" pathLength="1" x="868" y="798" width="209" height="162" rx="16" fill="#fff"/>
+      <path class="draw" style="--d:660ms" pathLength="1" stroke-width="5" d="M 888 933 L 1058 933"/>
+      <rect class="pop" style="--d:700ms" x="902" y="888" width="28" height="45" rx="4" fill="#fff" stroke-width="5"/>
+      <rect class="pop" style="--d:740ms" x="946" y="858" width="28" height="75" rx="4" fill="#fff" stroke-width="5"/>
+      <g class="bars"><rect class="pop" style="--d:780ms" x="990" y="824" width="28" height="109" rx="4" fill="#F6CB43" stroke-width="5"/></g>
+    </g>
+    <!-- 中央大芯片 -->
+    <g stroke="#d8d8d2" stroke-width="13">
+      <path class="draw" style="--d:500ms" pathLength="1" d="M 553 478 L 553 519 M 601 478 L 601 519 M 649 478 L 649 519 M 697 478 L 697 519"/>
+      <path class="draw" style="--d:540ms" pathLength="1" d="M 553 758 L 553 799 M 601 758 L 601 799 M 649 758 L 649 799 M 697 758 L 697 799"/>
+      <path class="draw" style="--d:580ms" pathLength="1" d="M 461 591 L 502 591 M 461 641 L 502 641 M 461 691 L 502 691"/>
+      <path class="draw" style="--d:620ms" pathLength="1" d="M 748 591 L 789 591 M 748 641 L 789 641 M 748 691 L 789 691"/>
+    </g>
+    <rect class="dfill" style="--d:0ms" pathLength="1" x="503" y="521" width="242" height="235" rx="40" fill="#fff"/>
+    <path class="draw" style="--d:380ms" pathLength="1" stroke="#141414" stroke-width="13" d="M 572 708 Q 588 648 612 588 Q 632 648 646 708 M 586 666 Q 608 660 632 666 M 678 590 Q 674 650 680 708"/>
+    <!-- 端子黄点(大) -->
+    <g class="ball"><circle class="pop" style="--d:900ms" cx="625" cy="326" r="17" fill="#F6CB43" stroke="none"/></g>
+    <g class="ball lp1"><circle class="pop" style="--d:960ms" cx="283" cy="641" r="17" fill="#F6CB43" stroke="none"/></g>
+    <g class="ball lp2"><circle class="pop" style="--d:1020ms" cx="973" cy="641" r="17" fill="#F6CB43" stroke="none"/></g>
+    <g class="ball"><circle class="pop" style="--d:1080ms" cx="625" cy="944" r="17" fill="#F6CB43" stroke="none"/></g>
+    <!-- 对角小黄点 -->
+    <circle class="pop" style="--d:1300ms" cx="434" cy="409" r="8" fill="#F6CB43" stroke="none"/>
+    <circle class="pop" style="--d:1340ms" cx="884" cy="366" r="8" fill="#F6CB43" stroke="none"/>
+    <circle class="pop" style="--d:1380ms" cx="413" cy="873" r="8" fill="#F6CB43" stroke="none"/>
+    <circle class="pop" style="--d:1420ms" cx="818" cy="871" r="8" fill="#F6CB43" stroke="none"/>
+  </g>
+</svg>

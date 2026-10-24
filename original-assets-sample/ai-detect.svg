@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1254 700" width="1254" height="700">
+  <!-- A5 目标检测 · 原创:摄像头视场扇形内三目标(猫/车/交通灯),检测框+标签,猫戴黄检测框 -->
+  <style>
+    .draw { stroke-dasharray: 1; stroke-dashoffset: 1; }
+    .pop { transform: scale(0.4); opacity: 0; transform-box: fill-box; transform-origin: center; }
+    .fade { opacity: 0; }
+    .dfill { fill-opacity: 0; }
+    @media (prefers-reduced-motion: no-preference) {
+      .draw { transition: stroke-dashoffset 0.7s cubic-bezier(0.45,0,0.35,1) var(--d,0ms); }
+      .in .draw { stroke-dashoffset: 0; }
+      .dfill { transition: stroke-dashoffset 0.9s cubic-bezier(0.45,0,0.35,1) var(--d,0ms), fill-opacity 0.5s ease calc(var(--d,0ms) + 300ms); }
+      .in .dfill { fill-opacity: 1; }
+      .fade { transition: opacity 0.6s ease var(--d,0ms); }
+      .in .fade { opacity: 1; }
+      .pop { transition: opacity 0.3s ease var(--d,0ms), transform 0.45s cubic-bezier(0.34,1.56,0.64,1) var(--d,0ms); }
+      .in .pop { opacity: 1; transform: scale(1); }
+      .in .cam { transform-origin: 210px 350px; animation: cam-scan 4s ease-in-out infinite alternate; }
+      @keyframes cam-scan { from { transform: rotate(-1.6deg); } to { transform: rotate(1.8deg); } }
+      .in .fov { animation: fov-breathe 4s ease-in-out infinite alternate; }
+      @keyframes fov-breathe { from { opacity: 0.28; } to { opacity: 0.5; } }
+      .in .corner { transform-box: fill-box; transform-origin: center; animation: c-breathe 2.6s ease-in-out infinite alternate; }
+      @keyframes c-breathe { from { transform: scale(1); } to { transform: scale(1.06); } }
+      .in .led { animation: ledblink 1.8s ease-in-out infinite; }
+      .in .led.l2 { animation-delay: -0.6s; }
+      .in .led.l3 { animation-delay: -1.2s; }
+      @keyframes ledblink { 0%,70%,100% { opacity: 1; } 85% { opacity: 0.15; } }
+      .in .rays { animation: dashflow 2.8s linear infinite; }
+      @keyframes dashflow { to { stroke-dashoffset: -110; } }
+    }
+  </style>
+  <g id="scene-A5">
+  <g fill="none" stroke="#141414" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- 摄像头(左,带扫描视场) -->
+    <g class="cam">
+      <path class="dfill draw" style="--d:0ms" pathLength="1" fill="#fff" d="M 96 300 Q 92 288 106 286 L 288 280 Q 302 279 304 292 L 308 420 Q 310 432 296 434 L 110 440 Q 96 440 96 426 Z" />
+      <circle class="draw" style="--d:160ms" pathLength="1" cx="210" cy="358" r="34" stroke-width="3.5" />
+      <circle class="pop" style="--d:240ms" cx="210" cy="358" r="13" fill="#141414" stroke="none" />
+      <circle class="pop" style="--d:280ms" cx="205" cy="352" r="4" fill="#fff" stroke="none" />
+      <path class="draw" style="--d:300ms" pathLength="1" stroke-width="2.6" d="M 210 280 L 210 252 M 180 436 L 174 462 M 250 436 L 258 462" />
+      <!-- 视场扇形(淡黄) -->
+      <path class="fade fov" style="--d:340ms" d="M 310 330 L 1180 140 L 1180 620 L 310 400 Z" fill="#F6CB43" opacity="0.35" stroke="none" />
+      <path class="fade rays" style="--d:400ms" stroke="#141414" stroke-width="1.8" stroke-dasharray="3 9" d="M 316 336 L 1170 160 M 316 394 L 1170 600" />
+    </g>
+
+    <!-- 场景地线 -->
+    <path class="draw" style="--d:450ms" pathLength="1" d="M 400 560 Q 620 566 840 560 Q 1000 556 1180 562" />
+
+    <!-- 目标1:猫(黄检测框) -->
+    <g>
+      <path class="draw--fill draw" style="--d:550ms" pathLength="1" fill="#fff" d="M 560 470 Q 546 448 566 436 Q 560 414 590 410 Q 596 392 622 398 Q 646 392 652 412 Q 676 416 670 438 Q 688 452 672 470 Q 660 496 616 498 Q 578 496 560 470 Z" />
+      <path class="fade" style="--d:640ms" stroke-width="2.4" d="M 570 428 L 560 408 L 580 414 M 656 426 L 666 406 L 646 412" />
+      <circle class="pop" style="--d:660ms" cx="596" cy="452" r="4" fill="#141414" stroke="none" />
+      <circle class="pop" style="--d:690ms" cx="636" cy="450" r="4" fill="#141414" stroke="none" />
+      <path class="fade" style="--d:720ms" stroke-width="2.2" d="M 606 468 Q 616 474 626 468" />
+      <g class="fade corner" style="--d:760ms" stroke-width="3.5">
+        <path d="M 548 404 L 548 386 L 566 386" />
+        <path d="M 676 386 L 694 386 L 694 404" />
+        <path d="M 694 492 L 694 510 L 676 510" />
+        <path d="M 566 510 L 548 510 L 548 492" />
+      </g>
+      <g class="pop" style="--d:800ms">
+        <rect x="548" y="356" width="66" height="24" rx="6" fill="#141414" stroke="none" />
+        <text x="556" y="374" font-size="15" font-weight="700" font-family="inherit" fill="#fff" stroke="none">cat 0.97</text>
+      </g>
+    </g>
+
+    <!-- 目标2:车 -->
+    <g>
+      <path class="draw--fill draw" style="--d:850ms" pathLength="1" fill="#fff" d="M 800 520 L 806 496 Q 810 488 820 486 L 856 484 Q 866 470 886 470 L 916 470 Q 936 472 940 488 L 944 500 L 962 502 L 962 522 Z" />
+      <circle class="pop" style="--d:930ms" cx="836" cy="524" r="12" fill="#fff" stroke-width="3" />
+      <circle class="pop" style="--d:960ms" cx="926" cy="524" r="12" fill="#fff" stroke-width="3" />
+      <path class="fade" style="--d:990ms" stroke-width="2.2" d="M 866 492 L 908 490" />
+      <g class="fade corner" style="--d:1020ms" stroke-width="3">
+        <path d="M 792 462 L 792 448 L 806 448" />
+        <path d="M 950 448 L 964 448 L 964 462" />
+        <path d="M 964 536 L 964 550 L 950 550" />
+        <path d="M 806 550 L 792 550 L 792 536" />
+      </g>
+      <g class="pop" style="--d:1060ms">
+        <rect x="792" y="420" width="58" height="22" rx="6" fill="#141414" stroke="none" />
+        <text x="799" y="437" font-size="14" font-weight="700" font-family="inherit" fill="#fff" stroke="none">car 0.94</text>
+      </g>
+    </g>
+
+    <!-- 目标3:交通灯 -->
+    <g>
+      <rect class="dfill draw" style="--d:1100ms" pathLength="1" x="1080" y="330" width="46" height="120" rx="14" fill="#fff" stroke-width="3.5" />
+      <circle class="pop led" style="--d:1180ms" cx="1103" cy="364" r="10" fill="#F6CB43" stroke-width="3" />
+      <circle class="pop led l2" style="--d:1210ms" cx="1103" cy="396" r="10" fill="#fff" stroke-width="3" />
+      <circle class="pop led l3" style="--d:1240ms" cx="1103" cy="428" r="10" fill="#fff" stroke-width="3" />
+      <path class="draw" style="--d:1260ms" pathLength="1" stroke-width="3" d="M 1103 450 L 1103 560" />
+      <g class="fade corner" style="--d:1300ms" stroke-width="3">
+        <path d="M 1064 316 L 1064 302 L 1078 302" />
+        <path d="M 1128 302 L 1142 302 L 1142 316" />
+        <path d="M 1142 466 L 1142 480 L 1128 480" />
+        <path d="M 1078 480 L 1064 480 L 1064 466" />
+      </g>
+      <g class="pop" style="--d:1340ms">
+        <rect x="1058" y="270" width="88" height="22" rx="6" fill="#141414" stroke="none" />
+        <text x="1066" y="287" font-size="14" font-weight="700" font-family="inherit" fill="#fff" stroke="none">light 0.91</text>
+      </g>
+    </g>
+  </g>
+  </g>
+</svg>

@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1254 1254" width="1254" height="1254">
+  <!-- 20 桌面三箱检测 · 复刻自素材 16_09_46-5(白底,相机→AI芯片,虚线视场下探桌面三立方体,中间黄色+黄角框) -->
+  <style>
+    .draw { stroke-dasharray: 1; }
+    @media (prefers-reduced-motion: no-preference) {
+    .draw { animation: draw-in .7s cubic-bezier(.45,0,.35,1) var(--d,0ms) both; }
+    .dfill { animation: draw-in .9s cubic-bezier(.45,0,.35,1) var(--d,0ms) both, fill-in .5s ease calc(var(--d,0ms) + 300ms) both; }
+    .fade { animation: fade-in .6s ease var(--d,0ms) both; }
+    .pop { transform-box: fill-box; transform-origin: center; animation: pop-o .3s ease var(--d,0ms) both, pop-t .45s cubic-bezier(.34,1.56,.64,1) var(--d,0ms) both; }
+    @keyframes draw-in { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+    @keyframes fill-in { from { fill-opacity: 0; } to { fill-opacity: 1; } }
+    @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes pop-o { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes pop-t { from { transform: scale(.4); } to { transform: scale(1); } }
+    .spark { transform-box: fill-box; transform-origin: 30% 90%; animation: spark 2.6s ease-in-out infinite; }
+    @keyframes spark { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: .35; transform: scale(.88); } }
+    .dash { animation: march 2.4s linear infinite; }
+    @keyframes march { from { stroke-dashoffset: var(--p,.1); } to { stroke-dashoffset: 0; } }
+    .bracket { animation: bracket 2.8s ease-in-out infinite; }
+    @keyframes bracket { 0%,32%,100% { opacity: 1; } 8%,24% { opacity: .15; } }
+    .lp1 { animation-delay: -.9s; } .lp2 { animation-delay: -1.5s; }
+    }
+    @media print { * { animation: none !important; } }
+  </style>
+  <g id="scene" fill="none" stroke="#141414" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <!-- 虚线视场 -->
+    <g class="fade" style="--d:1150ms"><path class="dash" pathLength="1" stroke-width="6" stroke-dasharray="0.05 0.05" d="M 252 402 L 122 686"/></g>
+    <g class="fade lp1" style="--d:1200ms"><path class="dash" pathLength="1" stroke-width="6" stroke-dasharray="0.05 0.05" d="M 372 402 Q 560 502 696 578"/></g>
+    <!-- 家用相机(左上) -->
+    <path class="dfill" style="--d:60ms" pathLength="1" fill="#fff" d="M 244 258 L 260 226 L 314 226 L 330 258"/>
+    <rect class="dfill" style="--d:0ms" pathLength="1" x="214" y="258" width="170" height="122" rx="22" fill="#fff"/>
+    <circle class="draw" style="--d:120ms" pathLength="1" cx="299" cy="319" r="36" fill="#fff"/>
+    <circle class="draw" style="--d:180ms" pathLength="1" cx="299" cy="319" r="22" fill="#fff"/>
+    <circle class="fade" style="--d:240ms" cx="303" cy="323" r="13" fill="#141414" stroke="none"/>
+    <circle class="pop" style="--d:260ms" cx="358" cy="278" r="4.5" fill="#141414" stroke="none"/>
+    <g class="spark" stroke="#F6CB43" stroke-width="11">
+      <path class="fade" style="--d:300ms" d="M 396 268 L 424 250 M 402 306 L 436 304 M 394 342 L 422 358"/>
+    </g>
+    <!-- 实线弯箭头 → AI 芯片 -->
+    <path class="draw" style="--d:400ms" pathLength="1" stroke-width="7" d="M 390 296 L 610 296 Q 648 296 648 330 L 648 348 Q 648 380 686 380 L 896 380"/>
+    <path class="pop" style="--d:540ms" d="M 932 380 L 898 363 L 898 397 Z" fill="#141414" stroke="none"/>
+    <g stroke-width="9">
+      <path class="draw" style="--d:520ms" pathLength="1" d="M 992 228 L 992 263 M 1035 228 L 1035 263 M 1078 228 L 1078 263"/>
+      <path class="draw" style="--d:560ms" pathLength="1" d="M 992 442 L 992 477 M 1035 442 L 1035 477 M 1078 442 L 1078 477"/>
+      <path class="draw" style="--d:600ms" pathLength="1" d="M 915 315 L 948 315 M 915 390 L 948 390 M 1122 315 L 1155 315 M 1122 390 L 1155 390"/>
+    </g>
+    <rect class="dfill" style="--d:500ms" pathLength="1" x="950" y="265" width="170" height="175" rx="34" fill="#fff"/>
+    <path class="draw" style="--d:640ms" pathLength="1" stroke-width="9" d="M 998 385 Q 1011 335 1027 285 Q 1042 335 1054 385 M 1009 357 Q 1026 352 1043 357 M 1078 287 Q 1075 337 1080 385"/>
+    <g class="spark lp1" stroke="#F6CB43" stroke-width="11">
+      <path class="fade" style="--d:680ms" d="M 1136 300 L 1164 286 M 1140 340 L 1172 340 M 1134 380 L 1162 394"/>
+    </g>
+    <!-- 桌腿(先画,台面盖住上端) -->
+    <rect class="dfill" style="--d:620ms" pathLength="1" x="86" y="770" width="46" height="300" fill="#fff"/>
+    <rect class="dfill" style="--d:650ms" pathLength="1" x="330" y="700" width="46" height="240" fill="#fff"/>
+    <rect class="dfill" style="--d:680ms" pathLength="1" x="880" y="900" width="46" height="180" fill="#fff"/>
+    <rect class="dfill" style="--d:710ms" pathLength="1" x="1105" y="720" width="46" height="210" fill="#fff"/>
+    <!-- 台面 -->
+    <path class="dfill" style="--d:580ms" pathLength="1" fill="#fff" d="M 60 772 L 318 588 L 1164 694 L 890 878 Z"/>
+    <path class="dfill" style="--d:640ms" pathLength="1" fill="#fff" d="M 60 772 L 890 878 L 890 920 L 60 814 Z"/>
+    <path class="dfill" style="--d:660ms" pathLength="1" fill="#fff" d="M 890 878 L 1164 694 L 1164 736 L 890 920 Z"/>
+    <!-- 三箱 -->
+    <g class="dfill" style="--d:740ms" pathLength="1" fill="#fff">
+      <path d="M 333 654 L 274 677 L 333 700 L 392 677 Z"/>
+      <path d="M 274 677 L 274 769 L 333 792 L 333 700 Z"/>
+      <path d="M 392 677 L 392 769 L 333 792 L 333 700 Z"/>
+    </g>
+    <g class="dfill" style="--d:820ms" pathLength="1" fill="#F6CB43">
+      <path d="M 611 640 L 539 668 L 611 696 L 683 668 Z"/>
+      <path d="M 539 668 L 539 794 L 611 822 L 611 696 Z"/>
+      <path d="M 683 668 L 683 794 L 611 822 L 611 696 Z"/>
+    </g>
+    <path d="M 683 668 L 683 794 L 611 822 L 611 696 Z" fill="#E9B93A" stroke="#141414" stroke-width="8" class="dfill" style="--d:850ms" pathLength="1"/>
+    <g class="dfill" style="--d:900ms" pathLength="1" fill="#fff">
+      <path d="M 855 690 L 799 712 L 855 734 L 911 712 Z"/>
+      <path d="M 799 712 L 799 799 L 855 821 L 855 734 Z"/>
+      <path d="M 911 712 L 911 799 L 855 821 L 855 734 Z"/>
+    </g>
+    <!-- 黄检测角框 -->
+    <g class="bracket" stroke="#F6CB43" stroke-width="13">
+      <path class="fade" style="--d:1050ms" d="M 509 646 L 509 622 Q 509 610 521 610 L 545 610"/>
+      <path class="fade" style="--d:1110ms" d="M 713 646 L 713 622 Q 713 610 701 610 L 677 610"/>
+      <path class="fade" style="--d:1170ms" d="M 509 816 L 509 840 Q 509 852 521 852 L 545 852"/>
+      <path class="fade" style="--d:1230ms" d="M 713 816 L 713 840 Q 713 852 701 852 L 677 852"/>
+    </g>
+  </g>
+</svg>

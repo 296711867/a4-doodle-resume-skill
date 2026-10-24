@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1254 940" width="1254" height="940">
+  <!-- 17 视觉系统全景 · 复刻自素材 16_09_38-1(白底宽幅,工业相机+AI芯片+标定板+黄立方体+二指爪,点线视场) -->
+  <style>
+    .draw { stroke-dasharray: 1; }
+    @media (prefers-reduced-motion: no-preference) {
+    .draw { animation: draw-in .7s cubic-bezier(.45,0,.35,1) var(--d,0ms) both; }
+    .dfill { animation: draw-in .9s cubic-bezier(.45,0,.35,1) var(--d,0ms) both, fill-in .5s ease calc(var(--d,0ms) + 300ms) both; }
+    .fade { animation: fade-in .6s ease var(--d,0ms) both; }
+    .pop { transform-box: fill-box; transform-origin: center; animation: pop-o .3s ease var(--d,0ms) both, pop-t .45s cubic-bezier(.34,1.56,.64,1) var(--d,0ms) both; }
+    @keyframes draw-in { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+    @keyframes fill-in { from { fill-opacity: 0; } to { fill-opacity: 1; } }
+    @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes pop-o { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes pop-t { from { transform: scale(.4); } to { transform: scale(1); } }
+    .ball { transform-box: fill-box; transform-origin: center; animation: ball 2.2s ease-in-out infinite alternate; }
+    @keyframes ball { from { transform: scale(1); } to { transform: scale(1.22); } }
+    .spark { transform-box: fill-box; transform-origin: 30% 90%; animation: spark 2.6s ease-in-out infinite; }
+    @keyframes spark { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: .35; transform: scale(.88); } }
+    .dash { animation: march 1.8s linear infinite; }
+    @keyframes march { from { stroke-dashoffset: var(--p,.1); } to { stroke-dashoffset: 0; } }
+    .breathe { transform-box: fill-box; transform-origin: center; animation: breathe 3s ease-in-out infinite alternate; }
+    @keyframes breathe { from { transform: scale(1); } to { transform: scale(1.04); } }
+    .lp1 { animation-delay: -.9s; } .lp2 { animation-delay: -1.5s; }
+    }
+    @media print { * { animation: none !important; } }
+  </style>
+  <g id="scene" fill="none" stroke="#141414" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <!-- 点线视场/连接 -->
+    <g class="fade" style="--d:800ms;--p:.08"><path class="dash" pathLength="1" stroke-width="6" stroke-dasharray="0.012 0.068" d="M 320 288 L 528 288"/></g>
+    <g class="fade lp2" style="--d:920ms;--p:.08"><path class="dash" pathLength="1" stroke-width="6" stroke-dasharray="0.012 0.068" d="M 285 352 Q 400 480 540 602"/></g>
+    <g class="fade" style="--d:960ms;--p:.08"><path class="dash" pathLength="1" stroke-width="6" stroke-dasharray="0.012 0.068" d="M 320 332 Q 480 460 612 580"/></g>
+    <g class="fade lp1" style="--d:1000ms;--p:.08"><path class="dash" pathLength="1" stroke-width="6" stroke-dasharray="0.012 0.068" d="M 697 350 Q 850 405 1036 468"/></g>
+    <!-- 工业相机(左上,支架贴左缘) -->
+    <rect class="dfill" style="--d:120ms" pathLength="1" x="0" y="238" width="62" height="14" fill="#fff"/>
+    <rect class="dfill" style="--d:160ms" pathLength="1" x="0" y="298" width="62" height="14" fill="#fff"/>
+    <path class="dfill" style="--d:200ms" pathLength="1" fill="#fff" d="M 134 334 L 158 334 L 158 388 L 134 388 Z"/>
+    <rect class="dfill" style="--d:0ms" pathLength="1" x="60" y="220" width="182" height="112" rx="10" fill="#fff"/>
+    <path class="dfill" style="--d:60ms" pathLength="1" fill="#fff" d="M 66 220 L 100 192 L 262 192 L 242 220"/>
+    <rect class="dfill" style="--d:240ms" pathLength="1" x="242" y="234" width="52" height="84" fill="#fff"/>
+    <ellipse class="dfill" style="--d:300ms" pathLength="1" cx="298" cy="276" rx="27" ry="43" fill="#fff"/>
+    <ellipse class="fade" style="--d:380ms" cx="301" cy="276" rx="14" ry="24" fill="#141414" stroke="none"/>
+    <g class="spark" stroke="#F6CB43" stroke-width="12">
+      <path class="fade" style="--d:420ms" d="M 318 214 L 344 194 M 330 246 L 362 240"/>
+    </g>
+    <!-- AI 芯片 -->
+    <g stroke-width="9">
+      <path class="draw" style="--d:300ms" pathLength="1" d="M 572 208 L 572 234 M 616 208 L 616 234 M 660 208 L 660 234"/>
+      <path class="draw" style="--d:340ms" pathLength="1" d="M 572 362 L 572 388 M 616 362 L 616 388 M 660 362 L 660 388"/>
+      <path class="draw" style="--d:380ms" pathLength="1" d="M 516 266 L 542 266 M 516 330 L 542 330 M 691 266 L 717 266 M 691 330 L 717 330"/>
+    </g>
+    <rect class="dfill" style="--d:250ms" pathLength="1" x="540" y="232" width="153" height="132" rx="26" fill="#fff"/>
+    <path class="draw" style="--d:440ms" pathLength="1" stroke-width="8" d="M 585 322 Q 593 294 604 266 Q 614 294 621 322 M 592 304 Q 603 301 614 304 M 636 267 Q 634 296 637 322"/>
+    <!-- 黄立方体 -->
+    <g class="breathe">
+      <path class="dfill" style="--d:600ms" pathLength="1" fill="#F6CB43" d="M 631 572 L 546 606 L 631 640 L 716 606 Z"/>
+      <path class="dfill" style="--d:660ms" pathLength="1" fill="#F6CB43" d="M 546 606 L 546 684 L 631 718 L 631 640 Z"/>
+      <path class="dfill" style="--d:720ms" pathLength="1" fill="#E9B93A" d="M 716 606 L 716 684 L 631 718 L 631 640 Z"/>
+    </g>
+    <!-- C形二指爪(右) -->
+    <path class="dfill" style="--d:640ms" pathLength="1" fill="#fff" d="M 1254 205 L 1254 292 L 1148 428 L 1104 384 Z"/>
+    <circle class="dfill" style="--d:680ms" pathLength="1" cx="1136" cy="428" r="56" fill="#fff"/>
+    <g class="ball lp1"><circle class="pop" style="--d:720ms" cx="1150" cy="440" r="10" fill="#141414" stroke="none"/></g>
+    <path class="draw" style="--d:760ms" pathLength="1" stroke="#141414" stroke-width="52" stroke-linecap="round" d="M 1122 452 L 1160 540"/>
+    <path class="draw" style="--d:760ms" pathLength="1" stroke="#fefefe" stroke-width="38" stroke-linecap="round" d="M 1122 452 L 1160 540"/>
+    <circle class="pop" style="--d:800ms" cx="1140" cy="490" r="8" fill="#141414" stroke="none"/>
+    <circle class="pop" style="--d:830ms" cx="1152" cy="518" r="8" fill="#141414" stroke="none"/>
+    <path class="draw" style="--d:860ms" pathLength="1" stroke="#141414" stroke-width="30" stroke-linecap="round" d="M 1096 470 Q 1000 478 950 535 Q 930 565 952 588"/>
+    <path class="draw" style="--d:900ms" pathLength="1" stroke="#fefefe" stroke-width="18" stroke-linecap="round" d="M 1096 470 Q 1000 478 950 535 Q 930 565 952 588"/>
+    <path class="draw" style="--d:940ms" pathLength="1" stroke="#141414" stroke-width="30" stroke-linecap="round" d="M 1082 548 Q 1000 590 950 650 Q 930 680 958 692"/>
+    <path class="draw" style="--d:940ms" pathLength="1" stroke="#fefefe" stroke-width="18" stroke-linecap="round" d="M 1082 548 Q 1000 590 950 650 Q 930 680 958 692"/>
+  </g>
+</svg>

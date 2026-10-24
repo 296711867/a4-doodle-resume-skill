@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1254 1254" width="1254" height="1254">
+  <!-- 16 AI 安全盾 · 复刻自素材 16_06_08-8(黑底,盾+黄勾徽章居中,直角灰线连五卫星,11黄端子) -->
+  <style>
+    .draw { stroke-dasharray: 1; }
+    @media (prefers-reduced-motion: no-preference) {
+    .draw { animation: draw-in .7s cubic-bezier(.45,0,.35,1) var(--d,0ms) both; }
+    .dfill { animation: draw-in .9s cubic-bezier(.45,0,.35,1) var(--d,0ms) both, fill-in .5s ease calc(var(--d,0ms) + 300ms) both; }
+    .fade { animation: fade-in .6s ease var(--d,0ms) both; }
+    .pop { transform-box: fill-box; transform-origin: center; animation: pop-o .3s ease var(--d,0ms) both, pop-t .45s cubic-bezier(.34,1.56,.64,1) var(--d,0ms) both; }
+    @keyframes draw-in { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+    @keyframes fill-in { from { fill-opacity: 0; } to { fill-opacity: 1; } }
+    @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes pop-o { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes pop-t { from { transform: scale(.4); } to { transform: scale(1); } }
+    .ball { transform-box: fill-box; transform-origin: center; animation: ball 2.2s ease-in-out infinite alternate; }
+    @keyframes ball { from { transform: scale(1); } to { transform: scale(1.22); } }
+    .spark { transform-box: fill-box; transform-origin: 30% 90%; animation: spark 2.6s ease-in-out infinite; }
+    @keyframes spark { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: .35; transform: scale(.88); } }
+    .breathe { transform-box: fill-box; transform-origin: center; animation: breathe 3s ease-in-out infinite alternate; }
+    @keyframes breathe { from { transform: scale(1); } to { transform: scale(1.04); } }
+    .lp1 { animation-delay: -.9s; } .lp2 { animation-delay: -1.5s; }
+    }
+    @media print { * { animation: none !important; } }
+  </style>
+  <g id="scene" fill="none" stroke="#141414" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <!-- 直角灰线 -->
+    <g stroke="#d8d8d2" stroke-width="2.5">
+      <path class="draw" style="--d:800ms" pathLength="1" d="M 626 462 L 626 422"/>
+      <path class="draw" style="--d:850ms" pathLength="1" d="M 420 366 L 452 366 Q 464 366 464 380 L 464 502 Q 464 516 478 521 L 494 526"/>
+      <path class="draw" style="--d:900ms" pathLength="1" d="M 836 524 L 870 520 Q 882 518 882 504 L 882 382 Q 882 368 894 366 L 924 366"/>
+      <path class="draw" style="--d:950ms" pathLength="1" d="M 360 806 L 420 806 Q 434 806 434 792 L 434 700 Q 434 688 448 686 L 492 684"/>
+      <path class="draw" style="--d:1000ms" pathLength="1" d="M 758 728 L 800 730 Q 814 730 814 744 L 814 788 Q 814 802 828 802 L 884 802"/>
+      <path class="draw" style="--d:1050ms" pathLength="1" d="M 625 770 L 625 866"/>
+    </g>
+    <!-- 浏览器图表卡(左上) -->
+    <g class="breathe">
+      <rect class="dfill" style="--d:250ms" pathLength="1" x="112" y="265" width="294" height="262" rx="20" fill="#fff"/>
+      <path class="draw" style="--d:350ms" pathLength="1" stroke-width="6" d="M 114 317 L 404 317"/>
+      <circle class="pop" style="--d:400ms" cx="144" cy="291" r="8" fill="#F6CB43" stroke="none"/>
+      <circle class="pop" style="--d:430ms" cx="176" cy="291" r="7" fill="#141414" stroke="none"/>
+      <circle class="pop" style="--d:460ms" cx="208" cy="291" r="7" fill="#141414" stroke="none"/>
+      <rect class="pop" style="--d:500ms" x="150" y="452" width="26" height="40" rx="4" fill="#fff" stroke-width="5"/>
+      <rect class="pop" style="--d:530ms" x="192" y="428" width="26" height="64" rx="4" fill="#fff" stroke-width="5"/>
+      <g class="ball"><rect class="pop" style="--d:560ms" x="234" y="404" width="26" height="88" rx="4" fill="#F6CB43" stroke-width="5"/></g>
+      <path class="draw" style="--d:600ms" pathLength="1" stroke-width="7" d="M 290 420 L 376 419 M 290 450 L 376 449 M 290 480 L 350 480"/>
+    </g>
+    <!-- 文档卡+黄盾(右上) -->
+    <g class="breathe lp1">
+      <rect class="dfill" style="--d:350ms" pathLength="1" x="928" y="284" width="206" height="244" rx="14" fill="#fff"/>
+      <path class="draw" style="--d:450ms" pathLength="1" stroke-width="5" d="M 1056 286 L 1132 362 L 1056 362"/>
+      <path class="draw" style="--d:500ms" pathLength="1" stroke-width="7" d="M 950 340 L 1026 340 M 950 375 L 1026 375 M 950 410 L 1026 410 M 950 445 L 1000 445"/>
+      <path class="pop" style="--d:560ms" d="M 1052 420 L 1108 420 L 1108 468 Q 1108 500 1080 512 Q 1052 500 1052 468 Z" fill="#F6CB43" stroke="none"/>
+    </g>
+    <!-- 清单卡(左下) -->
+    <g class="breathe lp2">
+      <rect class="dfill" style="--d:450ms" pathLength="1" x="112" y="717" width="244" height="249" rx="20" fill="#fff"/>
+      <rect class="pop" style="--d:580ms" x="140" y="747" width="46" height="46" rx="10" fill="#F6CB43" stroke-width="6"/>
+      <path class="draw" style="--d:640ms" pathLength="1" stroke-width="6" d="M 150 770 L 161 781 L 180 757"/>
+      <path class="draw" style="--d:680ms" pathLength="1" stroke-width="7" d="M 210 762 L 330 761 M 210 790 L 330 789"/>
+      <rect class="pop" style="--d:720ms" x="140" y="827" width="46" height="46" rx="10" fill="#fff" stroke-width="6"/>
+      <path class="draw" style="--d:760ms" pathLength="1" stroke-width="7" d="M 210 842 L 330 841 M 210 870 L 330 869"/>
+      <rect class="pop" style="--d:800ms" x="140" y="907" width="46" height="46" rx="10" fill="#fff" stroke-width="6"/>
+      <path class="draw" style="--d:840ms" pathLength="1" stroke-width="7" d="M 210 922 L 330 921 M 210 950 L 330 949"/>
+    </g>
+    <!-- 放大镜(右下) -->
+    <g class="breathe">
+      <circle class="dfill" style="--d:550ms" pathLength="1" cx="1024" cy="796" r="95" fill="#fff"/>
+      <circle class="draw" style="--d:650ms" pathLength="1" cx="1024" cy="796" r="70" fill="#fff"/>
+      <rect class="pop" style="--d:700ms" x="986" y="808" width="16" height="38" rx="3" fill="#fff" stroke-width="5"/>
+      <rect class="pop" style="--d:730ms" x="1012" y="788" width="16" height="58" rx="3" fill="#fff" stroke-width="5"/>
+      <g class="ball lp1"><rect class="pop" style="--d:760ms" x="1038" y="768" width="16" height="78" rx="3" fill="#F6CB43" stroke-width="5"/></g>
+      <path class="draw" style="--d:700ms" pathLength="1" stroke-width="5" d="M 978 850 L 1070 850"/>
+      <path class="draw" style="--d:800ms" pathLength="1" stroke="#d8d8d2" stroke-width="30" d="M 1096 868 L 1148 920"/>
+    </g>
+    <!-- 数据库(底) -->
+    <g class="breathe lp1">
+      <path class="dfill" style="--d:600ms" pathLength="1" fill="#fff" d="M 538 902 L 538 1038 Q 538 1066 625 1066 Q 712 1066 712 1038 L 712 902"/>
+      <ellipse class="dfill" style="--d:600ms" pathLength="1" cx="625" cy="902" rx="87" ry="26" fill="#fff"/>
+      <path class="draw" style="--d:700ms" pathLength="1" d="M 538 956 Q 538 984 625 984 Q 712 984 712 956 M 538 1010 Q 538 1038 625 1038 Q 712 1038 712 1010"/>
+      <circle class="pop" style="--d:760ms" cx="696" cy="935" r="6" fill="#F6CB43" stroke="none"/>
+      <circle class="pop" style="--d:790ms" cx="696" cy="988" r="6" fill="#F6CB43" stroke="none"/>
+      <circle class="pop" style="--d:820ms" cx="696" cy="1040" r="6" fill="#F6CB43" stroke="none"/>
+    </g>
+    <!-- 安全盾 -->
+    <path class="dfill" style="--d:0ms" pathLength="1" fill="#fff" d="M 504 465 L 746 465 Q 754 465 754 473 L 754 556 Q 754 686 625 762 Q 496 686 496 556 L 496 473 Q 496 465 504 465 Z"/>
+    <path class="draw" style="--d:300ms" pathLength="1" stroke="#141414" stroke-width="11" d="M 578 600 Q 592 545 614 490 Q 634 545 648 600 M 590 568 Q 612 562 636 568 M 672 492 Q 668 548 674 600"/>
+    <g class="ball"><circle class="pop" style="--d:450ms" cx="625" cy="672" r="38" fill="#F6CB43" stroke="#141414" stroke-width="6"/></g>
+    <path class="draw" style="--d:560ms" pathLength="1" stroke="#141414" stroke-width="8" d="M 607 672 L 620 686 L 646 656"/>
+    <g class="spark" stroke="#F6CB43" stroke-width="13">
+      <path class="fade" style="--d:1400ms" d="M 702 466 L 728 438 M 738 420 L 762 392 M 772 468 L 794 446"/>
+    </g>
+    <!-- 黄端子 ×11 -->
+    <g class="ball lp1"><circle class="pop" style="--d:1150ms" cx="626" cy="410" r="11" fill="#F6CB43" stroke="none"/></g>
+    <circle class="pop" style="--d:1180ms" cx="434" cy="366" r="9" fill="#F6CB43" stroke="none"/>
+    <circle class="pop" style="--d:1210ms" cx="480" cy="526" r="10" fill="#F6CB43" stroke="none"/>
+    <circle class="pop" style="--d:1240ms" cx="848" cy="524" r="10" fill="#F6CB43" stroke="none"/>
+    <circle class="pop" style="--d:1270ms" cx="908" cy="366" r="9" fill="#F6CB43" stroke="none"/>
+    <circle class="pop" style="--d:1300ms" cx="374" cy="806" r="9" fill="#F6CB43" stroke="none"/>
+    <circle class="pop" style="--d:1330ms" cx="478" cy="684" r="10" fill="#F6CB43" stroke="none"/>
+    <circle class="pop" style="--d:1360ms" cx="772" cy="729" r="10" fill="#F6CB43" stroke="none"/>
+    <circle class="pop" style="--d:1390ms" cx="898" cy="802" r="9" fill="#F6CB43" stroke="none"/>
+    <circle class="pop" style="--d:1420ms" cx="625" cy="792" r="10" fill="#F6CB43" stroke="none"/>
+    <circle class="pop" style="--d:1450ms" cx="625" cy="852" r="9" fill="#F6CB43" stroke="none"/>
+  </g>
+</svg>

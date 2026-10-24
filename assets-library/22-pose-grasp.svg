@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1254 1254" width="1254" height="1254">
+  <!-- 22 6D位姿抓取 · 复刻自素材 16_09_49-7(白底,AI芯片→虚线箭→立方体位姿角框→黄粗箭→平行夹爪夹箱) -->
+  <style>
+    .draw { stroke-dasharray: 1; }
+    @media (prefers-reduced-motion: no-preference) {
+    .draw { animation: draw-in .7s cubic-bezier(.45,0,.35,1) var(--d,0ms) both; }
+    .dfill { animation: draw-in .9s cubic-bezier(.45,0,.35,1) var(--d,0ms) both, fill-in .5s ease calc(var(--d,0ms) + 300ms) both; }
+    .fade { animation: fade-in .6s ease var(--d,0ms) both; }
+    .pop { transform-box: fill-box; transform-origin: center; animation: pop-o .3s ease var(--d,0ms) both, pop-t .45s cubic-bezier(.34,1.56,.64,1) var(--d,0ms) both; }
+    @keyframes draw-in { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+    @keyframes fill-in { from { fill-opacity: 0; } to { fill-opacity: 1; } }
+    @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes pop-o { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes pop-t { from { transform: scale(.4); } to { transform: scale(1); } }
+    .spark { transform-box: fill-box; transform-origin: 30% 90%; animation: spark 2.6s ease-in-out infinite; }
+    @keyframes spark { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: .35; transform: scale(.88); } }
+    .dash { animation: march 2.2s linear infinite; }
+    @keyframes march { from { stroke-dashoffset: var(--p,.1); } to { stroke-dashoffset: 0; } }
+    .bracket { animation: bracket 2.8s ease-in-out infinite; }
+    @keyframes bracket { 0%,32%,100% { opacity: 1; } 8%,24% { opacity: .15; } }
+    .breathe { transform-box: fill-box; transform-origin: center; animation: breathe 3s ease-in-out infinite alternate; }
+    @keyframes breathe { from { transform: scale(1); } to { transform: scale(1.04); } }
+    .lp1 { animation-delay: -.9s; }
+    }
+    @media print { * { animation: none !important; } }
+  </style>
+  <g id="scene" fill="none" stroke="#141414" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <!-- AI 芯片(左上) -->
+    <g stroke-width="9">
+      <path class="draw" style="--d:180ms" pathLength="1" d="M 150 375 L 150 407 M 193 375 L 193 407 M 236 375 L 236 407"/>
+      <path class="draw" style="--d:220ms" pathLength="1" d="M 150 538 L 150 570 M 193 538 L 193 570 M 236 538 L 236 570"/>
+      <path class="draw" style="--d:260ms" pathLength="1" d="M 83 434 L 117 434 M 83 510 L 117 510 M 248 434 L 282 434 M 248 510 L 282 510"/>
+    </g>
+    <rect class="dfill" style="--d:0ms" pathLength="1" x="115" y="405" width="137" height="135" rx="28" fill="#fff"/>
+    <path class="draw" style="--d:300ms" pathLength="1" stroke-width="8" d="M 152 506 Q 161 476 173 446 Q 184 476 192 506 M 159 486 Q 171 482 183 486 M 207 447 Q 205 478 208 506"/>
+    <g class="spark" stroke="#F6CB43" stroke-width="11">
+      <path class="fade" style="--d:340ms" d="M 148 380 L 138 350 M 192 374 L 194 342 M 236 380 L 248 352 M 96 428 L 64 416"/>
+    </g>
+    <!-- 虚线弯箭头 -->
+    <g class="fade" style="--d:400ms"><path class="dash" pathLength="1" stroke-width="7" stroke-dasharray="0.05 0.05" d="M 292 486 Q 372 520 422 604"/></g>
+    <path class="pop" style="--d:520ms" d="M 438 632 L 404 614 L 428 588 Z" fill="#141414" stroke="none"/>
+    <!-- 中央立方体 + 位姿角框 -->
+    <g class="breathe">
+      <path class="dfill" style="--d:560ms" pathLength="1" fill="#fff" d="M 557 606 L 450 649 L 557 692 L 664 649 Z"/>
+      <path class="dfill" style="--d:620ms" pathLength="1" fill="#fff" d="M 450 649 L 450 779 L 557 822 L 557 692 Z"/>
+      <path class="dfill" style="--d:660ms" pathLength="1" fill="#fff" d="M 664 649 L 664 779 L 557 822 L 557 692 Z"/>
+    </g>
+    <g class="bracket" stroke-width="11">
+      <path class="draw" style="--d:720ms" pathLength="1" d="M 527 545 L 521 545 Q 515 545 515 539 L 515 503 Q 515 497 521 497 L 527 497"/>
+      <path class="draw" style="--d:760ms" pathLength="1" d="M 605 497 L 611 497 Q 617 497 617 503 L 617 539 Q 617 545 611 545 L 605 545"/>
+      <path class="draw" style="--d:800ms" pathLength="1" d="M 352 593 L 346 593 Q 340 593 340 599 L 340 736 Q 340 742 346 742 L 352 742"/>
+      <path class="draw" style="--d:840ms" pathLength="1" d="M 400 593 L 406 593 Q 412 593 412 599 L 412 736 Q 412 742 406 742 L 400 742"/>
+      <path class="draw" style="--d:880ms" pathLength="1" d="M 527 882 L 521 882 Q 515 882 515 888 L 515 921 Q 515 927 521 927 L 527 927"/>
+      <path class="draw" style="--d:920ms" pathLength="1" d="M 591 882 L 597 882 Q 603 882 603 888 L 603 921 Q 603 927 597 927 L 591 927"/>
+      <path class="draw" style="--d:960ms" pathLength="1" d="M 702 600 L 702 578 Q 702 572 708 572 L 726 572"/>
+      <path class="draw" style="--d:1000ms" pathLength="1" d="M 762 624 L 762 602 Q 762 596 756 596 L 738 596"/>
+    </g>
+    <g class="fade" style="--d:1020ms"><path class="dash" pathLength="1" stroke-width="6" stroke-dasharray="0.05 0.05" d="M 698 612 L 668 644"/></g>
+    <g class="bracket lp1" stroke="#F6CB43" stroke-width="11">
+      <path class="draw" style="--d:1060ms" pathLength="1" d="M 637 681 L 631 681 Q 625 681 625 687 L 625 752 Q 625 758 631 758 L 637 758"/>
+      <path class="draw" style="--d:1100ms" pathLength="1" d="M 660 681 L 666 681 Q 672 681 672 687 L 672 752 Q 672 758 666 758 L 660 758"/>
+    </g>
+    <!-- 黄粗弯箭头 -->
+    <path class="draw" style="--d:1150ms" pathLength="1" stroke="#F6CB43" stroke-width="14" d="M 692 702 Q 800 658 892 686"/>
+    <path class="pop" style="--d:1300ms" d="M 924 694 L 884 668 L 880 706 Z" fill="#F6CB43" stroke="none"/>
+    <!-- 平行夹爪 -->
+    <rect class="dfill" style="--d:1350ms" pathLength="1" x="1000" y="339" width="44" height="132" rx="8" fill="#fff"/>
+    <rect class="dfill" style="--d:1390ms" pathLength="1" x="1148" y="339" width="44" height="132" rx="8" fill="#fff"/>
+    <path class="dfill" style="--d:1430ms" pathLength="1" fill="#fff" d="M 984 469 L 1208 469 L 1186 547 L 1006 547 Z"/>
+    <path class="dfill" style="--d:1470ms" pathLength="1" fill="#fff" d="M 992 540 L 938 642 L 966 658 L 1020 558 Z"/>
+    <path class="dfill" style="--d:1510ms" pathLength="1" fill="#fff" d="M 1200 540 L 1246 634 L 1218 650 L 1172 558 Z"/>
+    <circle class="pop" style="--d:1550ms" cx="952" cy="655" r="16" fill="#141414" stroke="none"/>
+    <circle class="pop" style="--d:1580ms" cx="1232" cy="648" r="16" fill="#141414" stroke="none"/>
+    <g class="dfill" style="--d:1620ms" pathLength="1" fill="#fff">
+      <path d="M 1075 610 L 1005 638 L 1075 666 L 1145 638 Z"/>
+      <path d="M 1005 638 L 1005 727 L 1075 755 L 1075 666 Z"/>
+      <path d="M 1145 638 L 1145 727 L 1075 755 L 1075 666 Z"/>
+    </g>
+    <path class="draw" style="--d:1680ms" pathLength="1" stroke-width="22" d="M 954 668 Q 964 716 992 740"/>
+    <path class="draw" style="--d:1720ms" pathLength="1" stroke-width="22" d="M 1230 660 Q 1220 706 1192 730"/>
+    <rect class="pop" style="--d:1760ms" x="976" y="686" width="16" height="60" rx="6" fill="#F6CB43" stroke="none"/>
+    <rect class="pop" style="--d:1790ms" x="1158" y="686" width="16" height="60" rx="6" fill="#F6CB43" stroke="none"/>
+    <g class="spark lp1" stroke="#F6CB43" stroke-width="11">
+      <path class="fade" style="--d:1850ms" d="M 918 620 L 896 600 M 926 760 L 902 776 M 1262 588 L 1276 562"/>
+    </g>
+  </g>
+</svg>

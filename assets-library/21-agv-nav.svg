@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1254 1254" width="1254" height="1254">
+  <!-- 21 AGV 导航 · 复刻自素材 16_09_48-6(白底,AGV驮黄胶带箱+AI芯片,S虚线路径→黄地图钉) -->
+  <style>
+    .draw { stroke-dasharray: 1; }
+    @media (prefers-reduced-motion: no-preference) {
+    .draw { animation: draw-in .7s cubic-bezier(.45,0,.35,1) var(--d,0ms) both; }
+    .dfill { animation: draw-in .9s cubic-bezier(.45,0,.35,1) var(--d,0ms) both, fill-in .5s ease calc(var(--d,0ms) + 300ms) both; }
+    .fade { animation: fade-in .6s ease var(--d,0ms) both; }
+    .pop { transform-box: fill-box; transform-origin: center; animation: pop-o .3s ease var(--d,0ms) both, pop-t .45s cubic-bezier(.34,1.56,.64,1) var(--d,0ms) both; }
+    @keyframes draw-in { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+    @keyframes fill-in { from { fill-opacity: 0; } to { fill-opacity: 1; } }
+    @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes pop-o { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes pop-t { from { transform: scale(.4); } to { transform: scale(1); } }
+    .ball { transform-box: fill-box; transform-origin: center; animation: ball 2.2s ease-in-out infinite alternate; }
+    @keyframes ball { from { transform: scale(1); } to { transform: scale(1.22); } }
+    .dash { animation: march 2.2s linear infinite; }
+    @keyframes march { from { stroke-dashoffset: var(--p,.1); } to { stroke-dashoffset: 0; } }
+    .bob { animation: bob 2.8s ease-in-out infinite alternate; }
+    @keyframes bob { from { transform: translateY(0); } to { transform: translateY(-5px); } }
+    .wheel { transform-box: fill-box; transform-origin: center; animation: spin 2.6s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .lp1 { animation-delay: -.9s; }
+    }
+    @media print { * { animation: none !important; } }
+  </style>
+  <g id="scene" fill="none" stroke="#141414" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <!-- AI 芯片 -->
+    <g stroke-width="9">
+      <path class="draw" style="--d:200ms" pathLength="1" d="M 258 288 L 258 322 M 297 288 L 297 322 M 336 288 L 336 322"/>
+      <path class="draw" style="--d:240ms" pathLength="1" d="M 258 478 L 258 512 M 297 478 L 297 512 M 336 478 L 336 512"/>
+      <path class="draw" style="--d:280ms" pathLength="1" d="M 183 362 L 217 362 M 183 438 L 217 438 M 378 362 L 412 362 M 378 438 L 412 438"/>
+    </g>
+    <rect class="dfill" style="--d:0ms" pathLength="1" x="215" y="322" width="165" height="156" rx="32" fill="#fff"/>
+    <path class="draw" style="--d:320ms" pathLength="1" stroke-width="9" d="M 262 428 Q 273 382 287 336 Q 300 382 311 428 M 272 402 Q 288 397 303 402 M 336 338 Q 334 384 338 428"/>
+    <g class="fade" style="--d:400ms;--p:.08"><path class="dash" pathLength="1" stroke-width="6" stroke-dasharray="0.012 0.068" d="M 297 516 L 297 612"/></g>
+    <!-- AGV 车轮(先画车身再轮? 轮在车身下缘前层) -->
+    <g class="bob">
+      <rect class="dfill" style="--d:450ms" pathLength="1" x="74" y="762" width="434" height="130" rx="30" fill="#fff"/>
+      <g class="dfill" style="--d:520ms" pathLength="1" fill="#F6CB43">
+        <path d="M 255 618 L 180 648 L 255 678 L 330 648 Z"/>
+        <path d="M 180 648 L 180 765 L 255 795 L 255 678 Z"/>
+        <path d="M 330 648 L 330 765 L 255 795 L 255 648 Z" fill="#E9B93A"/>
+      </g>
+      <path class="draw" style="--d:600ms" pathLength="1" stroke-width="7" d="M 184 648 L 326 648"/>
+      <circle class="pop" style="--d:660ms" cx="422" cy="826" r="8" fill="#141414" stroke="none"/>
+      <circle class="pop" style="--d:690ms" cx="450" cy="826" r="8" fill="#141414" stroke="none"/>
+      <rect class="pop" style="--d:720ms" x="362" y="846" width="46" height="16" rx="8" fill="#141414" stroke="none"/>
+    </g>
+    <g class="wheel">
+      <circle class="dfill" style="--d:760ms" pathLength="1" cx="168" cy="892" r="55" fill="#fff"/>
+      <circle class="draw" style="--d:800ms" pathLength="1" cx="168" cy="892" r="30" fill="#fff"/>
+      <circle class="pop" style="--d:840ms" cx="180" cy="880" r="9" fill="#141414" stroke="none"/>
+    </g>
+    <g class="wheel lp1">
+      <circle class="dfill" style="--d:880ms" pathLength="1" cx="300" cy="892" r="48" fill="#fff"/>
+      <circle class="draw" style="--d:920ms" pathLength="1" cx="300" cy="892" r="26" fill="#fff"/>
+      <circle class="pop" style="--d:960ms" cx="311" cy="881" r="8" fill="#141414" stroke="none"/>
+    </g>
+    <circle class="fade" style="--d:1000ms" cx="462" cy="882" r="25" fill="#141414" stroke="none"/>
+    <!-- S 虚线路径 -->
+    <g class="fade" style="--d:1100ms"><path class="dash" pathLength="1" stroke-width="7" stroke-dasharray="0.05 0.05" d="M 516 848 Q 650 884 762 834 Q 876 784 870 702 Q 866 632 916 590"/></g>
+    <path class="pop" style="--d:1300ms" d="M 942 566 L 900 576 L 924 606 Z" fill="#141414" stroke="none"/>
+    <!-- 地图钉 -->
+    <ellipse class="dfill" style="--d:1500ms" pathLength="1" cx="1080" cy="588" rx="100" ry="28" fill="#fff"/>
+    <g class="ball">
+      <path class="dfill" style="--d:1400ms" pathLength="1" fill="#F6CB43" d="M 1080 592 C 1015 520 993 472 993 425 A 87 87 0 1 1 1167 425 C 1167 472 1145 520 1080 592 Z"/>
+      <circle class="fade" style="--d:1550ms" cx="1080" cy="428" r="38" fill="#fefefe" stroke="none"/>
+    </g>
+  </g>
+</svg>

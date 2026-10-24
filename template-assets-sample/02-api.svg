@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="70 430 1115 620" width="1115" height="620">
+  
+  
+  
+  <g id="scene-02">
+  
+  <g fill="none" stroke="#141414" stroke-width="6.0" stroke-linecap="round" stroke-linejoin="round">
+    <path class="draw" style="--d:0ms" pathLength="1" fill="#fff" d="M 100 452 Q 226 445 352 452 L 364 488 Q 226 480 88 488 Z" />
+    <rect class="dfill draw" style="--d:100ms" pathLength="1" x="89" y="492" width="273" height="78" rx="12" fill="#fff" />
+    <rect class="dfill draw" style="--d:200ms" pathLength="1" x="91" y="598" width="268" height="70" rx="12" fill="#fff" />
+    <rect class="dfill draw" style="--d:300ms" pathLength="1" x="93" y="692" width="264" height="70" rx="12" fill="#fff" />
+    <path class="draw" style="--d:380ms" pathLength="1" stroke-width="5.0" d="M 128 574 L 300 572 M 130 668 L 298 666 M 132 760 L 296 758" />
+    <path class="fade" style="--d:430ms" stroke-width="5.0" d="M 240 552 L 296 551 M 240 650 L 294 649 M 242 745 L 292 744" />
+    <circle class="pop led" style="--d:460ms" cx="123" cy="532" r="8" fill="#F6CB43" stroke="none" />
+    <circle class="pop led l2" style="--d:490ms" cx="125" cy="633" r="8" fill="#F6CB43" stroke="none" />
+    <circle class="pop led l3" style="--d:520ms" cx="126" cy="728" r="8" fill="#F6CB43" stroke="none" />
+    <path class="fade" style="--d:420ms" stroke-width="5.0" d="M 240 532 L 318 531 M 240 633 L 316 632 M 242 728 L 314 727" />
+
+    
+    <ellipse class="draw" style="--d:500ms" pathLength="1" cx="1067" cy="518" rx="97" ry="28" fill="#fff" />
+    <path fill="#fff" stroke="none" d="M 970 518 L 970 745 Q 1067 770 1164 745 L 1164 518 Q 1067 540 970 518 Z" />
+    <path class="draw" style="--d:580ms" pathLength="1" d="M 970 518 Q 968 585 971 656 M 1164 518 Q 1166 585 1163 656" />
+    <path class="draw" style="--d:640ms" pathLength="1" stroke-width="5.0" d="M 970 570 Q 1067 592 1164 568" />
+    <path class="draw" style="--d:700ms" pathLength="1" d="M 968 598 Q 966 650 970 702 M 1166 598 Q 1168 650 1164 702" />
+    <path class="draw" style="--d:740ms" pathLength="1" stroke-width="5.0" d="M 969 648 Q 1067 670 1165 646" />
+    <path class="draw" style="--d:780ms" pathLength="1" d="M 966 668 Q 964 710 970 745 Q 1067 772 1162 745 Q 1166 710 1164 668" />
+    <circle class="pop led" style="--d:820ms" cx="1136" cy="580" r="7" fill="#F6CB43" stroke="none" />
+    <circle class="pop led l2" style="--d:850ms" cx="1136" cy="646" r="7" fill="#F6CB43" stroke="none" />
+    <circle class="pop led l3" style="--d:880ms" cx="1139" cy="709" r="6" fill="#F6CB43" stroke="none" />
+
+    
+    <path class="draw" style="--d:900ms" pathLength="1" stroke-width="5.0" d="M 612 520 Q 616 480 620 462 M 696 522 Q 698 490 696 468" />
+    <circle class="pop" style="--d:980ms" cx="621" cy="455" r="13" fill="#F6CB43" stroke-width="4.0" />
+    <circle class="pop" style="--d:1010ms" cx="696" cy="470" r="10" fill="#F6CB43" stroke-width="4.0" />
+    <rect class="dfill draw" style="--d:1050ms" pathLength="1" x="526" y="524" width="261" height="173" rx="26" fill="#fff" />
+    <text class="fade" style="--d:1200ms" x="656" y="636" text-anchor="middle" font-size="86" font-weight="700"
+      font-family="'Segoe Print','Bradley Hand','Comic Sans MS',cursive" fill="#141414" stroke="none">API</text>
+
+    
+    <path class="fade" style="--d:1300ms" stroke="#8f8f85" stroke-width="5.0" stroke-dasharray="14 16" d="M 386 606 Q 455 600 514 604" />
+    <path class="fade" style="--d:1340ms" stroke="#8f8f85" stroke-width="5.0" d="M 514 604 L 496 590 M 514 604 L 496 616" />
+    <path class="fade pulse" style="--d:1420ms" stroke="#F6CB43" stroke-width="6.5" pathLength="100" stroke-dasharray="0.01 11" d="M 386 606 Q 455 600 514 604" />
+    <path class="fade" style="--d:1380ms" stroke="#8f8f85" stroke-width="5.0" stroke-dasharray="14 16" d="M 940 602 Q 875 606 802 604" />
+    <path class="fade" style="--d:1420ms" stroke="#8f8f85" stroke-width="5.0" d="M 802 604 L 820 590 M 802 604 L 820 616" />
+    <path class="fade pulse p2" style="--d:1460ms" stroke="#F6CB43" stroke-width="6.5" pathLength="100" stroke-dasharray="0.01 11" d="M 940 602 Q 875 606 802 604" />
+    <path class="fade" style="--d:1500ms" stroke="#8f8f85" stroke-width="5.0" stroke-dasharray="14 16" d="M 655 840 Q 650 790 654 716" />
+    <path class="fade" style="--d:1540ms" stroke="#8f8f85" stroke-width="5.0" d="M 654 716 L 640 732 M 654 716 L 668 730" />
+    <path class="fade pulse" style="--d:1580ms" stroke="#F6CB43" stroke-width="6.5" pathLength="100" stroke-dasharray="0.01 11" d="M 655 840 Q 650 790 654 716" />
+
+    
+    <g class="spin">
+      <path class="dfill draw" style="--d:1600ms" pathLength="1" fill="#fff" stroke-width="6.0"
+        d="M 731.0 932.2 Q 739.0 945.0 731.0 957.8 L 706.5 958.0 A 58 58 0 0 1 699.2 975.7 L 716.3 993.2 Q 712.9 1007.9 698.2 1011.3 L 680.7 994.2 A 58 58 0 0 1 663.0 1001.5 L 662.8 1026.0 Q 650.0 1034.0 637.2 1026.0 L 637.0 1001.5 A 58 58 0 0 1 619.3 994.2 L 601.8 1011.3 Q 587.1 1007.9 583.7 993.2 L 600.8 975.7 A 58 58 0 0 1 593.5 958.0 L 569.0 957.8 Q 561.0 945.0 569.0 932.2 L 593.5 932.0 A 58 58 0 0 1 600.8 914.3 L 583.7 896.8 Q 587.1 882.1 601.8 878.7 L 619.3 895.8 A 58 58 0 0 1 637.0 888.5 L 637.2 864.0 Q 650.0 856.0 662.8 864.0 L 663.0 888.5 A 58 58 0 0 1 680.7 895.8 L 698.2 878.7 Q 712.9 882.1 716.3 896.8 L 699.2 914.3 A 58 58 0 0 1 706.5 932.0 Z" />
+      <circle class="pop" style="--d:1780ms" cx="650" cy="945" r="22" fill="#fff" stroke-width="6.0" />
+    </g>
+    <g class="tw fade" style="--d:1700ms" stroke="#F6CB43" stroke-width="13.0" stroke-linecap="round">
+      <path d="M 756 830 L 768 812" />
+    </g>
+    <g class="tw t2 fade" style="--d:1740ms" stroke="#F6CB43" stroke-width="13.0" stroke-linecap="round">
+      <path d="M 776 868 L 800 872" />
+    </g>
+    <g class="tw t3 fade" style="--d:1780ms" stroke="#F6CB43" stroke-width="12.0" stroke-linecap="round">
+      <path d="M 782 908 L 802 910" />
+    </g>
+  </g>
+  </g>
+  
+</svg>

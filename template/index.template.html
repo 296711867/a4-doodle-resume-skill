@@ -1,0 +1,594 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>JIANG YE 江野 — 前后端全栈工程师 · 简历</title>
+<style>
+  /* ===== 字体(单文件内嵌,零外部请求) ===== */
+  @font-face {
+    font-family: 'Space Grotesk'; font-style: normal; font-weight: 300 700; font-display: block;
+    src: url(data:font/woff2;base64,%%FONT_SG%%) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  @font-face {
+    font-family: 'Caveat'; font-style: normal; font-weight: 400 700; font-display: block;
+    src: url(data:font/woff2;base64,%%FONT_CV%%) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+FEFF, U+FFFD;
+  }
+
+  :root {
+    --ink: #141414;
+    --soft: #3c3c38;
+    --mut: #6b6b64;
+    --accent: #F6CB43;
+    --accent-ink: #141414;
+    --paper: #ffffff;
+    --yellow: var(--accent);
+    --font-main: 'Space Grotesk', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans SC', sans-serif;
+    --font-hand: 'Caveat', 'Segoe Script', 'Bradley Hand', cursive;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  ul, ol { list-style: none; }
+  html, body { background: #E9E7E2; }
+  body { font-family: var(--font-main); color: var(--ink); -webkit-font-smoothing: antialiased; }
+
+  /* ===== A4 页面 ===== */
+  .page {
+    width: 794px; height: 1123px;
+    margin: 28px auto;
+    background: #fff;
+    box-shadow: 0 24px 60px rgba(20,20,20,.18), 0 0 0 1px rgba(20,20,20,.06);
+    padding: 30px 44px 16px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* ===== 姓名区 ===== */
+  .hero { display: grid; grid-template-columns: 1fr 236px; gap: 18px; align-items: start; margin-bottom: 10px; }
+  .hero__name {
+    font-size: 50px; font-weight: 700; line-height: 1; letter-spacing: -0.5px; white-space: nowrap;
+  }
+  .hero__name .hl {
+    background: linear-gradient(104deg, transparent 2%, var(--yellow) 2% 96%, transparent 96%);
+    background-size: 100% 46%; background-position: 0 88%; padding: 0 4px;
+  }
+  .hero__seal {
+    display: inline-block; vertical-align: 6px; margin-left: 10px;
+    width: 36px; height: 36px; background: var(--yellow);
+    border: 2px solid var(--ink);
+    border-radius: 12px 4px 14px 5px / 5px 14px 4px 12px;
+    transform: rotate(4deg);
+    font-size: 12px; font-weight: 600; color: var(--ink);
+    display: inline-flex; align-items: center; justify-content: center;
+    writing-mode: vertical-rl; letter-spacing: 2px;
+    font-family: var(--font-main);
+  }
+  .hero__role { margin-top: 9px; font-size: 17px; font-weight: 600; }
+  .hero__role em { font-family: var(--font-hand); font-style: normal; font-weight: 600; font-size: 17px; color: var(--mut); margin-left: 8px; }
+  .hero__tags { margin-top: 10px; display: flex; gap: 8px; flex-wrap: wrap; }
+  .tag {
+    font-size: 11.5px; padding: 4px 12px; border: 1.5px solid var(--ink); background: #fff;
+    border-radius: 12px 4px 14px 5px / 5px 14px 4px 12px;
+  }
+  .tag:nth-child(2) { border-radius: 5px 14px 4px 12px / 12px 4px 14px 5px; }
+  .tag:nth-child(3) { border-radius: 14px 5px 12px 4px / 4px 12px 5px 14px; }
+  .tag:nth-child(4) { border-radius: 4px 12px 5px 14px / 14px 5px 12px 4px; }
+  .tag--y { background: var(--yellow); font-weight: 600; }
+  .hero__contact { margin-top: 10px; font-size: 12px; color: var(--soft); display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+  .hero__contact svg { width: 15px; height: 15px; flex: none; }
+  .hero__contact .dot { color: var(--mut); }
+  .hero__fig { text-align: center; }
+  .hero__fig svg { width: 224px; height: auto; }
+  .hero__fig figcaption { font-family: var(--font-hand); font-size: 14px; color: var(--mut); margin-top: 2px; transform: rotate(-1.5deg); }
+
+  /* ===== 节头(黄章 + 速写双线 + 手写批注) ===== */
+  .sec { margin-bottom: 8px; break-inside: avoid; }
+  .sec__head { position: relative; height: 34px; margin-bottom: 7px; }
+  .sec__stamp {
+    position: absolute; left: 0; top: 2px; width: 26px; height: 26px;
+    background: var(--yellow); border: 1.5px solid var(--ink);
+    border-radius: 11px 4px 13px 5px / 5px 13px 4px 11px;
+    transform: rotate(-3deg);
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 13px;
+  }
+  .sec__title {
+    position: absolute; left: 36px; top: 8px;
+    font-size: 15px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase;
+  }
+  .sec__motto {
+    position: absolute; right: 0; top: -2px;
+    font-family: var(--font-hand); font-size: 16.5px; font-weight: 600; color: var(--soft);
+    transform: rotate(-1.5deg);
+    display: flex; align-items: center; gap: 6px; white-space: nowrap;
+  }
+  .sec__motto svg { width: 60px; height: 6px; flex: none; }
+  .sec__motto svg.star { width: 12px; height: 12px; }
+  .sec__rule { position: absolute; left: 0; top: 30px; width: 706px; height: 10px; }
+
+  /* ===== PROFILE ===== */
+  .profile { display: grid; grid-template-columns: 452px 1fr; gap: 20px; align-items: start; }
+  .profile p { font-size: 12.5px; line-height: 1.62; color: var(--soft); }
+  .profile p strong { color: var(--ink); }
+  .profile__fig { text-align: center; }
+  .profile__fig svg { width: 160px; height: auto; }
+  .profile__fig figcaption { font-family: var(--font-hand); font-size: 13px; color: var(--mut); transform: rotate(-1.5deg); }
+
+  /* ===== EXPERIENCE ===== */
+  .exp { display: grid; grid-template-columns: 424px 1fr; gap: 22px; align-items: start; }
+  .job + .job { margin-top: 8px; }
+  .job__co { font-size: 13.5px; font-weight: 700; }
+  .job__role { font-size: 12px; margin-top: 1px; }
+  .job__role b { font-weight: 600; }
+  .job__role span { color: var(--mut); }
+  .job ul { margin-top: 5px; }
+  .job li { position: relative; padding-left: 14px; font-size: 11.8px; line-height: 1.45; color: var(--soft); margin-top: 3px; }
+  .job li::before { content: ''; position: absolute; left: 1px; top: 7.5px; width: 5px; height: 5px; background: var(--yellow); border: 1px solid var(--ink); border-radius: 60% 40% 55% 45%; }
+  .exp__side { display: grid; grid-template-rows: auto 1fr; gap: 6px; }
+  .stats { display: flex; gap: 6px; }
+  .stat { flex: 1; text-align: center; padding: 6px 2px 5px; border: 1.5px solid var(--ink); border-radius: 10px 4px 12px 5px / 5px 12px 4px 10px; }
+  .stat:nth-child(2) { border-radius: 4px 12px 5px 10px / 10px 4px 12px 5px; }
+  .stat:nth-child(3) { border-radius: 12px 5px 10px 4px / 4px 10px 5px 12px; }
+  .stat b { display: block; font-size: 19px; font-weight: 700; line-height: 1.1; }
+  .stat span { display: block; font-size: 10px; color: var(--mut); margin-top: 2px; }
+  .exp__fig { text-align: center; align-self: end; }
+  .exp__fig svg { width: 160px; height: auto; }
+  .exp__fig figcaption { font-family: var(--font-hand); font-size: 13px; color: var(--mut); transform: rotate(-1.5deg); }
+
+  /* ===== PROJECTS ===== */
+  .projects { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .proj { border: 1.5px solid var(--ink); border-radius: 12px 5px 14px 6px / 6px 14px 5px 12px; padding: 10px 12px 9px; background: #fff; }
+  .proj:nth-child(2) { border-radius: 5px 14px 6px 12px / 12px 5px 14px 6px; }
+  .proj:nth-child(3) { border-radius: 14px 6px 12px 5px / 5px 12px 6px 14px; }
+  .proj__fig { height: 84px; display: flex; align-items: center; justify-content: center; }
+  .proj__fig svg { max-width: 100%; max-height: 84px; }
+  .page [fill="#F6CB43"] { fill: var(--accent); }
+  .page [stroke="#F6CB43"] { stroke: var(--accent); }
+  .hero__seal { color: var(--accent-ink); }
+  .sec__stamp { color: var(--accent-ink); }
+  .tag--y { color: var(--accent-ink); }
+  .stat b { color: var(--ink); }
+  .proj h3 { font-size: 12.8px; font-weight: 700; margin-top: 4px; }
+  .proj .stack { font-family: var(--font-hand); font-size: 13px; color: var(--mut); margin-top: 1px; }
+  .proj p { font-size: 11.3px; line-height: 1.45; color: var(--soft); margin-top: 4px; }
+
+  /* ===== SKILLS ===== */
+  .skills { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  .skill h3 { display: flex; align-items: center; gap: 7px; font-size: 12.5px; font-weight: 700; }
+  .skill h3 svg { width: 17px; height: 17px; flex: none; }
+  .skill ul { margin-top: 6px; }
+  .skill li { font-size: 11.4px; line-height: 1.5; color: var(--soft); padding-left: 12px; position: relative; }
+  .skill li::before { content: ''; position: absolute; left: 0; top: 7px; width: 5px; height: 2.5px; background: var(--yellow); outline: 1px solid var(--ink); outline-offset: -1px; }
+
+  /* ===== EDU / AWARDS ===== */
+  .duo { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+  .edu__row, .aw__row { display: flex; gap: 10px; align-items: flex-start; }
+  .edu__row + .aw__row { margin-top: 0; }
+  .duo svg.ic { width: 20px; height: 20px; flex: none; margin-top: 1px; }
+  .duo b { font-size: 12.3px; font-weight: 700; display: block; }
+  .duo span { font-size: 11.2px; color: var(--soft); display: block; margin-top: 1px; line-height: 1.38; }
+  .duo .yr { font-family: var(--font-hand); font-size: 13px; color: var(--mut); display: inline; margin: 0; }
+
+  /* ===== 页脚手绘线 ===== */
+  .ground { position: absolute; left: 44px; right: 44px; bottom: 13px; }
+  .ground svg { width: 100%; height: 14px; }
+  .ground .note { position: absolute; right: 0; bottom: 13px; font-family: var(--font-hand); font-size: 14px; color: var(--mut); transform: rotate(-1.5deg); }
+
+  /* ===== 入场动效(屏幕,一次性) ===== */
+  @media (prefers-reduced-motion: no-preference) {
+    .rise { opacity: 0; transform: translateY(10px); animation: rise .5s cubic-bezier(.22,1,.36,1) forwards; animation-delay: calc(var(--i, 0) * 90ms + 60ms); }
+    @keyframes rise { to { opacity: 1; transform: none; } }
+    .hero__seal.rise { animation-name: seal-in; }
+    @keyframes seal-in { 0% { opacity: 0; transform: rotate(14deg) scale(.6); } 100% { opacity: 1; transform: rotate(4deg) scale(1); } }
+
+    /* SVG 描边入场基态(必须在 MQ 内:减动效/img 场景恒可见) */
+    .draw { stroke-dasharray: 1; stroke-dashoffset: 1; }
+    .pop { transform: scale(0.4); opacity: 0; transform-box: fill-box; transform-origin: center; }
+    .fade { opacity: 0; }
+    .dfill { fill-opacity: 0; }
+    .draw { transition: stroke-dashoffset 0.7s cubic-bezier(0.45,0,0.35,1) var(--d,0ms); }
+    .dfill { transition: stroke-dashoffset 0.9s cubic-bezier(0.45,0,0.35,1) var(--d,0ms), fill-opacity 0.5s ease calc(var(--d,0ms) + 300ms); }
+    .in .draw { stroke-dashoffset: 0; }
+    .in .dfill { fill-opacity: 1; }
+    .in .fade { opacity: 1; }
+    .in .pop { opacity: 1; transform: scale(1); }
+
+    /* 循环(仅 4 类,克制) */
+    .in .pulse { animation: pulse-run 3.2s linear infinite; }
+    .in .pulse.p2 { animation-duration: 3.8s; }
+    .in .pulse.p3 { animation-duration: 3s; }
+    .in .pulse.p4 { animation-duration: 4.2s; }
+    @keyframes pulse-run { to { stroke-dashoffset: -115; } }
+    .in .tw { animation: twinkle 2.4s ease-in-out infinite; }
+    .in .tw.t2 { animation-delay: -0.8s; }
+    .in .tw.t3 { animation-delay: -1.6s; }
+    @keyframes twinkle { 0%,100% { opacity: 1; } 50% { opacity: 0.25; } }
+    .in .led { animation: ledblink 1.8s ease-in-out infinite; }
+    .in .led.l2 { animation-delay: -0.6s; }
+    .in .led.l3 { animation-delay: -1.2s; }
+    @keyframes ledblink { 0%,70%,100% { opacity: 1; } 85% { opacity: 0.15; } }
+    .in .ball { transform-box: fill-box; transform-origin: center; animation: ball-pulse 2.2s ease-in-out infinite alternate; }
+    @keyframes ball-pulse { from { transform: scale(1); } to { transform: scale(1.18); } }
+
+    /* ---- AI 原创插画循环动画(6 幅共用) ---- */
+    .in .sig { animation: sigflow 2.6s linear infinite; }
+    .in .sig.s2 { animation-delay: -0.9s; }
+    .in .sig.s3 { animation-delay: -1.8s; }
+    @keyframes sigflow { to { stroke-dashoffset: -110; } }
+    .in .node { transform-box: fill-box; transform-origin: center; animation: nodeglow 3s ease-in-out infinite; }
+    .in .node.n2 { animation-delay: -1s; }
+    .in .node.n3 { animation-delay: -2s; }
+    @keyframes nodeglow { 0%,100% { opacity: 1; } 50% { opacity: 0.55; } }
+    .in .think { animation: thinkdot 2.2s ease-in-out infinite; }
+    .in .think.t2 { animation-delay: 0.3s; }
+    .in .think.t3 { animation-delay: 0.6s; }
+    @keyframes thinkdot { 0%,60%,100% { opacity: 1; } 30% { opacity: 0.15; } }
+    .in .ball { transform-box: fill-box; transform-origin: center; animation: ball-pulse 2.2s ease-in-out infinite alternate; }
+    @keyframes ball-pulse { from { transform: scale(1); } to { transform: scale(1.2); } }
+    .in .tw { animation: twinkle 2.4s ease-in-out infinite; }
+    .in .tw.t2 { animation-delay: -0.8s; }
+    @keyframes twinkle { 0%,100% { opacity: 1; } 50% { opacity: 0.2; } }
+    .in .dash { animation: dashrun 3s linear infinite; }
+    @keyframes dashrun { to { stroke-dashoffset: -110; } }
+    .in .fan { transform-box: fill-box; transform-origin: center; animation: fanspin 3.6s linear infinite; }
+    @keyframes fanspin { to { transform: rotate(360deg); } }
+    .in .core { transform-box: fill-box; transform-origin: center; animation: core-pulse 2.4s ease-in-out infinite; }
+    @keyframes core-pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.06); } }
+    .in .orbit { animation: orbit-pulse 3s ease-in-out infinite; }
+    .in .orbit.o2 { animation-delay: -1s; }
+    .in .orbit.o3 { animation-delay: -2s; }
+    @keyframes orbit-pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.6; } }
+    .in .pulse { animation: pulse-run 3.2s linear infinite; }
+    .in .pulse.p2 { animation-duration: 3.8s; }
+    @keyframes pulse-run { to { stroke-dashoffset: -115; } }
+    .in .cloud { animation: bob 6s ease-in-out infinite alternate; }
+    @keyframes bob { from { transform: translateY(-3px); } to { transform: translateY(4px); } }
+    .in .qball { transform-box: fill-box; transform-origin: center; animation: q-move 2.8s ease-in-out infinite alternate; }
+    @keyframes q-move { from { transform: translate(0,0); } to { transform: translate(180px,-30px); } }
+    .in .hit { animation: hit-glow 1.8s ease-in-out infinite alternate; }
+    @keyframes hit-glow { from { opacity: 1; } to { opacity: 0.45; } }
+    .in .scan { animation: scan-move 2.4s linear infinite; }
+    @keyframes scan-move { to { transform: translateX(120px); } }
+    .in .cam { transform-origin: 210px 350px; animation: cam-scan 4s ease-in-out infinite alternate; }
+    @keyframes cam-scan { from { transform: rotate(-1.6deg); } to { transform: rotate(1.8deg); } }
+    .in .fov { animation: fov-breathe 4s ease-in-out infinite alternate; }
+    @keyframes fov-breathe { from { opacity: 0.28; } to { opacity: 0.5; } }
+    .in .corner { transform-box: fill-box; transform-origin: center; animation: c-breathe 2.6s ease-in-out infinite alternate; }
+    @keyframes c-breathe { from { transform: scale(1); } to { transform: scale(1.06); } }
+    .in .led { animation: ledblink 1.8s ease-in-out infinite; }
+    .in .led.l2 { animation-delay: -0.6s; }
+    .in .led.l3 { animation-delay: -1.2s; }
+    @keyframes ledblink { 0%,70%,100% { opacity: 1; } 85% { opacity: 0.15; } }
+    .in .rays { animation: dashflow 2.8s linear infinite; }
+    .in .ghost { animation: ghost-breathe 2s ease-in-out infinite alternate; }
+    @keyframes ghost-breathe { from { opacity: 0.9; } to { opacity: 0.5; } }
+    .in .caret { animation: caret-blink 1.1s steps(1) infinite; }
+    @keyframes caret-blink { 0%,55% { opacity: 1; } 56%,100% { opacity: 0; } }
+    .in .bob { animation: bob 5.5s ease-in-out infinite alternate; }
+    .in .plant { transform-origin: 150px 560px; animation: sway 5.5s ease-in-out infinite alternate; }
+    @keyframes sway { from { transform: rotate(-2.4deg); } to { transform: rotate(2.6deg); } }
+    .in .steam { animation: steamup 2.8s ease-out infinite; }
+    .in .steam.s2 { animation-delay: -1.4s; }
+    @keyframes steamup { 0% { transform: translateY(3px); opacity: 0; } 30% { opacity: 0.8; } 100% { transform: translateY(-12px); opacity: 0; } }
+    .in .spark { animation: sparktw 2.2s ease-in-out infinite; }
+    .in .spark.s2 { animation-delay: -0.7s; }
+    .in .spark.s3 { animation-delay: -1.4s; }
+    @keyframes sparktw { 0%,100% { opacity: 1; } 50% { opacity: 0.2; } }
+    .in .balance { transform-origin: 627px 150px; animation: tilt 4.4s ease-in-out infinite alternate; }
+    @keyframes tilt { from { transform: rotate(-2.2deg); } to { transform: rotate(2.2deg); } }
+    .in .radar { transform-box: fill-box; transform-origin: 1075px 515px; animation: radar-sweep 3.2s ease-in-out infinite alternate; }
+    @keyframes radar-sweep { from { transform: rotate(-40deg); } to { transform: rotate(40deg); } }
+    .hero__fig svg { animation: hero-float 6s ease-in-out infinite alternate; }
+    @keyframes hero-float { from { transform: translateY(-2px); } to { transform: translateY(3px); } }
+  }
+
+  /* ===== 打印 ===== */
+  @page { size: A4; margin: 0; }
+  @media print {
+    html, body { background: #fff; width: 210mm; }
+    .page { margin: 0; box-shadow: none; width: 210mm; height: 296mm; padding: 30px 42px 26px; }
+    .toolbar { display: none !important; }
+    * { animation: none !important; transition: none !important; }
+    .draw, .dfill { stroke-dashoffset: 0 !important; }
+    .fade, .pop { opacity: 1 !important; transform: none !important; }
+    .dfill { fill-opacity: 1 !important; }
+    .rise { opacity: 1 !important; transform: none !important; }
+    .sec, .proj, .stat { break-inside: avoid; }
+  }
+
+  /* ===== 工具条(仅屏幕) ===== */
+  .toolbar { position: fixed; right: 26px; bottom: 26px; z-index: 10; display: flex; gap: 10px; }
+  .toolbar button {
+    font-family: var(--font-main); font-size: 13px; font-weight: 600;
+    padding: 10px 18px; background: var(--ink); color: #fff; border: none; cursor: pointer;
+    border-radius: 12px 4px 14px 5px / 5px 14px 4px 12px;
+    box-shadow: 0 8px 22px rgba(20,20,20,.3);
+  }
+  .toolbar button:hover { background: #000; }
+  .theme-pop {
+    position: absolute; right: 0; bottom: 54px;
+    background: #fff; border: 1.5px solid var(--ink);
+    border-radius: 12px 5px 14px 6px / 6px 14px 5px 12px;
+    box-shadow: 0 14px 34px rgba(20,20,20,.24);
+    padding: 12px 14px; width: 300px; max-width: calc(100vw - 48px);
+  }
+  .toolbar { position: fixed; }
+  .tp-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .tp-row + .tp-row { margin-top: 10px; }
+  .tp-label { font-size: 11.5px; color: var(--mut); width: 52px; flex: none; }
+  .swatches { display: flex; gap: 6px; }
+  .swatch { width: 20px; height: 20px; border-radius: 6px 3px 7px 4px; border: 1.5px solid var(--ink); cursor: pointer; padding: 0; }
+  .swatch.on { outline: 2px solid var(--ink); outline-offset: 1.5px; }
+  .tp-row input[type="color"] { width: 26px; height: 22px; border: 1.5px solid var(--ink); border-radius: 5px; background: #fff; padding: 1px; cursor: pointer; }
+  .tp-reset { font-size: 11.5px; color: var(--mut); border: none; background: none; cursor: pointer; text-decoration: underline; padding: 2px 0; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ===== 姓名区 ===== -->
+  <header class="hero rise" style="--i:0">
+    <div>
+      <div class="hero__name">JIANG <span class="hl">YE.</span><span class="hero__seal">江野</span></div>
+      <div class="hero__role">江野 · 前后端全栈工程师<em>full-stack engineer</em></div>
+      <div class="hero__tags">
+        <span class="tag tag--y">Web 前端</span><span class="tag">后端服务</span><span class="tag">数据库与缓存</span><span class="tag">云端部署</span>
+      </div>
+      <div class="hero__contact">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#141414" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="M 4 7 L 12 13.5 L 20 7"/></svg>
+        <span>jiangye@example.com</span><span class="dot">·</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="#141414" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M 7 4 Q 4.5 4 4.5 7 Q 4.5 16 12 19.5 Q 17 21.5 19 19.5 L 20.5 17.8 Q 21.3 16.6 19.6 15.5 L 16.2 13.6 Q 15 13 13.9 14 L 12.8 15 Q 8.6 13 7 8.6 L 8 7.6 Q 9 6.6 8.2 5.2 L 7.4 4.4 Z"/></svg>
+        <span>138 0000 0000</span><span class="dot">·</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="#141414" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M 12 3.5 Q 6.5 3.5 6.5 9.5 Q 6.5 14.5 12 20.5 Q 17.5 14.5 17.5 9.5 Q 17.5 3.5 12 3.5 Z"/><circle cx="12" cy="9.5" r="2.6"/></svg>
+        <span>杭州 · 中国</span>
+      </div>
+    </div>
+    <figure class="hero__fig">
+      %%SVG_06%%
+      <figcaption>my desk, my ship — from ui to db.</figcaption>
+    </figure>
+  </header>
+
+  <!-- ===== 01 PROFILE ===== -->
+  <section class="sec rise" style="--i:1">
+    <div class="sec__head">
+      <span class="sec__stamp">01</span><h2 class="sec__title">Profile</h2>
+      <span class="sec__motto"><svg class="star" viewBox="0 0 12 12" fill="none" stroke="#141414" stroke-width="1.4" stroke-linecap="round"><path d="M 6 1 L 6 11 M 1 6 L 11 6 M 2.5 2.5 L 9.5 9.5 M 9.5 2.5 L 2.5 9.5"/></svg>code is communication.<svg viewBox="0 0 60 6" fill="none" stroke="#F6CB43" stroke-width="2.4" stroke-linecap="round"><path d="M 2 4 Q 10 1 18 3.6 Q 26 6 34 3 Q 42 1 50 3.6 Q 55 4.6 58 3"/></svg></span>
+      <svg class="sec__rule" viewBox="0 0 706 10" fill="none" preserveAspectRatio="none"><path stroke="#141414" stroke-width="1.6" stroke-linecap="round" d="M 2 3.5 Q 120 2.2 240 3.8 Q 380 5.4 520 3.2 Q 620 2 704 3.6"/><path stroke="#141414" stroke-width="1" stroke-linecap="round" stroke-dasharray="6 5" opacity="0.35" d="M 2 8 Q 180 9.4 360 7.8 Q 540 6.4 704 8.2"/></svg>
+    </div>
+    <div class="profile">
+      <p>六年全栈经验，习惯从需求评审跟到灰度上线：<strong>前端用 React/TypeScript 打磨交互与首屏性能，后端用 Node.js 与 Go 沉淀稳定接口，数据层在 MySQL 与 Redis 间务实取舍</strong>。相信简单可维护的架构，也重视评审与文档这些不酷但重要的事。</p>
+      <figure class="profile__fig">
+        %%SVG_03%%
+        <figcaption>ship it — from ui to cloud.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ===== 02 EXPERIENCE ===== -->
+  <section class="sec rise" style="--i:2">
+    <div class="sec__head">
+      <span class="sec__stamp">02</span><h2 class="sec__title">Experience</h2>
+      <span class="sec__motto"><svg class="star" viewBox="0 0 12 12" fill="none" stroke="#141414" stroke-width="1.4" stroke-linecap="round"><path d="M 6 1 L 6 11 M 1 6 L 11 6 M 2.5 2.5 L 9.5 9.5 M 9.5 2.5 L 2.5 9.5"/></svg>build, measure, simplify.<svg viewBox="0 0 60 6" fill="none" stroke="#F6CB43" stroke-width="2.4" stroke-linecap="round"><path d="M 2 4 Q 10 1 18 3.6 Q 26 6 34 3 Q 42 1 50 3.6 Q 55 4.6 58 3"/></svg></span>
+      <svg class="sec__rule" viewBox="0 0 706 10" fill="none" preserveAspectRatio="none"><path stroke="#141414" stroke-width="1.6" stroke-linecap="round" d="M 2 3.5 Q 120 2.2 240 3.8 Q 380 5.4 520 3.2 Q 620 2 704 3.6"/><path stroke="#141414" stroke-width="1" stroke-linecap="round" stroke-dasharray="6 5" opacity="0.35" d="M 2 8 Q 180 9.4 360 7.8 Q 540 6.4 704 8.2"/></svg>
+    </div>
+    <div class="exp">
+      <div>
+        <div class="job">
+          <div class="job__co">星云数科（某云科技集团）</div>
+          <div class="job__role"><b>高级全栈工程师</b> <span>/ 2022.07 — 至今</span></div>
+          <ul>
+            <li>主导交易中台前端重构：React + TS 微模块架构，首屏 LCP 2.8s 降至 1.4s</li>
+            <li>设计订单/库存服务（NestJS + MySQL），日均 40 万笔读写，P95 220ms</li>
+            <li>搭建 Jenkins → Docker/K8s 发布流水线，发版 45 分钟压至 30 分钟，可一键回滚</li>
+          </ul>
+        </div>
+        <div class="job">
+          <div class="job__co">青梧网络（某电商平台）</div>
+          <div class="job__role"><b>全栈工程师</b> <span>/ 2020.07 — 2022.06</span></div>
+          <ul>
+            <li>客户门户 Vue → React 迁移与 SSR 改造，SEO 流量三个月提升 28%</li>
+            <li>统一权限中心（RBAC + JWT）被 4 条产品线复用，减少 60% 重复鉴权代码</li>
+            <li>维护 WebSocket 实时协作白板，断线重连成功率 99.5% 以上</li>
+          </ul>
+        </div>
+      </div>
+      <div class="exp__side">
+        <div class="stats">
+          <div class="stat"><b>15+</b><span>从 0 到 1 模块</span></div>
+          <div class="stat"><b>220ms</b><span>核心接口 P95</span></div>
+          <div class="stat"><b>-33%</b><span>发版耗时</span></div>
+        </div>
+        <figure class="exp__fig">
+          %%SVG_05%%
+          <figcaption>数据大屏 — 我负责的另一面</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 03 PROJECTS ===== -->
+  <section class="sec rise" style="--i:3">
+    <div class="sec__head">
+      <span class="sec__stamp">03</span><h2 class="sec__title">Projects</h2>
+      <span class="sec__motto"><svg class="star" viewBox="0 0 12 12" fill="none" stroke="#141414" stroke-width="1.4" stroke-linecap="round"><path d="M 6 1 L 6 11 M 1 6 L 11 6 M 2.5 2.5 L 9.5 9.5 M 9.5 2.5 L 2.5 9.5"/></svg>side projects never sleep.<svg viewBox="0 0 60 6" fill="none" stroke="#F6CB43" stroke-width="2.4" stroke-linecap="round"><path d="M 2 4 Q 10 1 18 3.6 Q 26 6 34 3 Q 42 1 50 3.6 Q 55 4.6 58 3"/></svg></span>
+      <svg class="sec__rule" viewBox="0 0 706 10" fill="none" preserveAspectRatio="none"><path stroke="#141414" stroke-width="1.6" stroke-linecap="round" d="M 2 3.5 Q 120 2.2 240 3.8 Q 380 5.4 520 3.2 Q 620 2 704 3.6"/><path stroke="#141414" stroke-width="1" stroke-linecap="round" stroke-dasharray="6 5" opacity="0.35" d="M 2 8 Q 180 9.4 360 7.8 Q 540 6.4 704 8.2"/></svg>
+    </div>
+    <div class="projects">
+      <div class="proj">
+        <div class="proj__fig">%%SVG_01%%</div>
+        <h3>云雀 CRM 工作台</h3>
+        <div class="stack">React · NestJS · MySQL</div>
+        <p>线索到回款全流程管理，自定义看板与角色视图，签约 3 家 B 端客户。</p>
+      </div>
+      <div class="proj">
+        <div class="proj__fig">%%SVG_04%%</div>
+        <h3>潮汐经营大屏</h3>
+        <div class="stack">React · WebSocket · D3</div>
+        <p>聚合 6 类门店数据源，5 秒增量刷新，连续运行 30 天零重启。</p>
+      </div>
+      <div class="proj">
+        <div class="proj__fig">%%SVG_07%%</div>
+        <h3>双端点单小程序</h3>
+        <div class="stack">Taro · Node.js · Redis</div>
+        <p>一套代码同时跑小程序与管理 H5，日峰值 1.2 万单。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 04 SKILLS ===== -->
+  <section class="sec rise" style="--i:4">
+    <div class="sec__head">
+      <span class="sec__stamp">04</span><h2 class="sec__title">Skills</h2>
+      <span class="sec__motto"><svg class="star" viewBox="0 0 12 12" fill="none" stroke="#141414" stroke-width="1.4" stroke-linecap="round"><path d="M 6 1 L 6 11 M 1 6 L 11 6 M 2.5 2.5 L 9.5 9.5 M 9.5 2.5 L 2.5 9.5"/></svg>tools change, fundamentals don't.<svg viewBox="0 0 60 6" fill="none" stroke="#F6CB43" stroke-width="2.4" stroke-linecap="round"><path d="M 2 4 Q 10 1 18 3.6 Q 26 6 34 3 Q 42 1 50 3.6 Q 55 4.6 58 3"/></svg></span>
+      <svg class="sec__rule" viewBox="0 0 706 10" fill="none" preserveAspectRatio="none"><path stroke="#141414" stroke-width="1.6" stroke-linecap="round" d="M 2 3.5 Q 120 2.2 240 3.8 Q 380 5.4 520 3.2 Q 620 2 704 3.6"/><path stroke="#141414" stroke-width="1" stroke-linecap="round" stroke-dasharray="6 5" opacity="0.35" d="M 2 8 Q 180 9.4 360 7.8 Q 540 6.4 704 8.2"/></svg>
+    </div>
+    <div class="skills">
+      <div class="skill">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="#141414" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M 8 6 L 3.5 12 L 8 18 M 16 6 L 20.5 12 L 16 18 M 13.5 4.5 L 10.5 19.5"/></svg>前端技术</h3>
+        <ul><li>React / TypeScript / Vue 3</li><li>Next.js / Nuxt / Tailwind</li><li>HTML5 / CSS3 / Sass</li></ul>
+      </div>
+      <div class="skill">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="#141414" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.5"/><path d="M 12 3 L 12 6.5 M 12 17.5 L 12 21 M 3 12 L 6.5 12 M 17.5 12 L 21 12 M 5.6 5.6 L 8 8 M 16 16 L 18.4 18.4 M 18.4 5.6 L 16 8 M 8 16 L 5.6 18.4"/></svg>服务端</h3>
+        <ul><li>Node.js(NestJS)/ Go(Gin)</li><li>RESTful / GraphQL</li><li>JWT / OAuth 2</li></ul>
+      </div>
+      <div class="skill">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="#141414" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5.5" rx="7.5" ry="3"/><path d="M 4.5 5.5 L 4.5 18.5 Q 12 21.6 19.5 18.5 L 19.5 5.5 M 4.5 12 Q 12 15 19.5 12"/></svg>数据与运维</h3>
+        <ul><li>MySQL / Redis / MongoDB</li><li>Docker / K8s</li><li>Nginx / CI-CD</li></ul>
+      </div>
+      <div class="skill">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="#141414" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M 20 6.5 A 5.5 5.5 0 1 0 13.5 2"/><path d="M 16 6 A 3.2 3.2 0 1 0 12 3.2"/><path d="M 14.5 8.5 Q 11 11 8.5 14.5 Q 6 18 4.5 21"/></svg>工程与协作</h3>
+        <ul><li>Git Flow / Code Review</li><li>Jest / Cypress</li><li>接口设计 / 前后端联调</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 05/06 EDUCATION & AWARDS ===== -->
+  <section class="sec rise" style="--i:5">
+    <div class="sec__head">
+      <span class="sec__stamp">05</span><h2 class="sec__title">Education &amp; Awards</h2>
+      <span class="sec__motto"><svg class="star" viewBox="0 0 12 12" fill="none" stroke="#141414" stroke-width="1.4" stroke-linecap="round"><path d="M 6 1 L 6 11 M 1 6 L 11 6 M 2.5 2.5 L 9.5 9.5 M 9.5 2.5 L 2.5 9.5"/></svg>learn it twice, teach it once.<svg viewBox="0 0 60 6" fill="none" stroke="#F6CB43" stroke-width="2.4" stroke-linecap="round"><path d="M 2 4 Q 10 1 18 3.6 Q 26 6 34 3 Q 42 1 50 3.6 Q 55 4.6 58 3"/></svg></span>
+      <svg class="sec__rule" viewBox="0 0 706 10" fill="none" preserveAspectRatio="none"><path stroke="#141414" stroke-width="1.6" stroke-linecap="round" d="M 2 3.5 Q 120 2.2 240 3.8 Q 380 5.4 520 3.2 Q 620 2 704 3.6"/><path stroke="#141414" stroke-width="1" stroke-linecap="round" stroke-dasharray="6 5" opacity="0.35" d="M 2 8 Q 180 9.4 360 7.8 Q 540 6.4 704 8.2"/></svg>
+    </div>
+    <div class="duo">
+      <div class="edu__row">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="#141414" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M 12 4 L 22 8.5 L 12 13 L 2 8.5 Z"/><path d="M 6.5 11 L 6.5 16.5 Q 12 19.5 17.5 16.5 L 17.5 11"/><path d="M 22 8.5 L 22 14"/></svg>
+        <div><b>计算机科学与技术 · 本科</b><span>2016.09 — 2020.06 · 某理工大学</span><span>主修：数据结构 / 操作系统 / 分布式系统 · CET-6</span></div>
+      </div>
+      <div>
+        <div class="aw__row">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="#141414" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M 7 3.5 L 17 3.5 L 16.4 10 Q 15.8 14.5 12 14.5 Q 8.2 14.5 7.6 10 Z"/><path d="M 7 5 Q 3.8 5.6 4.8 9 Q 5.5 11.4 8 10.8 M 17 5 Q 20.2 5.6 19.2 9 Q 18.5 11.4 16 10.8"/><path d="M 12 14.5 L 12 18 M 8 18.5 L 16 18.5"/></svg>
+          <div><b>公司年度技术之星 <span class="yr">· 2023</span></b></div>
+        </div>
+        <div class="aw__row" style="margin-top:9px">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="#141414" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M 7 3.5 L 17 3.5 L 16.4 10 Q 15.8 14.5 12 14.5 Q 8.2 14.5 7.6 10 Z"/><path d="M 7 5 Q 3.8 5.6 4.8 9 Q 5.5 11.4 8 10.8 M 17 5 Q 20.2 5.6 19.2 9 Q 18.5 11.4 16 10.8"/><path d="M 12 14.5 L 12 18 M 8 18.5 L 16 18.5"/></svg>
+          <div><b>黑客马拉松杭州站 二等奖 <span class="yr">· 2021</span></b></div>
+        </div>
+        <div class="aw__row" style="margin-top:9px">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="#141414" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M 4 20 Q 12 16.5 20 20"/><path d="M 12 4 L 12 15 M 12 4 Q 6.5 6 4.5 12 M 12 4 Q 17.5 6 19.5 12"/></svg>
+          <div><b>校一等奖学金 <span class="yr">· 2019</span></b></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚手绘地线 -->
+  <div class="ground">
+    <svg viewBox="0 0 706 14" fill="none" preserveAspectRatio="none"><path stroke="#141414" stroke-width="2" stroke-linecap="round" d="M 2 6 Q 180 9 360 6.5 Q 520 4.5 704 7"/><path stroke="#141414" stroke-width="1.4" stroke-linecap="round" d="M 560 11 L 566 8.6 M 572 11 L 578 9"/><path stroke="#141414" stroke-width="1.4" stroke-linecap="round" d="M 120 11.5 L 126 9.4"/></svg>
+    <span class="note">thanks for reading — let's build something.</span>
+  </div>
+</div>
+
+<div class="toolbar">
+  <div class="theme-pop" id="theme-pop" hidden>
+    <div class="tp-row"><span class="tp-label">主题色</span>
+      <span class="swatches" data-kind="accent"></span>
+      <input type="color" id="pick-accent" value="#F6CB43" aria-label="自定义主题色" />
+    </div>
+    <div class="tp-row"><span class="tp-label">页面底色</span>
+      <span class="swatches" data-kind="paper"></span>
+      <input type="color" id="pick-paper" value="#ffffff" aria-label="自定义页面底色" />
+    </div>
+    <div class="tp-row"><button id="theme-reset" class="tp-reset">恢复默认</button></div>
+  </div>
+  <button id="btn-theme" aria-expanded="false">主题</button>
+  <button id="btn-print">打印 / 存为 PDF</button>
+</div>
+
+<script>
+  (function () {
+    var go = function () {
+      document.querySelectorAll('[id^="scene-"]').forEach(function (g) { g.classList.add('in'); });
+    };
+    if (location.hash === '#clean') { var t = document.querySelector('.toolbar'); if (t) t.style.display = 'none'; }
+    if (document.readyState === 'complete') go(); else window.addEventListener('load', go);
+    window.addEventListener('beforeprint', go);
+    document.getElementById('btn-print').addEventListener('click', function () {
+      (document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve()).then(function () { window.print(); });
+    });
+
+    /* ---- 主题切换 ---- */
+    var DEFAULTS = { accent: '#F6CB43', paper: '#ffffff' };
+    var ACCENTS = ['#F6CB43', '#F08C42', '#E15B64', '#5B8DEF', '#4CAF7D', '#9B7EDE'];
+    var PAPERS = ['#ffffff', '#FAF6EC', '#F1F3F5', '#F6F1E7'];
+    function hex2rgb(h) {
+      h = h.replace('#', '');
+      return [parseInt(h.slice(0, 2), 16), parseInt(h.slice(2, 4), 16), parseInt(h.slice(4, 6), 16)];
+    }
+    function applyTheme(accent, paper, save) {
+      var st = document.documentElement.style;
+      st.setProperty('--accent', accent);
+      st.setProperty('--paper', paper);
+      var rgb = hex2rgb(accent);
+      var lum = 0.2126 * rgb[0] + 0.7152 * rgb[1] + 0.0722 * rgb[2];
+      st.setProperty('--accent-ink', lum > 148 ? '#141414' : '#ffffff');
+      var pa = document.getElementById('pick-accent'), pp = document.getElementById('pick-paper');
+      if (pa) pa.value = accent; if (pp) pp.value = paper;
+      document.querySelectorAll('.swatch').forEach(function (b) {
+        var kind = b.parentNode.getAttribute('data-kind');
+        var cur = kind === 'accent' ? accent : paper;
+        b.classList.toggle('on', b.dataset.c.toLowerCase() === cur.toLowerCase());
+      });
+      if (save) localStorage.setItem('resume-theme', JSON.stringify({ accent: accent, paper: paper }));
+    }
+    (function initTheme() {
+      var pop = document.getElementById('theme-pop');
+      [['accent', ACCENTS], ['paper', PAPERS]].forEach(function (cfg) {
+        var wrap = pop.querySelector('.swatches[data-kind="' + cfg[0] + '"]');
+        cfg[1].forEach(function (c) {
+          var b = document.createElement('button');
+          b.className = 'swatch'; b.style.background = c; b.dataset.c = c;
+          b.setAttribute('aria-label', (cfg[0] === 'accent' ? '主题色 ' : '底色 ') + c);
+          b.addEventListener('click', function () {
+            if (cfg[0] === 'accent') applyTheme(c, getComputedStyle(document.documentElement).getPropertyValue('--paper').trim() || DEFAULTS.paper, true);
+            else applyTheme(getComputedStyle(document.documentElement).getPropertyValue('--accent').trim() || DEFAULTS.accent, c, true);
+          });
+          wrap.appendChild(b);
+        });
+      });
+      document.getElementById('pick-accent').addEventListener('input', function (e) {
+        applyTheme(e.target.value, getComputedStyle(document.documentElement).getPropertyValue('--paper').trim() || DEFAULTS.paper, true);
+      });
+      document.getElementById('pick-paper').addEventListener('input', function (e) {
+        applyTheme(getComputedStyle(document.documentElement).getPropertyValue('--accent').trim() || DEFAULTS.accent, e.target.value, true);
+      });
+      document.getElementById('theme-reset').addEventListener('click', function () {
+        localStorage.removeItem('resume-theme'); applyTheme(DEFAULTS.accent, DEFAULTS.paper, false);
+      });
+      var btn = document.getElementById('btn-theme');
+      btn.addEventListener('click', function () {
+        var open = pop.hidden;
+        pop.hidden = !open;
+        btn.setAttribute('aria-expanded', String(open));
+      });
+      try {
+        var saved = JSON.parse(localStorage.getItem('resume-theme') || 'null');
+        if (saved && saved.accent && saved.paper) applyTheme(saved.accent, saved.paper, false);
+        else applyTheme(DEFAULTS.accent, DEFAULTS.paper, false);
+      } catch (e) { applyTheme(DEFAULTS.accent, DEFAULTS.paper, false); }
+    })();
+  })();
+</script>
+</body>
+</html>

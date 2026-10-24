@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1448 1086" width="1448" height="1086">
+  <!-- 03 数据上云链路 · 复刻自素材 ChatGPT 图 3(笔记本→网页→云→服务器×3→数据库) -->
+  <style>
+    @media (prefers-reduced-motion: no-preference) {
+    .draw { stroke-dasharray: 1; stroke-dashoffset: 1; }
+    .pop { transform: scale(0.4); opacity: 0; transform-box: fill-box; transform-origin: center; }
+    .fade { opacity: 0; }
+    .dfill { fill-opacity: 0; }
+    .in .ball { transform-box: fill-box; transform-origin: center; animation: ball-pulse 2.2s ease-in-out infinite alternate; }
+    @keyframes ball-pulse { from { transform: scale(1); } to { transform: scale(1.22); } }
+      .draw { transition: stroke-dashoffset 0.7s cubic-bezier(0.45,0,0.35,1) var(--d,0ms); }
+      .in .draw { stroke-dashoffset: 0; }
+      .dfill { transition: stroke-dashoffset 0.9s cubic-bezier(0.45,0,0.35,1) var(--d,0ms), fill-opacity 0.5s ease calc(var(--d,0ms) + 300ms); }
+      .in .dfill { fill-opacity: 1; }
+      .fade { transition: opacity 0.6s ease var(--d,0ms); }
+      .in .fade { opacity: 1; }
+      .pop { transition: opacity 0.3s ease var(--d,0ms), transform 0.45s cubic-bezier(0.34,1.56,0.64,1) var(--d,0ms); }
+      .in .pop { opacity: 1; transform: scale(1); }
+      .in .cloud { animation: bob 5.5s ease-in-out infinite alternate; }
+      @keyframes bob { from { transform: translateY(-3px); } to { transform: translateY(4px); } }
+      .in .tw { animation: twinkle 2.2s ease-in-out infinite; }
+      .in .tw.t2 { animation-delay: -0.7s; }
+      .in .tw.t3 { animation-delay: -1.4s; }
+      @keyframes twinkle { 0%,100% { opacity: 1; } 50% { opacity: 0.25; } }
+      .in .led { animation: ledblink 1.8s ease-in-out infinite; }
+      .in .led.l2 { animation-delay: -0.6s; }
+      .in .led.l3 { animation-delay: -1.2s; }
+      @keyframes ledblink { 0%,70%,100% { opacity: 1; } 85% { opacity: 0.15; } }
+      .in .pulse { animation: pulse-run 3.4s linear infinite; }
+      .in .pulse.p2 { animation-duration: 3.8s; }
+      .in .pulse.p3 { animation-duration: 3s; }
+      .in .pulse.p4 { animation-duration: 4.2s; }
+      @keyframes pulse-run { to { stroke-dashoffset: -115; } }
+    }
+    @media print {
+      .draw, .dfill { stroke-dashoffset: 0 !important; }
+      .fade, .pop { opacity: 1 !important; transform: none !important; }
+      .dfill { fill-opacity: 1 !important; }
+    }
+  </style>
+  <rect width="1448" height="1086" fill="#050505" />
+  <g id="scene">
+  <g fill="none" stroke="#141414" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <!-- 笔记本(黄标) -->
+    <path class="dfill draw" style="--d:0ms" pathLength="1" fill="#fff"
+      d="M 132 632 Q 128 624 136 623 L 318 628 Q 326 628 327 636 L 344 752 Q 345 760 337 760 L 158 762 Q 150 762 150 754 Z" />
+    <circle class="pop" style="--d:160ms" cx="226" cy="696" r="11" fill="#F6CB43" stroke="none" />
+    <path class="draw" style="--d:120ms" pathLength="1" stroke-width="5" d="M 148 764 L 118 772 L 350 770 L 336 760" />
+
+    <!-- 浏览器窗口 -->
+    <rect class="dfill draw" style="--d:300ms" pathLength="1" x="360" y="358" width="256" height="181" rx="12" fill="#fff" />
+    <path class="draw" style="--d:400ms" pathLength="1" stroke-width="5" d="M 362 392 Q 488 389 614 392" />
+    <circle class="pop" style="--d:460ms" cx="382" cy="375" r="5" fill="#141414" stroke="none" />
+    <circle class="pop" style="--d:490ms" cx="401" cy="375" r="5" fill="#141414" stroke="none" />
+    <circle class="pop" style="--d:520ms" cx="420" cy="375" r="5" fill="#141414" stroke="none" />
+    <rect class="dfill draw" style="--d:540ms" pathLength="1" x="387" y="419" width="105" height="83" rx="8" fill="#fff" stroke-width="5" />
+    <path class="fade" style="--d:620ms" stroke-width="4.5" d="M 396 490 L 420 462 L 438 480 L 452 470 L 470 490" />
+    <circle class="pop ball" style="--d:650ms" cx="461" cy="447" r="9" fill="#F6CB43" stroke-width="4" />
+    <path class="draw" style="--d:600ms" pathLength="1" stroke-width="5" d="M 512 432 L 594 430" />
+    <path class="draw" style="--d:630ms" pathLength="1" stroke-width="5" d="M 512 456 L 578 454" />
+    <rect class="pop" style="--d:680ms" x="512" y="478" width="74" height="26" rx="8" fill="#fff" stroke-width="5" />
+
+    <!-- 云(黄 W 标记) -->
+    <g class="cloud">
+      <path class="dfill draw" style="--d:800ms" pathLength="1" fill="#fff"
+        d="M 686 664 Q 656 660 662 634 Q 654 606 690 602 Q 700 570 740 578 Q 762 556 796 574 Q 830 568 838 602 Q 868 610 858 640 Q 872 662 842 666 Q 800 676 744 672 Q 710 674 686 664 Z" />
+    </g>
+    <g class="tw fade" style="--d:1000ms" stroke="#F6CB43" stroke-width="11" stroke-linecap="round">
+      <path d="M 776 526 Q 782 516 790 512" />
+      <path d="M 798 534 Q 806 528 816 528" />
+      <path d="M 786 546 Q 794 544 800 546" />
+      <path d="M 806 518 Q 812 508 820 504" stroke="#E14B2E" />
+    </g>
+
+    <!-- 服务器×3 -->
+    <rect class="dfill draw" style="--d:1050ms" pathLength="1" x="962" y="612" width="146" height="50" rx="10" fill="#fff" />
+    <rect class="dfill draw" style="--d:1130ms" pathLength="1" x="961" y="670" width="147" height="51" rx="10" fill="#fff" />
+    <rect class="dfill draw" style="--d:1210ms" pathLength="1" x="962" y="729" width="148" height="51" rx="10" fill="#fff" />
+    <circle class="pop led" style="--d:1290ms" cx="989" cy="637" r="7" fill="#fff" stroke-width="4" />
+    <circle class="pop led l2" style="--d:1320ms" cx="988" cy="695" r="7" fill="#fff" stroke-width="4" />
+    <circle class="pop led l3" style="--d:1350ms" cx="989" cy="754" r="7" fill="#fff" stroke-width="4" />
+    <path class="fade" style="--d:1300ms" stroke-width="5" d="M 1046 637 L 1086 636 M 1046 650 L 1080 649 M 1046 695 L 1084 694 M 1046 708 L 1078 707 M 1046 754 L 1082 753 M 1046 767 L 1078 766" />
+    <path class="fade" style="--d:1380ms" stroke-width="5" d="M 975 782 L 971 796 M 1098 782 L 1102 796" />
+
+    <!-- 数据库(4 环) -->
+    <ellipse class="draw" style="--d:1400ms" pathLength="1" cx="1305" cy="640" rx="61" ry="20" fill="#fff" />
+    <path fill="#fff" stroke="none" d="M 1244 640 L 1244 734 Q 1305 756 1366 734 L 1366 640 Q 1305 662 1244 640 Z" />
+    <path class="draw" style="--d:1470ms" pathLength="1" d="M 1244 640 Q 1242 686 1246 734 M 1366 640 Q 1368 686 1364 734" />
+    <path class="draw" style="--d:1530ms" pathLength="1" stroke-width="5" d="M 1244 664 Q 1305 682 1366 662" />
+    <path class="draw" style="--d:1580ms" pathLength="1" stroke-width="5" d="M 1245 700 Q 1305 718 1365 698" />
+    <path class="draw" style="--d:1630ms" pathLength="1" d="M 1246 734 Q 1305 752 1364 734" />
+    <path class="fade" style="--d:1680ms" stroke-width="5" d="M 1382 622 L 1400 614 M 1384 648 L 1402 642" />
+
+    <!-- 链路虚线 + 黄脉冲 -->
+    <path class="fade" style="--d:1700ms" stroke="#d8d8d2" stroke-width="5" stroke-dasharray="13 15" d="M 236 614 Q 280 500 352 452" />
+    <path class="fade" style="--d:1740ms" stroke="#d8d8d2" stroke-width="5" d="M 352 452 L 334 454 M 352 452 L 344 468" />
+    <path class="fade pulse" style="--d:1820ms" stroke="#F6CB43" stroke-width="6.5" pathLength="100" stroke-dasharray="0.01 11" d="M 236 614 Q 280 500 352 452" />
+    <path class="fade" style="--d:1780ms" stroke="#d8d8d2" stroke-width="5" stroke-dasharray="13 15" d="M 620 546 Q 650 570 656 590" />
+    <path class="fade" style="--d:1820ms" stroke="#d8d8d2" stroke-width="5" d="M 656 590 L 642 578 M 656 590 L 668 580" />
+    <path class="fade pulse p2" style="--d:1880ms" stroke="#F6CB43" stroke-width="6.5" pathLength="100" stroke-dasharray="0.01 11" d="M 620 546 Q 650 570 656 590" />
+    <path class="fade" style="--d:1860ms" stroke="#d8d8d2" stroke-width="5" stroke-dasharray="13 15" d="M 866 636 Q 916 634 948 638" />
+    <path class="fade" style="--d:1900ms" stroke="#d8d8d2" stroke-width="5" d="M 948 638 L 932 626 M 948 638 L 932 648" />
+    <path class="fade pulse p3" style="--d:1940ms" stroke="#F6CB43" stroke-width="6.5" pathLength="100" stroke-dasharray="0.01 11" d="M 866 636 Q 916 634 948 638" />
+    <path class="fade" style="--d:1940ms" stroke="#d8d8d2" stroke-width="5" stroke-dasharray="13 15" d="M 1126 700 Q 1180 690 1228 686" />
+    <path class="fade" style="--d:1980ms" stroke="#d8d8d2" stroke-width="5" d="M 1228 686 L 1212 676 M 1228 686 L 1214 696" />
+    <path class="fade pulse p4" style="--d:2020ms" stroke="#F6CB43" stroke-width="6.5" pathLength="100" stroke-dasharray="0.01 11" d="M 1126 700 Q 1180 690 1228 686" />
+  </g>
+  </g>
+  <script>
+    (function () {
+      var scene = document.getElementById('scene');
+      var go = function () { scene.classList.add('in'); };
+      if (document.readyState === 'complete') go(); else window.addEventListener('load', go);
+    })();
+  </script>
+</svg>
